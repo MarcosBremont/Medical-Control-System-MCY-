@@ -323,5 +323,10 @@ namespace Medical_Control_System__MCY_
                 txtcorreo.ForeColor = Color.White;
             }
         }
+
+        private void panelLogin_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

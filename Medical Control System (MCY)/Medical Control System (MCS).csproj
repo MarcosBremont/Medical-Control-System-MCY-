@@ -93,6 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="FrmVerCitas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVerCitas.Designer.cs">
+      <DependentUpon>FrmVerCitas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\AgregarCitas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmVerCitas.resx">
+      <DependentUpon>FrmVerCitas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\AgregarCitas.resx">
       <DependentUpon>AgregarCitas.cs</DependentUpon>
     </EmbeddedResource>

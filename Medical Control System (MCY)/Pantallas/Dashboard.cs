@@ -98,5 +98,21 @@ namespace Medical_Control_System__MCY_.Pantallas
         {
             btnCitas.BackColor = System.Drawing.ColorTranslator.FromHtml("#24B089"); // or Color.Red or whatever you want
         }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            //Codigo para poder mover el formulario sin bordes
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+
+        }
+
+        private void panel6_MouseDown(object sender, MouseEventArgs e)
+        {
+            //Codigo para poder mover el formulario sin bordes
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+
+        }
     }
 }

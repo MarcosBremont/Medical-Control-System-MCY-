@@ -28,30 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.btnMyCart = new System.Windows.Forms.Button();
             this.btnDrinks = new System.Windows.Forms.Button();
             this.btnDeserts = new System.Windows.Forms.Button();
             this.btnCitas = new System.Windows.Forms.Button();
             this.pnlDesktop = new System.Windows.Forms.Panel();
-            this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.IDInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CategoriaProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lbluser = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
+            this.lblversion = new System.Windows.Forms.Label();
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMaximize = new System.Windows.Forms.PictureBox();
-            this.lblversion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pnlDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
@@ -100,7 +90,7 @@
             this.btnDrinks.Name = "btnDrinks";
             this.btnDrinks.Size = new System.Drawing.Size(213, 37);
             this.btnDrinks.TabIndex = 18;
-            this.btnDrinks.Text = "   Pacientes";
+            this.btnDrinks.Text = "   Ver Citas";
             this.btnDrinks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDrinks.UseVisualStyleBackColor = false;
             // 
@@ -130,7 +120,7 @@
             this.btnCitas.Name = "btnCitas";
             this.btnCitas.Size = new System.Drawing.Size(213, 37);
             this.btnCitas.TabIndex = 15;
-            this.btnCitas.Text = "   Citas";
+            this.btnCitas.Text = "   Agregar Citas";
             this.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCitas.UseVisualStyleBackColor = false;
             this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
@@ -139,96 +129,10 @@
             // 
             // pnlDesktop
             // 
-            this.pnlDesktop.Controls.Add(this.dgvInventario);
-            this.pnlDesktop.Location = new System.Drawing.Point(218, 43);
+            this.pnlDesktop.Location = new System.Drawing.Point(221, 46);
             this.pnlDesktop.Name = "pnlDesktop";
-            this.pnlDesktop.Size = new System.Drawing.Size(693, 516);
+            this.pnlDesktop.Size = new System.Drawing.Size(1131, 516);
             this.pnlDesktop.TabIndex = 26;
-            // 
-            // dgvInventario
-            // 
-            this.dgvInventario.AllowUserToAddRows = false;
-            this.dgvInventario.AllowUserToDeleteRows = false;
-            this.dgvInventario.AllowUserToOrderColumns = true;
-            this.dgvInventario.AllowUserToResizeColumns = false;
-            this.dgvInventario.AllowUserToResizeRows = false;
-            this.dgvInventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvInventario.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dgvInventario.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(167)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgvInventario.ColumnHeadersHeight = 40;
-            this.dgvInventario.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.IDInventario,
-            this.NombreProducto,
-            this.CategoriaProducto});
-            this.dgvInventario.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(173)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvInventario.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvInventario.EnableHeadersVisualStyles = false;
-            this.dgvInventario.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvInventario.Location = new System.Drawing.Point(3, 3);
-            this.dgvInventario.MultiSelect = false;
-            this.dgvInventario.Name = "dgvInventario";
-            this.dgvInventario.ReadOnly = true;
-            this.dgvInventario.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(173)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvInventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dgvInventario.RowHeadersVisible = false;
-            this.dgvInventario.RowHeadersWidth = 10;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.dgvInventario.RowTemplate.Height = 30;
-            this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventario.Size = new System.Drawing.Size(693, 510);
-            this.dgvInventario.TabIndex = 79;
-            // 
-            // IDInventario
-            // 
-            this.IDInventario.DataPropertyName = "IDInventario";
-            this.IDInventario.FillWeight = 76.14214F;
-            this.IDInventario.HeaderText = "Codigo";
-            this.IDInventario.Name = "IDInventario";
-            this.IDInventario.ReadOnly = true;
-            // 
-            // NombreProducto
-            // 
-            this.NombreProducto.DataPropertyName = "NombreProducto";
-            this.NombreProducto.FillWeight = 111.9289F;
-            this.NombreProducto.HeaderText = "Nombre";
-            this.NombreProducto.Name = "NombreProducto";
-            this.NombreProducto.ReadOnly = true;
-            // 
-            // CategoriaProducto
-            // 
-            this.CategoriaProducto.DataPropertyName = "CategoriaProducto";
-            this.CategoriaProducto.HeaderText = "Apellido";
-            this.CategoriaProducto.Name = "CategoriaProducto";
-            this.CategoriaProducto.ReadOnly = true;
             // 
             // panel6
             // 
@@ -240,8 +144,9 @@
             this.panel6.Controls.Add(this.picMaximize);
             this.panel6.Location = new System.Drawing.Point(219, -1);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(701, 38);
+            this.panel6.Size = new System.Drawing.Size(1145, 38);
             this.panel6.TabIndex = 27;
+            this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseDown);
             // 
             // lbluser
             // 
@@ -263,42 +168,6 @@
             this.lblBienvenido.TabIndex = 0;
             this.lblBienvenido.Text = "Bienvenido:";
             // 
-            // picMinimize
-            // 
-            this.picMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picMinimize.Image = global::Medical_Control_System__MCY_.Properties.Resources.btnMinimize;
-            this.picMinimize.Location = new System.Drawing.Point(645, 10);
-            this.picMinimize.Name = "picMinimize";
-            this.picMinimize.Size = new System.Drawing.Size(18, 18);
-            this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMinimize.TabIndex = 24;
-            this.picMinimize.TabStop = false;
-            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
-            // 
-            // picClose
-            // 
-            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picClose.Image = global::Medical_Control_System__MCY_.Properties.Resources.btnClose;
-            this.picClose.Location = new System.Drawing.Point(669, 11);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(18, 18);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picClose.TabIndex = 23;
-            this.picClose.TabStop = false;
-            this.picClose.Click += new System.EventHandler(this.picClose_Click);
-            // 
-            // picMaximize
-            // 
-            this.picMaximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picMaximize.Image = global::Medical_Control_System__MCY_.Properties.Resources.btnMaximize;
-            this.picMaximize.Location = new System.Drawing.Point(621, 10);
-            this.picMaximize.Name = "picMaximize";
-            this.picMaximize.Size = new System.Drawing.Size(18, 18);
-            this.picMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMaximize.TabIndex = 25;
-            this.picMaximize.TabStop = false;
-            this.picMaximize.Click += new System.EventHandler(this.picMaximize_Click);
-            // 
             // lblversion
             // 
             this.lblversion.AutoSize = true;
@@ -310,6 +179,42 @@
             this.lblversion.TabIndex = 29;
             this.lblversion.Text = "V 1.0";
             // 
+            // picMinimize
+            // 
+            this.picMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picMinimize.Image = global::Medical_Control_System__MCY_.Properties.Resources.btnMinimize;
+            this.picMinimize.Location = new System.Drawing.Point(1091, 10);
+            this.picMinimize.Name = "picMinimize";
+            this.picMinimize.Size = new System.Drawing.Size(18, 18);
+            this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMinimize.TabIndex = 24;
+            this.picMinimize.TabStop = false;
+            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
+            // 
+            // picClose
+            // 
+            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picClose.Image = global::Medical_Control_System__MCY_.Properties.Resources.btnClose;
+            this.picClose.Location = new System.Drawing.Point(1115, 11);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(18, 18);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picClose.TabIndex = 23;
+            this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
+            // 
+            // picMaximize
+            // 
+            this.picMaximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picMaximize.Image = global::Medical_Control_System__MCY_.Properties.Resources.btnMaximize;
+            this.picMaximize.Location = new System.Drawing.Point(1067, 10);
+            this.picMaximize.Name = "picMaximize";
+            this.picMaximize.Size = new System.Drawing.Size(18, 18);
+            this.picMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMaximize.TabIndex = 25;
+            this.picMaximize.TabStop = false;
+            this.picMaximize.Click += new System.EventHandler(this.picMaximize_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Medical_Control_System__MCY_.Properties.Resources.Makeup___ore_removebg_preview__1_;
@@ -320,13 +225,14 @@
             this.pictureBox1.TabIndex = 28;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(920, 571);
+            this.ClientSize = new System.Drawing.Size(1364, 571);
             this.Controls.Add(this.lblversion);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pnlDesktop);
@@ -340,8 +246,6 @@
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseDown);
-            this.pnlDesktop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
@@ -364,10 +268,6 @@
         internal System.Windows.Forms.Button btnCitas;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox1;
-        public System.Windows.Forms.DataGridView dgvInventario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDInventario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CategoriaProducto;
         private System.Windows.Forms.Label lblBienvenido;
         public System.Windows.Forms.Label lblversion;
         public System.Windows.Forms.Label lbluser;
