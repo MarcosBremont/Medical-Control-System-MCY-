@@ -37,7 +37,7 @@
             this.btnDrinks = new System.Windows.Forms.Button();
             this.btnDeserts = new System.Windows.Forms.Button();
             this.btnCitas = new System.Windows.Forms.Button();
-            this.pnlFoods = new System.Windows.Forms.Panel();
+            this.pnlDesktop = new System.Windows.Forms.Panel();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.IDInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,9 +48,9 @@
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMaximize = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblversion = new System.Windows.Forms.Label();
-            this.pnlFoods.SuspendLayout();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnlDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
@@ -133,14 +133,17 @@
             this.btnCitas.Text = "   Citas";
             this.btnCitas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCitas.UseVisualStyleBackColor = false;
+            this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
+            this.btnCitas.MouseEnter += new System.EventHandler(this.btnCitas_MouseEnter);
+            this.btnCitas.MouseLeave += new System.EventHandler(this.btnCitas_MouseLeave);
             // 
-            // pnlFoods
+            // pnlDesktop
             // 
-            this.pnlFoods.Controls.Add(this.dgvInventario);
-            this.pnlFoods.Location = new System.Drawing.Point(218, 43);
-            this.pnlFoods.Name = "pnlFoods";
-            this.pnlFoods.Size = new System.Drawing.Size(693, 516);
-            this.pnlFoods.TabIndex = 26;
+            this.pnlDesktop.Controls.Add(this.dgvInventario);
+            this.pnlDesktop.Location = new System.Drawing.Point(218, 43);
+            this.pnlDesktop.Name = "pnlDesktop";
+            this.pnlDesktop.Size = new System.Drawing.Size(693, 516);
+            this.pnlDesktop.TabIndex = 26;
             // 
             // dgvInventario
             // 
@@ -178,7 +181,7 @@
             this.dgvInventario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInventario.EnableHeadersVisualStyles = false;
             this.dgvInventario.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvInventario.Location = new System.Drawing.Point(1, 3);
+            this.dgvInventario.Location = new System.Drawing.Point(3, 3);
             this.dgvInventario.MultiSelect = false;
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.ReadOnly = true;
@@ -270,6 +273,7 @@
             this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMinimize.TabIndex = 24;
             this.picMinimize.TabStop = false;
+            this.picMinimize.Click += new System.EventHandler(this.picMinimize_Click);
             // 
             // picClose
             // 
@@ -281,6 +285,7 @@
             this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picClose.TabIndex = 23;
             this.picClose.TabStop = false;
+            this.picClose.Click += new System.EventHandler(this.picClose_Click);
             // 
             // picMaximize
             // 
@@ -292,16 +297,7 @@
             this.picMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.picMaximize.TabIndex = 25;
             this.picMaximize.TabStop = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Medical_Control_System__MCY_.Properties.Resources.Makeup___ore_removebg_preview__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(4, -42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(209, 210);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
+            this.picMaximize.Click += new System.EventHandler(this.picMaximize_Click);
             // 
             // lblversion
             // 
@@ -314,6 +310,17 @@
             this.lblversion.TabIndex = 29;
             this.lblversion.Text = "V 1.0";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Medical_Control_System__MCY_.Properties.Resources.Makeup___ore_removebg_preview__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(4, -42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(209, 210);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -322,7 +329,7 @@
             this.ClientSize = new System.Drawing.Size(920, 571);
             this.Controls.Add(this.lblversion);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.pnlFoods);
+            this.Controls.Add(this.pnlDesktop);
             this.Controls.Add(this.btnAboutUs);
             this.Controls.Add(this.btnMyCart);
             this.Controls.Add(this.btnDrinks);
@@ -333,7 +340,7 @@
             this.Name = "Dashboard";
             this.Text = "Dashboard";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseDown);
-            this.pnlFoods.ResumeLayout(false);
+            this.pnlDesktop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
@@ -355,7 +362,6 @@
         internal System.Windows.Forms.Button btnDrinks;
         internal System.Windows.Forms.Button btnDeserts;
         internal System.Windows.Forms.Button btnCitas;
-        internal System.Windows.Forms.Panel pnlFoods;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.DataGridView dgvInventario;
@@ -365,5 +371,6 @@
         private System.Windows.Forms.Label lblBienvenido;
         public System.Windows.Forms.Label lblversion;
         public System.Windows.Forms.Label lbluser;
+        public System.Windows.Forms.Panel pnlDesktop;
     }
 }
