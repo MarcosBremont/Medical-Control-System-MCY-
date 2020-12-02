@@ -38,33 +38,25 @@
             this.btnDeserts = new System.Windows.Forms.Button();
             this.btnCitas = new System.Windows.Forms.Button();
             this.pnlFoods = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picMaximize = new System.Windows.Forms.PictureBox();
-            this.picMinimize = new System.Windows.Forms.PictureBox();
-            this.picClose = new System.Windows.Forms.PictureBox();
-            this.lblversion = new System.Windows.Forms.Label();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
             this.IDInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoriaProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblBienvenido = new System.Windows.Forms.Label();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.lbluser = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblBienvenido = new System.Windows.Forms.Label();
+            this.picMinimize = new System.Windows.Forms.PictureBox();
+            this.picClose = new System.Windows.Forms.PictureBox();
+            this.picMaximize = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblversion = new System.Windows.Forms.Label();
             this.pnlFoods.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
-            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAboutUs
@@ -144,79 +136,11 @@
             // 
             // pnlFoods
             // 
-            this.pnlFoods.Controls.Add(this.panel1);
             this.pnlFoods.Controls.Add(this.dgvInventario);
             this.pnlFoods.Location = new System.Drawing.Point(218, 43);
             this.pnlFoods.Name = "pnlFoods";
             this.pnlFoods.Size = new System.Drawing.Size(693, 516);
             this.pnlFoods.TabIndex = 26;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.panel6.Controls.Add(this.lbluser);
-            this.panel6.Controls.Add(this.lblBienvenido);
-            this.panel6.Controls.Add(this.picMinimize);
-            this.panel6.Controls.Add(this.picClose);
-            this.panel6.Controls.Add(this.picMaximize);
-            this.panel6.Location = new System.Drawing.Point(219, -1);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(701, 38);
-            this.panel6.TabIndex = 27;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Medical_Control_System__MCY_.Properties.Resources.Makeup___ore_removebg_preview__1_;
-            this.pictureBox1.Location = new System.Drawing.Point(4, -42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(209, 210);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 28;
-            this.pictureBox1.TabStop = false;
-            // 
-            // picMaximize
-            // 
-            this.picMaximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picMaximize.Image = global::Medical_Control_System__MCY_.Properties.Resources.btnMaximize;
-            this.picMaximize.Location = new System.Drawing.Point(666, 10);
-            this.picMaximize.Name = "picMaximize";
-            this.picMaximize.Size = new System.Drawing.Size(18, 18);
-            this.picMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMaximize.TabIndex = 25;
-            this.picMaximize.TabStop = false;
-            // 
-            // picMinimize
-            // 
-            this.picMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picMinimize.Image = global::Medical_Control_System__MCY_.Properties.Resources.btnMinimize;
-            this.picMinimize.Location = new System.Drawing.Point(645, 10);
-            this.picMinimize.Name = "picMinimize";
-            this.picMinimize.Size = new System.Drawing.Size(18, 18);
-            this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picMinimize.TabIndex = 24;
-            this.picMinimize.TabStop = false;
-            // 
-            // picClose
-            // 
-            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.picClose.Image = global::Medical_Control_System__MCY_.Properties.Resources.btnClose;
-            this.picClose.Location = new System.Drawing.Point(624, 10);
-            this.picClose.Name = "picClose";
-            this.picClose.Size = new System.Drawing.Size(18, 18);
-            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picClose.TabIndex = 23;
-            this.picClose.TabStop = false;
-            // 
-            // lblversion
-            // 
-            this.lblversion.AutoSize = true;
-            this.lblversion.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblversion.ForeColor = System.Drawing.Color.White;
-            this.lblversion.Location = new System.Drawing.Point(15, 549);
-            this.lblversion.Name = "lblversion";
-            this.lblversion.Size = new System.Drawing.Size(33, 16);
-            this.lblversion.TabIndex = 29;
-            this.lblversion.Text = "V 1.0";
             // 
             // dgvInventario
             // 
@@ -254,7 +178,7 @@
             this.dgvInventario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInventario.EnableHeadersVisualStyles = false;
             this.dgvInventario.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvInventario.Location = new System.Drawing.Point(1, 70);
+            this.dgvInventario.Location = new System.Drawing.Point(1, 3);
             this.dgvInventario.MultiSelect = false;
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.ReadOnly = true;
@@ -277,7 +201,7 @@
             this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvInventario.RowTemplate.Height = 30;
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventario.Size = new System.Drawing.Size(693, 443);
+            this.dgvInventario.Size = new System.Drawing.Size(693, 510);
             this.dgvInventario.TabIndex = 79;
             // 
             // IDInventario
@@ -303,15 +227,18 @@
             this.CategoriaProducto.Name = "CategoriaProducto";
             this.CategoriaProducto.ReadOnly = true;
             // 
-            // lblBienvenido
+            // panel6
             // 
-            this.lblBienvenido.AutoSize = true;
-            this.lblBienvenido.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBienvenido.Location = new System.Drawing.Point(21, 10);
-            this.lblBienvenido.Name = "lblBienvenido";
-            this.lblBienvenido.Size = new System.Drawing.Size(102, 19);
-            this.lblBienvenido.TabIndex = 0;
-            this.lblBienvenido.Text = "Bienvenido:";
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.panel6.Controls.Add(this.lbluser);
+            this.panel6.Controls.Add(this.lblBienvenido);
+            this.panel6.Controls.Add(this.picMinimize);
+            this.panel6.Controls.Add(this.picClose);
+            this.panel6.Controls.Add(this.picMaximize);
+            this.panel6.Location = new System.Drawing.Point(219, -1);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(701, 38);
+            this.panel6.TabIndex = 27;
             // 
             // lbluser
             // 
@@ -323,67 +250,69 @@
             this.lbluser.TabIndex = 1;
             this.lbluser.Text = "...";
             // 
-            // panel1
+            // lblBienvenido
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(687, 61);
-            this.panel1.TabIndex = 28;
+            this.lblBienvenido.AutoSize = true;
+            this.lblBienvenido.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBienvenido.Location = new System.Drawing.Point(21, 10);
+            this.lblBienvenido.Name = "lblBienvenido";
+            this.lblBienvenido.Size = new System.Drawing.Size(102, 19);
+            this.lblBienvenido.TabIndex = 0;
+            this.lblBienvenido.Text = "Bienvenido:";
             // 
-            // textBox1
+            // picMinimize
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.picMinimize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picMinimize.Image = global::Medical_Control_System__MCY_.Properties.Resources.btnMinimize;
+            this.picMinimize.Location = new System.Drawing.Point(645, 10);
+            this.picMinimize.Name = "picMinimize";
+            this.picMinimize.Size = new System.Drawing.Size(18, 18);
+            this.picMinimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMinimize.TabIndex = 24;
+            this.picMinimize.TabStop = false;
             // 
-            // textBox2
+            // picClose
             // 
-            this.textBox2.Location = new System.Drawing.Point(118, 38);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 1;
+            this.picClose.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picClose.Image = global::Medical_Control_System__MCY_.Properties.Resources.btnClose;
+            this.picClose.Location = new System.Drawing.Point(669, 11);
+            this.picClose.Name = "picClose";
+            this.picClose.Size = new System.Drawing.Size(18, 18);
+            this.picClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picClose.TabIndex = 23;
+            this.picClose.TabStop = false;
             // 
-            // textBox3
+            // picMaximize
             // 
-            this.textBox3.Location = new System.Drawing.Point(301, 12);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 2;
+            this.picMaximize.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.picMaximize.Image = global::Medical_Control_System__MCY_.Properties.Resources.btnMaximize;
+            this.picMaximize.Location = new System.Drawing.Point(621, 10);
+            this.picMaximize.Name = "picMaximize";
+            this.picMaximize.Size = new System.Drawing.Size(18, 18);
+            this.picMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picMaximize.TabIndex = 25;
+            this.picMaximize.TabStop = false;
             // 
-            // textBox4
+            // pictureBox1
             // 
-            this.textBox4.Location = new System.Drawing.Point(301, 38);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 3;
+            this.pictureBox1.Image = global::Medical_Control_System__MCY_.Properties.Resources.Makeup___ore_removebg_preview__1_;
+            this.pictureBox1.Location = new System.Drawing.Point(4, -42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(209, 210);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 28;
+            this.pictureBox1.TabStop = false;
             // 
-            // label1
+            // lblversion
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(42, 13);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 19);
-            this.label1.TabIndex = 26;
-            this.label1.Text = "Nombre";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(42, 37);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 19);
-            this.label2.TabIndex = 27;
-            this.label2.Text = "Apellido";
+            this.lblversion.AutoSize = true;
+            this.lblversion.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblversion.ForeColor = System.Drawing.Color.White;
+            this.lblversion.Location = new System.Drawing.Point(12, 546);
+            this.lblversion.Name = "lblversion";
+            this.lblversion.Size = new System.Drawing.Size(33, 16);
+            this.lblversion.TabIndex = 29;
+            this.lblversion.Text = "V 1.0";
             // 
             // Dashboard
             // 
@@ -405,15 +334,13 @@
             this.Text = "Dashboard";
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseDown);
             this.pnlFoods.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -432,18 +359,11 @@
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.DataGridView dgvInventario;
-        private System.Windows.Forms.Label lblversion;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoriaProducto;
-        private System.Windows.Forms.Label lbluser;
         private System.Windows.Forms.Label lblBienvenido;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        public System.Windows.Forms.Label lblversion;
+        public System.Windows.Forms.Label lbluser;
     }
 }

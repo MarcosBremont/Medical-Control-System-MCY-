@@ -1,4 +1,5 @@
 ﻿using Medical_Control_System__MCY_.Pantallas;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,13 @@ namespace Medical_Control_System__MCY_
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
+        //Bases de datos
+        MySqlConnection con = null;
+        MySqlCommand cmd = null;
+        MySqlDataReader dr;
+
+        String cs = ("Server=localhost; database=medicalcontrolsystemmcs; user=root; password=1234");
+
         public LoginPage()
         {
             InitializeComponent();
@@ -27,10 +35,14 @@ namespace Medical_Control_System__MCY_
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
-            panelLogin.Visible = false;
-            txtemailIniciarSesion.Visible = false;
-            txtContraseñaIniciarSesion.Visible = false;
-            BtnIniciarSesion2.Visible = false;
+            panelLogin.Visible = true;
+            panelloginarriba.Visible = true;
+            panelregistroarriba.Visible = false;
+            txtemailIniciarSesion.Visible = true;
+            txtContraseñaIniciarSesion.Visible = true;
+            BtnIniciarSesion2.Visible = true;
+            panelRegistro.Visible = false;
+            
         }
 
         private void BtnIniciarSesion_Click(object sender, EventArgs e)
@@ -52,6 +64,8 @@ namespace Medical_Control_System__MCY_
             txtcorreo.Visible = true;
             txtcontrasena.Visible = true;
             BtnRegistrarse.Visible = true;
+            panelregistroarriba.Visible = true;
+            panelloginarriba.Visible = false;
         }
 
         public void OcultarRegistro()
@@ -66,6 +80,8 @@ namespace Medical_Control_System__MCY_
         public void MostrarInicioSesion()
         {
             panelLogin.Visible = true;
+            panelloginarriba.Visible = true;
+            panelregistroarriba.Visible = false;
             txtemailIniciarSesion.Visible = true;
             txtContraseñaIniciarSesion.Visible = true;
             BtnIniciarSesion2.Visible = true;
@@ -112,15 +128,200 @@ namespace Medical_Control_System__MCY_
 
         private void BtnIniciarSesion2_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-            dashboard.Show();
-            this.Close();
+            Ingresar();
+           
         }
 
         private void btnregistro_Click(object sender, EventArgs e)
         {
+            con = new MySqlConnection(cs);
+            con.Open();
+            string query = "INSERT INTO t_usuario (nombreusuario, apellidousuario, emailusuario, contrasenausuario) values (@nombreusuario, @apellidousuario, @emailusuario, @contrasenausuario)";
+            MySqlCommand comando = new MySqlCommand(query, con);
+            comando.Parameters.AddWithValue("@nombreusuario", txtusuario.Text);
+            comando.Parameters.AddWithValue("@apellidousuario", txtapellido.Text);
+            comando.Parameters.AddWithValue("@emailusuario", txtcorreo.Text);
+            comando.Parameters.AddWithValue("@contrasenausuario", txtcontrasena.Text);
+            comando.ExecuteNonQuery();
+            con.Close();
+            MessageBox.Show("Usuario Agregado exitosamente");
             OcultarRegistro();
             MostrarInicioSesion();
+        }
+
+        public void Ingresar()
+        {
+            if (txtemailIniciarSesion.Text == "")
+            {
+                MessageBox.Show("Por favor introduzca su Email. ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtemailIniciarSesion.Focus();
+                return;
+            }
+            if (txtcontrasena.Text == "")
+            {
+                MessageBox.Show("Por favor introduzca su contraseña. ", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtContraseñaIniciarSesion.Focus();
+                return;
+            }
+
+
+            try
+            {
+                MySqlConnection myConnection = default(MySqlConnection);
+                myConnection = new MySqlConnection(cs);
+
+                MySqlCommand myCommand = default(MySqlCommand);
+
+                myCommand = new MySqlCommand("SELECT emailusuario,contrasenausuario FROM t_usuario WHERE emailusuario = @emailusuario AND contrasenausuario = @contrasenausuario", myConnection);
+                MySqlParameter uName = new MySqlParameter("@emailusuario", MySqlDbType.VarChar);
+                MySqlParameter uPassword = new MySqlParameter("@contrasenausuario", MySqlDbType.VarChar);
+
+                uName.Value = txtemailIniciarSesion.Text;
+                uPassword.Value = txtContraseñaIniciarSesion.Text;
+                myCommand.Parameters.Add(uName);
+                myCommand.Parameters.Add(uPassword);
+                myCommand.Connection.Open();
+                MySqlDataReader myReader = myCommand.ExecuteReader(CommandBehavior.CloseConnection);
+
+                if (myReader.Read() == true)
+                {
+                    int i;
+
+                    this.Hide();
+                    Dashboard dashboard = new Dashboard();
+                    dashboard.Show();
+                    dashboard.lbluser.Text = txtemailIniciarSesion.Text;
+                }
+                else
+                {
+
+                    MessageBox.Show("¡El inicio de sesión falló, por favor verifique los datos correctamente!", "Inicio de sesión fallido", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                    txtemailIniciarSesion.Clear();
+                    txtContraseñaIniciarSesion.Clear();
+
+                }
+                if (myConnection.State == ConnectionState.Open)
+                {
+                    myConnection.Dispose();
+                }
+
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            
+        }
+
+        private void txtemailIniciarSesion_Enter(object sender, EventArgs e)
+        {
+            if (txtemailIniciarSesion.Text == "Email")
+            {
+                txtemailIniciarSesion.Text = "";
+                txtemailIniciarSesion.ForeColor = Color.White;
+            }
+        }
+
+        private void txtemailIniciarSesion_Leave(object sender, EventArgs e)
+        {
+            if (txtemailIniciarSesion.Text == "")
+            {
+                txtemailIniciarSesion.Text = "Email";
+                txtemailIniciarSesion.ForeColor = Color.White;
+            }
+        }
+
+        private void txtContraseñaIniciarSesion_Leave(object sender, EventArgs e)
+        {
+            if (txtContraseñaIniciarSesion.Text == "")
+            {
+                txtContraseñaIniciarSesion.Text = "Contraseña";
+                txtContraseñaIniciarSesion.ForeColor = Color.White;
+            }
+        }
+
+        private void txtContraseñaIniciarSesion_Enter(object sender, EventArgs e)
+        {
+            if (txtContraseñaIniciarSesion.Text == "Contraseña")
+            {
+                txtContraseñaIniciarSesion.Text = "";
+                txtContraseñaIniciarSesion.ForeColor = Color.White;
+            }
+        }
+
+        private void txtusuario_Enter(object sender, EventArgs e)
+        {
+            if (txtusuario.Text == "Nombre")
+            {
+                txtusuario.Text = "";
+                txtusuario.ForeColor = Color.White;
+            }
+        }
+
+        private void txtusuario_Leave(object sender, EventArgs e)
+        {
+            if (txtusuario.Text == "")
+            {
+                txtusuario.Text = "Nombre";
+                txtusuario.ForeColor = Color.White;
+            }
+        }
+
+        private void txtapellido_Enter(object sender, EventArgs e)
+        {
+            if (txtapellido.Text == "Apellido")
+            {
+                txtapellido.Text = "";
+                txtapellido.ForeColor = Color.White;
+            }
+        }
+
+        private void txtapellido_Leave(object sender, EventArgs e)
+        {
+            if (txtapellido.Text == "")
+            {
+                txtapellido.Text = "Apellido";
+                txtapellido.ForeColor = Color.White;
+            }
+        }
+
+        private void txtcontrasena_Enter(object sender, EventArgs e)
+        {
+            if (txtcontrasena.Text == "Contraseña")
+            {
+                txtcontrasena.Text = "";
+                txtcontrasena.ForeColor = Color.White;
+            }
+        }
+
+        private void txtcontrasena_Leave(object sender, EventArgs e)
+        {
+            if (txtcontrasena.Text == "")
+            {
+                txtcontrasena.Text = "Contraseña";
+                txtcontrasena.ForeColor = Color.White;
+            }
+        }
+
+        private void txtcorreo_Enter(object sender, EventArgs e)
+        {
+            if (txtcorreo.Text == "Email")
+            {
+                txtcorreo.Text = "";
+                txtcorreo.ForeColor = Color.White;
+            }
+        }
+
+        private void txtcorreo_Leave(object sender, EventArgs e)
+        {
+            if (txtcorreo.Text == "")
+            {
+                txtcorreo.Text = "Email";
+                txtcorreo.ForeColor = Color.White;
+            }
         }
     }
 }
