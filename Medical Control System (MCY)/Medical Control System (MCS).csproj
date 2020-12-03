@@ -93,11 +93,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Conexion.cs" />
-    <Compile Include="FrmVerCitas.cs">
+    <Compile Include="Pantallas\FrmVerPagos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmVerCitas.Designer.cs">
-      <DependentUpon>FrmVerCitas.cs</DependentUpon>
+    <Compile Include="Pantallas\FrmVerPagos.Designer.cs">
+      <DependentUpon>FrmVerPagos.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\AgregarCitas.cs">
       <SubType>Form</SubType>
@@ -125,8 +125,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmVerCitas.resx">
-      <DependentUpon>FrmVerCitas.cs</DependentUpon>
+    <EmbeddedResource Include="Pantallas\FrmVerPagos.resx">
+      <DependentUpon>FrmVerPagos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\AgregarCitas.resx">
       <DependentUpon>AgregarCitas.cs</DependentUpon>

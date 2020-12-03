@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblnombrepaciente = new System.Windows.Forms.Label();
             this.txtnombrepaciente = new System.Windows.Forms.TextBox();
             this.txtapellidopaciente = new System.Windows.Forms.TextBox();
@@ -59,6 +59,19 @@
             this.dtphoracita = new System.Windows.Forms.DateTimePicker();
             this.lblagregarcita = new System.Windows.Forms.Label();
             this.dgvcitas = new System.Windows.Forms.DataGridView();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.btnBuscarFecha = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnPagos = new System.Windows.Forms.Button();
+            this.txttotaldinero = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtabono = new System.Windows.Forms.TextBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.lblid = new System.Windows.Forms.Label();
+            this.idt_citapaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido_paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,11 +84,10 @@
             this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alergias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otros_problemas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.btnBuscarFecha = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.totaldinero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcitas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,7 +107,7 @@
             this.txtnombrepaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
             this.txtnombrepaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtnombrepaciente.ForeColor = System.Drawing.Color.Silver;
-            this.txtnombrepaciente.Location = new System.Drawing.Point(12, 205);
+            this.txtnombrepaciente.Location = new System.Drawing.Point(12, 210);
             this.txtnombrepaciente.Multiline = true;
             this.txtnombrepaciente.Name = "txtnombrepaciente";
             this.txtnombrepaciente.Size = new System.Drawing.Size(165, 30);
@@ -106,7 +118,7 @@
             this.txtapellidopaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
             this.txtapellidopaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtapellidopaciente.ForeColor = System.Drawing.Color.Silver;
-            this.txtapellidopaciente.Location = new System.Drawing.Point(214, 205);
+            this.txtapellidopaciente.Location = new System.Drawing.Point(214, 210);
             this.txtapellidopaciente.Multiline = true;
             this.txtapellidopaciente.Name = "txtapellidopaciente";
             this.txtapellidopaciente.Size = new System.Drawing.Size(165, 30);
@@ -128,7 +140,7 @@
             this.txtfechanacimiento.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
             this.txtfechanacimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtfechanacimiento.ForeColor = System.Drawing.Color.Silver;
-            this.txtfechanacimiento.Location = new System.Drawing.Point(12, 268);
+            this.txtfechanacimiento.Location = new System.Drawing.Point(12, 277);
             this.txtfechanacimiento.Multiline = true;
             this.txtfechanacimiento.Name = "txtfechanacimiento";
             this.txtfechanacimiento.Size = new System.Drawing.Size(165, 30);
@@ -139,7 +151,7 @@
             this.lblfechanacimiento.AutoSize = true;
             this.lblfechanacimiento.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblfechanacimiento.ForeColor = System.Drawing.Color.White;
-            this.lblfechanacimiento.Location = new System.Drawing.Point(12, 244);
+            this.lblfechanacimiento.Location = new System.Drawing.Point(12, 249);
             this.lblfechanacimiento.Name = "lblfechanacimiento";
             this.lblfechanacimiento.Size = new System.Drawing.Size(137, 19);
             this.lblfechanacimiento.TabIndex = 16;
@@ -150,7 +162,7 @@
             this.txtedad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
             this.txtedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtedad.ForeColor = System.Drawing.Color.Silver;
-            this.txtedad.Location = new System.Drawing.Point(214, 268);
+            this.txtedad.Location = new System.Drawing.Point(214, 277);
             this.txtedad.Multiline = true;
             this.txtedad.Name = "txtedad";
             this.txtedad.Size = new System.Drawing.Size(65, 30);
@@ -161,7 +173,7 @@
             this.lbledad.AutoSize = true;
             this.lbledad.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lbledad.ForeColor = System.Drawing.Color.White;
-            this.lbledad.Location = new System.Drawing.Point(214, 246);
+            this.lbledad.Location = new System.Drawing.Point(214, 249);
             this.lbledad.Name = "lbledad";
             this.lbledad.Size = new System.Drawing.Size(47, 19);
             this.lbledad.TabIndex = 18;
@@ -249,7 +261,7 @@
             this.txtAlergias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
             this.txtAlergias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtAlergias.ForeColor = System.Drawing.Color.Silver;
-            this.txtAlergias.Location = new System.Drawing.Point(954, 205);
+            this.txtAlergias.Location = new System.Drawing.Point(950, 210);
             this.txtAlergias.Multiline = true;
             this.txtAlergias.Name = "txtAlergias";
             this.txtAlergias.Size = new System.Drawing.Size(165, 30);
@@ -260,7 +272,7 @@
             this.lblalergias.AutoSize = true;
             this.lblalergias.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblalergias.ForeColor = System.Drawing.Color.White;
-            this.lblalergias.Location = new System.Drawing.Point(954, 182);
+            this.lblalergias.Location = new System.Drawing.Point(950, 182);
             this.lblalergias.Name = "lblalergias";
             this.lblalergias.Size = new System.Drawing.Size(61, 19);
             this.lblalergias.TabIndex = 28;
@@ -271,7 +283,7 @@
             this.txtOtrosProblemas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
             this.txtOtrosProblemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.txtOtrosProblemas.ForeColor = System.Drawing.Color.Silver;
-            this.txtOtrosProblemas.Location = new System.Drawing.Point(954, 268);
+            this.txtOtrosProblemas.Location = new System.Drawing.Point(950, 277);
             this.txtOtrosProblemas.Multiline = true;
             this.txtOtrosProblemas.Name = "txtOtrosProblemas";
             this.txtOtrosProblemas.Size = new System.Drawing.Size(165, 30);
@@ -282,7 +294,7 @@
             this.lblotrosproblemas.AutoSize = true;
             this.lblotrosproblemas.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblotrosproblemas.ForeColor = System.Drawing.Color.White;
-            this.lblotrosproblemas.Location = new System.Drawing.Point(954, 244);
+            this.lblotrosproblemas.Location = new System.Drawing.Point(950, 249);
             this.lblotrosproblemas.Name = "lblotrosproblemas";
             this.lblotrosproblemas.Size = new System.Drawing.Size(119, 19);
             this.lblotrosproblemas.TabIndex = 30;
@@ -321,7 +333,7 @@
             // dtpfechacita
             // 
             this.dtpfechacita.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpfechacita.Location = new System.Drawing.Point(12, 345);
+            this.dtpfechacita.Location = new System.Drawing.Point(12, 344);
             this.dtpfechacita.Name = "dtpfechacita";
             this.dtpfechacita.Size = new System.Drawing.Size(83, 20);
             this.dtpfechacita.TabIndex = 35;
@@ -331,7 +343,7 @@
             this.lblfechacita.AutoSize = true;
             this.lblfechacita.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblfechacita.ForeColor = System.Drawing.Color.White;
-            this.lblfechacita.Location = new System.Drawing.Point(12, 323);
+            this.lblfechacita.Location = new System.Drawing.Point(12, 316);
             this.lblfechacita.Name = "lblfechacita";
             this.lblfechacita.Size = new System.Drawing.Size(86, 19);
             this.lblfechacita.TabIndex = 36;
@@ -342,7 +354,7 @@
             this.lblhoracita.AutoSize = true;
             this.lblhoracita.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblhoracita.ForeColor = System.Drawing.Color.White;
-            this.lblhoracita.Location = new System.Drawing.Point(214, 321);
+            this.lblhoracita.Location = new System.Drawing.Point(214, 316);
             this.lblhoracita.Name = "lblhoracita";
             this.lblhoracita.Size = new System.Drawing.Size(75, 19);
             this.lblhoracita.TabIndex = 38;
@@ -351,7 +363,7 @@
             // dtphoracita
             // 
             this.dtphoracita.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtphoracita.Location = new System.Drawing.Point(214, 345);
+            this.dtphoracita.Location = new System.Drawing.Point(214, 344);
             this.dtphoracita.Name = "dtphoracita";
             this.dtphoracita.Size = new System.Drawing.Size(83, 20);
             this.dtphoracita.TabIndex = 37;
@@ -379,16 +391,17 @@
             this.dgvcitas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvcitas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvcitas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvcitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvcitas.ColumnHeadersHeight = 40;
             this.dgvcitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idt_citapaciente,
             this.nombre_paciente,
             this.apellido_paciente,
             this.telefono,
@@ -400,16 +413,18 @@
             this.sexo,
             this.direccion,
             this.alergias,
-            this.otros_problemas});
+            this.otros_problemas,
+            this.totaldinero,
+            this.abono});
             this.dgvcitas.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(173)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvcitas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(173)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvcitas.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvcitas.EnableHeadersVisualStyles = false;
             this.dgvcitas.GridColor = System.Drawing.SystemColors.Control;
             this.dgvcitas.Location = new System.Drawing.Point(12, 45);
@@ -417,27 +432,172 @@
             this.dgvcitas.Name = "dgvcitas";
             this.dgvcitas.ReadOnly = true;
             this.dgvcitas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(173)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvcitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(173)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvcitas.RowHeadersVisible = false;
             this.dgvcitas.RowHeadersWidth = 10;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvcitas.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift SemiLight", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvcitas.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvcitas.RowTemplate.Height = 30;
             this.dgvcitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvcitas.Size = new System.Drawing.Size(1116, 132);
             this.dgvcitas.TabIndex = 80;
             this.dgvcitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcitas_CellClick);
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(754, 15);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePicker1.TabIndex = 81;
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(935, 14);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePicker2.TabIndex = 82;
+            // 
+            // btnBuscarFecha
+            // 
+            this.btnBuscarFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnBuscarFecha.FlatAppearance.BorderSize = 0;
+            this.btnBuscarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarFecha.Font = new System.Drawing.Font("Century Gothic", 10.25F);
+            this.btnBuscarFecha.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarFecha.Location = new System.Drawing.Point(1024, 11);
+            this.btnBuscarFecha.Name = "btnBuscarFecha";
+            this.btnBuscarFecha.Size = new System.Drawing.Size(75, 28);
+            this.btnBuscarFecha.TabIndex = 83;
+            this.btnBuscarFecha.Text = "Buscar";
+            this.btnBuscarFecha.UseVisualStyleBackColor = false;
+            this.btnBuscarFecha.Click += new System.EventHandler(this.btnBuscarFecha_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(657, 15);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 19);
+            this.label1.TabIndex = 84;
+            this.label1.Text = "Fecha Inical";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(843, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 19);
+            this.label2.TabIndex = 85;
+            this.label2.Text = "Fecha Final";
+            // 
+            // btnPagos
+            // 
+            this.btnPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnPagos.FlatAppearance.BorderSize = 0;
+            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPagos.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.btnPagos.ForeColor = System.Drawing.Color.White;
+            this.btnPagos.Location = new System.Drawing.Point(735, 395);
+            this.btnPagos.Name = "btnPagos";
+            this.btnPagos.Size = new System.Drawing.Size(156, 45);
+            this.btnPagos.TabIndex = 86;
+            this.btnPagos.Text = "Completada";
+            this.btnPagos.UseVisualStyleBackColor = false;
+            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
+            // 
+            // txttotaldinero
+            // 
+            this.txttotaldinero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txttotaldinero.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txttotaldinero.ForeColor = System.Drawing.Color.Silver;
+            this.txttotaldinero.Location = new System.Drawing.Point(735, 348);
+            this.txttotaldinero.Multiline = true;
+            this.txttotaldinero.Name = "txttotaldinero";
+            this.txttotaldinero.Size = new System.Drawing.Size(165, 30);
+            this.txttotaldinero.TabIndex = 87;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(731, 321);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(108, 19);
+            this.label3.TabIndex = 88;
+            this.label3.Text = "Total Trabajo $";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(950, 316);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(55, 19);
+            this.label4.TabIndex = 90;
+            this.label4.Text = "Abono";
+            // 
+            // txtabono
+            // 
+            this.txtabono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txtabono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtabono.ForeColor = System.Drawing.Color.Silver;
+            this.txtabono.Location = new System.Drawing.Point(950, 344);
+            this.txtabono.Multiline = true;
+            this.txtabono.Name = "txtabono";
+            this.txtabono.Size = new System.Drawing.Size(165, 30);
+            this.txtabono.TabIndex = 89;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnActualizar.FlatAppearance.BorderSize = 0;
+            this.btnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.btnActualizar.ForeColor = System.Drawing.Color.White;
+            this.btnActualizar.Location = new System.Drawing.Point(21, 395);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(156, 45);
+            this.btnActualizar.TabIndex = 91;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = false;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
+            // lblid
+            // 
+            this.lblid.AutoSize = true;
+            this.lblid.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblid.ForeColor = System.Drawing.Color.White;
+            this.lblid.Location = new System.Drawing.Point(34, 23);
+            this.lblid.Name = "lblid";
+            this.lblid.Size = new System.Drawing.Size(21, 19);
+            this.lblid.TabIndex = 92;
+            this.lblid.Text = "...";
+            // 
+            // idt_citapaciente
+            // 
+            this.idt_citapaciente.DataPropertyName = "idt_citapaciente";
+            this.idt_citapaciente.HeaderText = "N. Paciente";
+            this.idt_citapaciente.Name = "idt_citapaciente";
+            this.idt_citapaciente.ReadOnly = true;
             // 
             // nombre_paciente
             // 
@@ -523,58 +683,45 @@
             this.otros_problemas.Name = "otros_problemas";
             this.otros_problemas.ReadOnly = true;
             // 
-            // dateTimePicker1
+            // totaldinero
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(754, 15);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(83, 20);
-            this.dateTimePicker1.TabIndex = 81;
+            this.totaldinero.DataPropertyName = "totaldinero";
+            this.totaldinero.HeaderText = "Total Dinero";
+            this.totaldinero.Name = "totaldinero";
+            this.totaldinero.ReadOnly = true;
             // 
-            // dateTimePicker2
+            // abono
             // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(935, 14);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(83, 20);
-            this.dateTimePicker2.TabIndex = 82;
+            this.abono.DataPropertyName = "abono";
+            this.abono.HeaderText = "Abono";
+            this.abono.Name = "abono";
+            this.abono.ReadOnly = true;
             // 
-            // btnBuscarFecha
+            // btnEliminar
             // 
-            this.btnBuscarFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.btnBuscarFecha.FlatAppearance.BorderSize = 0;
-            this.btnBuscarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarFecha.Font = new System.Drawing.Font("Century Gothic", 10.25F);
-            this.btnBuscarFecha.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarFecha.Location = new System.Drawing.Point(1024, 11);
-            this.btnBuscarFecha.Name = "btnBuscarFecha";
-            this.btnBuscarFecha.Size = new System.Drawing.Size(75, 28);
-            this.btnBuscarFecha.TabIndex = 83;
-            this.btnBuscarFecha.Text = "Buscar";
-            this.btnBuscarFecha.UseVisualStyleBackColor = false;
-            this.btnBuscarFecha.Click += new System.EventHandler(this.btnBuscarFecha_Click);
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(214, 395);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(156, 45);
+            this.btnEliminar.TabIndex = 93;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // label1
+            // label5
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(657, 15);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 19);
-            this.label1.TabIndex = 84;
-            this.label1.Text = "Fecha Inical";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(843, 16);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 19);
-            this.label2.TabIndex = 85;
-            this.label2.Text = "Fecha Final";
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(12, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(22, 19);
+            this.label5.TabIndex = 94;
+            this.label5.Text = "ID";
             // 
             // AgregarCitas
             // 
@@ -582,6 +729,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1140, 477);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.lblid);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txtabono);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txttotaldinero);
+            this.Controls.Add(this.btnPagos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBuscarFecha);
@@ -653,6 +809,19 @@
         private System.Windows.Forms.DateTimePicker dtphoracita;
         private System.Windows.Forms.Label lblagregarcita;
         public System.Windows.Forms.DataGridView dgvcitas;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button btnBuscarFecha;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnPagos;
+        private System.Windows.Forms.TextBox txttotaldinero;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtabono;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Label lblid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idt_citapaciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_paciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn apellido_paciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
@@ -665,10 +834,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn direccion;
         private System.Windows.Forms.DataGridViewTextBoxColumn alergias;
         private System.Windows.Forms.DataGridViewTextBoxColumn otros_problemas;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Button btnBuscarFecha;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn totaldinero;
+        private System.Windows.Forms.DataGridViewTextBoxColumn abono;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Label label5;
     }
 }

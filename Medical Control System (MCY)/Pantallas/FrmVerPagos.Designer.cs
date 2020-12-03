@@ -36,6 +36,7 @@
             this.IDInventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoriaProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbPaciente = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +76,7 @@
             this.dgvInventario.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvInventario.EnableHeadersVisualStyles = false;
             this.dgvInventario.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvInventario.Location = new System.Drawing.Point(55, 23);
+            this.dgvInventario.Location = new System.Drawing.Point(55, 41);
             this.dgvInventario.MultiSelect = false;
             this.dgvInventario.Name = "dgvInventario";
             this.dgvInventario.ReadOnly = true;
@@ -124,11 +125,21 @@
             this.CategoriaProducto.Name = "CategoriaProducto";
             this.CategoriaProducto.ReadOnly = true;
             // 
+            // cmbPaciente
+            // 
+            this.cmbPaciente.FormattingEnabled = true;
+            this.cmbPaciente.Location = new System.Drawing.Point(55, 13);
+            this.cmbPaciente.Name = "cmbPaciente";
+            this.cmbPaciente.Size = new System.Drawing.Size(131, 21);
+            this.cmbPaciente.TabIndex = 81;
+            this.cmbPaciente.Text = "Seleccione el paciente";
+            // 
             // FrmVerCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cmbPaciente);
             this.Controls.Add(this.dgvInventario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmVerCitas";
@@ -144,5 +155,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IDInventario;
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoriaProducto;
+        private System.Windows.Forms.ComboBox cmbPaciente;
     }
 }
