@@ -80,35 +80,37 @@ namespace Medical_Control_System__MCY_.Pantallas
                 MessageBox.Show("Por favor, verifique los datos nuevamente. ");
             }
         }
+
+
         public void CargarDgvCitas()
         {
             DateTime fecha1 = dateTimePicker1.Value;
             DateTime fecha2 = dateTimePicker2.Value;
             S_fecha(fecha1, fecha2);
+            CargarColores();
+        }
 
+        public void CargarColores()
+        {
             int rowIndex = -1;
             //Nombramos una variable string con la fecha de hoy
-            string fechacompar = DateTime.Today.ToString("MM/d/yyyy");
-
+            string fechacompar = DateTime.Today.ToString();
             //Hacemos un foreach para que recorra la tabla, en caso de que encuentre una fecha que sea igual
             // de la de hoy este mostrara la celda en rojo
             foreach (DataGridViewRow row in dgvcitas.Rows)
             {
                 if (row.Cells[5].Value.ToString().Equals(fechacompar))
                 {
-                    //rowIndex = row.Index;
+                   // this.dgvcitas.RowsDefaultCellStyle.BackColor = Color.Red;
                     row.DefaultCellStyle.BackColor = Color.Red;
-                    row.DefaultCellStyle.ForeColor = Color.Red;
-                    // break;
+                    lblnumero.Text = dgvcitas.RowCount.ToString();
+
                 }
                 else
                 {
-
-
-
+                    //this.dgvcitas.RowsDefaultCellStyle.BackColor = Color.White;
                 }
             }
-
         }
 
         private void AgregarCitas_Load(object sender, EventArgs e)
@@ -118,6 +120,7 @@ namespace Medical_Control_System__MCY_.Pantallas
             DateTime fecha1 = dateTimePicker1.Value;
             DateTime fecha2 = dateTimePicker2.Value;
             S_fecha(fecha1, fecha2);
+            CargarColores();
         }
 
         private void dgvcitas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -146,6 +149,7 @@ namespace Medical_Control_System__MCY_.Pantallas
             DateTime fecha1 = dateTimePicker1.Value;
             DateTime fecha2 = dateTimePicker2.Value;
             S_fecha(fecha1, fecha2);
+            CargarColores();
         }
 
         public void S_fecha(DateTime prm_fechainicial, DateTime prm_fechafinal)
@@ -158,6 +162,7 @@ namespace Medical_Control_System__MCY_.Pantallas
             da.SelectCommand.Parameters.Add("prm_fechafinal", MySqlDbType.DateTime).Value = prm_fechafinal;
             da.Fill(tabla);
             dgvcitas.DataSource = tabla;
+            CargarColores();
         }
 
         private void btnPagos_Click(object sender, EventArgs e)

@@ -59,20 +59,6 @@
             this.dtphoracita = new System.Windows.Forms.DateTimePicker();
             this.lblagregarcita = new System.Windows.Forms.Label();
             this.dgvcitas = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.btnBuscarFecha = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnPagos = new System.Windows.Forms.Button();
-            this.txttotaldinero = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtabono = new System.Windows.Forms.TextBox();
-            this.btnActualizar = new System.Windows.Forms.Button();
-            this.lblid = new System.Windows.Forms.Label();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
             this.idt_citapaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellido_paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,9 +75,26 @@
             this.totaldinero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.btnBuscarFecha = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnPagos = new System.Windows.Forms.Button();
+            this.txttotaldinero = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtabono = new System.Windows.Forms.TextBox();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.lblid = new System.Windows.Forms.Label();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lblnumero = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcitas)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblnombrepaciente
@@ -459,6 +462,118 @@
             this.dgvcitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcitas_CellClick);
             this.dgvcitas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvcitas_CellFormatting);
             // 
+            // idt_citapaciente
+            // 
+            this.idt_citapaciente.DataPropertyName = "idt_citapaciente";
+            this.idt_citapaciente.HeaderText = "N. Paciente";
+            this.idt_citapaciente.Name = "idt_citapaciente";
+            this.idt_citapaciente.ReadOnly = true;
+            // 
+            // nombre_paciente
+            // 
+            this.nombre_paciente.DataPropertyName = "nombre_paciente";
+            this.nombre_paciente.HeaderText = "Nombre P.";
+            this.nombre_paciente.Name = "nombre_paciente";
+            this.nombre_paciente.ReadOnly = true;
+            // 
+            // apellido_paciente
+            // 
+            this.apellido_paciente.DataPropertyName = "apellido_paciente";
+            this.apellido_paciente.HeaderText = "Apellido P.";
+            this.apellido_paciente.Name = "apellido_paciente";
+            this.apellido_paciente.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.DataPropertyName = "telefono";
+            this.telefono.HeaderText = "Telefono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // celular
+            // 
+            this.celular.DataPropertyName = "celular";
+            this.celular.HeaderText = "Celular";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
+            // 
+            // fecha_cita
+            // 
+            this.fecha_cita.DataPropertyName = "fecha_cita";
+            this.fecha_cita.HeaderText = "Fecha Cita";
+            this.fecha_cita.Name = "fecha_cita";
+            this.fecha_cita.ReadOnly = true;
+            // 
+            // hora_cita
+            // 
+            this.hora_cita.DataPropertyName = "hora_cita";
+            this.hora_cita.HeaderText = "Hora Cita";
+            this.hora_cita.Name = "hora_cita";
+            this.hora_cita.ReadOnly = true;
+            // 
+            // fecha_nacimiento
+            // 
+            this.fecha_nacimiento.DataPropertyName = "fecha_nacimiento";
+            this.fecha_nacimiento.HeaderText = "Fecha N.";
+            this.fecha_nacimiento.Name = "fecha_nacimiento";
+            this.fecha_nacimiento.ReadOnly = true;
+            // 
+            // edad
+            // 
+            this.edad.DataPropertyName = "edad";
+            this.edad.HeaderText = "Edad";
+            this.edad.Name = "edad";
+            this.edad.ReadOnly = true;
+            // 
+            // sexo
+            // 
+            this.sexo.DataPropertyName = "sexo";
+            this.sexo.HeaderText = "Sexo";
+            this.sexo.Name = "sexo";
+            this.sexo.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.DataPropertyName = "direccion";
+            this.direccion.HeaderText = "Direccion";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            // 
+            // alergias
+            // 
+            this.alergias.DataPropertyName = "alergias";
+            this.alergias.HeaderText = "Alergias";
+            this.alergias.Name = "alergias";
+            this.alergias.ReadOnly = true;
+            // 
+            // otros_problemas
+            // 
+            this.otros_problemas.DataPropertyName = "otros_problemas";
+            this.otros_problemas.HeaderText = "Otros Problemas";
+            this.otros_problemas.Name = "otros_problemas";
+            this.otros_problemas.ReadOnly = true;
+            // 
+            // totaldinero
+            // 
+            this.totaldinero.DataPropertyName = "totaldinero";
+            this.totaldinero.HeaderText = "Total Dinero";
+            this.totaldinero.Name = "totaldinero";
+            this.totaldinero.ReadOnly = true;
+            // 
+            // abono
+            // 
+            this.abono.DataPropertyName = "abono";
+            this.abono.HeaderText = "Abono";
+            this.abono.Name = "abono";
+            this.abono.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            // 
             // dateTimePicker1
             // 
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
@@ -623,118 +738,6 @@
             this.label5.TabIndex = 94;
             this.label5.Text = "ID";
             // 
-            // idt_citapaciente
-            // 
-            this.idt_citapaciente.DataPropertyName = "idt_citapaciente";
-            this.idt_citapaciente.HeaderText = "N. Paciente";
-            this.idt_citapaciente.Name = "idt_citapaciente";
-            this.idt_citapaciente.ReadOnly = true;
-            // 
-            // nombre_paciente
-            // 
-            this.nombre_paciente.DataPropertyName = "nombre_paciente";
-            this.nombre_paciente.HeaderText = "Nombre P.";
-            this.nombre_paciente.Name = "nombre_paciente";
-            this.nombre_paciente.ReadOnly = true;
-            // 
-            // apellido_paciente
-            // 
-            this.apellido_paciente.DataPropertyName = "apellido_paciente";
-            this.apellido_paciente.HeaderText = "Apellido P.";
-            this.apellido_paciente.Name = "apellido_paciente";
-            this.apellido_paciente.ReadOnly = true;
-            // 
-            // telefono
-            // 
-            this.telefono.DataPropertyName = "telefono";
-            this.telefono.HeaderText = "Telefono";
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            // 
-            // celular
-            // 
-            this.celular.DataPropertyName = "celular";
-            this.celular.HeaderText = "Celular";
-            this.celular.Name = "celular";
-            this.celular.ReadOnly = true;
-            // 
-            // fecha_cita
-            // 
-            this.fecha_cita.DataPropertyName = "fecha_cita";
-            this.fecha_cita.HeaderText = "Fecha Cita";
-            this.fecha_cita.Name = "fecha_cita";
-            this.fecha_cita.ReadOnly = true;
-            // 
-            // hora_cita
-            // 
-            this.hora_cita.DataPropertyName = "hora_cita";
-            this.hora_cita.HeaderText = "Hora Cita";
-            this.hora_cita.Name = "hora_cita";
-            this.hora_cita.ReadOnly = true;
-            // 
-            // fecha_nacimiento
-            // 
-            this.fecha_nacimiento.DataPropertyName = "fecha_nacimiento";
-            this.fecha_nacimiento.HeaderText = "Fecha N.";
-            this.fecha_nacimiento.Name = "fecha_nacimiento";
-            this.fecha_nacimiento.ReadOnly = true;
-            // 
-            // edad
-            // 
-            this.edad.DataPropertyName = "edad";
-            this.edad.HeaderText = "Edad";
-            this.edad.Name = "edad";
-            this.edad.ReadOnly = true;
-            // 
-            // sexo
-            // 
-            this.sexo.DataPropertyName = "sexo";
-            this.sexo.HeaderText = "Sexo";
-            this.sexo.Name = "sexo";
-            this.sexo.ReadOnly = true;
-            // 
-            // direccion
-            // 
-            this.direccion.DataPropertyName = "direccion";
-            this.direccion.HeaderText = "Direccion";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            // 
-            // alergias
-            // 
-            this.alergias.DataPropertyName = "alergias";
-            this.alergias.HeaderText = "Alergias";
-            this.alergias.Name = "alergias";
-            this.alergias.ReadOnly = true;
-            // 
-            // otros_problemas
-            // 
-            this.otros_problemas.DataPropertyName = "otros_problemas";
-            this.otros_problemas.HeaderText = "Otros Problemas";
-            this.otros_problemas.Name = "otros_problemas";
-            this.otros_problemas.ReadOnly = true;
-            // 
-            // totaldinero
-            // 
-            this.totaldinero.DataPropertyName = "totaldinero";
-            this.totaldinero.HeaderText = "Total Dinero";
-            this.totaldinero.Name = "totaldinero";
-            this.totaldinero.ReadOnly = true;
-            // 
-            // abono
-            // 
-            this.abono.DataPropertyName = "abono";
-            this.abono.HeaderText = "Abono";
-            this.abono.Name = "abono";
-            this.abono.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -761,12 +764,34 @@
             this.cmbEstado.TabIndex = 96;
             this.cmbEstado.Text = "Seleccione el estado.";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Medical_Control_System__MCY_.Properties.Resources.notificacion;
+            this.pictureBox1.Location = new System.Drawing.Point(1024, 384);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 81);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 97;
+            this.pictureBox1.TabStop = false;
+            // 
+            // lblnumero
+            // 
+            this.lblnumero.AutoSize = true;
+            this.lblnumero.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(67)))), ((int)(((byte)(54)))));
+            this.lblnumero.Location = new System.Drawing.Point(1075, 395);
+            this.lblnumero.Name = "lblnumero";
+            this.lblnumero.Size = new System.Drawing.Size(13, 13);
+            this.lblnumero.TabIndex = 98;
+            this.lblnumero.Text = "..";
+            // 
             // AgregarCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1140, 477);
+            this.Controls.Add(this.lblnumero);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -816,6 +841,7 @@
             this.Load += new System.EventHandler(this.AgregarCitas_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AgregarCitas_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.dgvcitas)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -881,5 +907,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblnumero;
     }
 }

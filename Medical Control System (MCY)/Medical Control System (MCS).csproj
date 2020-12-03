@@ -171,6 +171,7 @@
     <None Include="Resources\hermosa-chica-sentada-oficina-dentista_1157-21014.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\notificacion.png" />
     <None Include="Resources\338 [Convertido]1.png" />
     <None Include="Resources\aaaaa.png" />
     <None Include="Resources\aaaaa.jpg" />
