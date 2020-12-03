@@ -66,6 +66,7 @@ namespace Medical_Control_System__MCY_.Pantallas
                 comando.Parameters.AddWithValue("@hora_cita", dtphoracita.Value);
                 comando.Parameters.AddWithValue("@totaldinero", txttotaldinero.Text);
                 comando.Parameters.AddWithValue("@abono", txtabono.Text);
+                comando.Parameters.AddWithValue("@estado", cmbEstado.Text);
                 comando.ExecuteNonQuery();
                 CargarDgvCitas();
                 con.Close();
@@ -114,6 +115,7 @@ namespace Medical_Control_System__MCY_.Pantallas
             txtOtrosProblemas.Text = dgvcitas.CurrentRow.Cells[12].Value.ToString();
             txttotaldinero.Text = dgvcitas.CurrentRow.Cells[13].Value.ToString();
             txtabono.Text = dgvcitas.CurrentRow.Cells[14].Value.ToString();
+            cmbEstado.Text = dgvcitas.CurrentRow.Cells[15].Value.ToString();
         }
 
         private void btnBuscarFecha_Click(object sender, EventArgs e)
@@ -160,6 +162,7 @@ namespace Medical_Control_System__MCY_.Pantallas
             comando.Parameters.AddWithValue("@hora_cita", dtphoracita.Value);
             comando.Parameters.AddWithValue("@totaldinero", txttotaldinero.Text);
             comando.Parameters.AddWithValue("@abono", txtabono.Text);
+            comando.Parameters.AddWithValue("@estado", cmbEstado.Text);
             comando.ExecuteNonQuery();
             CargarDgvCitas();
             MessageBox.Show("Cita Actualizada exitosamente. ");
