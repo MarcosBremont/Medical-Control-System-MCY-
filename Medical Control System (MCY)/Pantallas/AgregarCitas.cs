@@ -58,8 +58,8 @@ namespace Medical_Control_System__MCY_.Pantallas
             comando.Parameters.AddWithValue("@direccion", txtDireccion.Text);
             comando.Parameters.AddWithValue("@alergias", txtAlergias.Text);
             comando.Parameters.AddWithValue("@otros_problemas", txtOtrosProblemas.Text);
-            comando.Parameters.AddWithValue("@fecha_cita", dtpfechacita.Text);
-            comando.Parameters.AddWithValue("@hora_cita", dtphoracita.Text);
+            comando.Parameters.AddWithValue("@fecha_cita", dtpfechacita.Value);
+            comando.Parameters.AddWithValue("@hora_cita", dtphoracita.Value);
             comando.ExecuteNonQuery();
             CargarDgvCitas();
             con.Close();
@@ -83,6 +83,9 @@ namespace Medical_Control_System__MCY_.Pantallas
         {
             dgvcitas.AutoGenerateColumns = false;
             CargarDgvCitas();
+            DateTime fecha1 = dateTimePicker1.Value;
+            DateTime fecha2 = dateTimePicker2.Value;
+            S_fecha(fecha1, fecha2);
         }
 
         private void dgvcitas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -103,13 +106,23 @@ namespace Medical_Control_System__MCY_.Pantallas
 
         private void btnBuscarFecha_Click(object sender, EventArgs e)
         {
+            DateTime fecha1 = dateTimePicker1.Value;
+            DateTime fecha2 = dateTimePicker2.Value;
+            S_fecha(fecha1, fecha2);
+        }
+
+        public void S_fecha(DateTime prm_fechainicial, DateTime prm_fechafinal)
+        {
             con = new MySqlConnection(cs);
-            MySqlCommand cmd = new MySqlCommand("Select * from t_citapaciente where fecha_cita = ", con);
-            MySqlDataAdapter adaptador = new MySqlDataAdapter();
-            adaptador.SelectCommand = cmd;
             DataTable tabla = new DataTable();
-            adaptador.Fill(tabla);
+            MySqlDataAdapter da = new MySqlDataAdapter("S_Fecha", con);
+            da.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("prm_fechainicial", MySqlDbType.DateTime).Value = prm_fechainicial;
+            da.SelectCommand.Parameters.Add("prm_fechafinal", MySqlDbType.DateTime).Value = prm_fechafinal;
+            da.Fill(tabla);
             dgvcitas.DataSource = tabla;
         }
+
+
     }
 }
