@@ -86,6 +86,29 @@ namespace Medical_Control_System__MCY_.Pantallas
             DateTime fecha2 = dateTimePicker2.Value;
             S_fecha(fecha1, fecha2);
 
+            int rowIndex = -1;
+            //Nombramos una variable string con la fecha de hoy
+            string fechacompar = DateTime.Today.ToString("MM/d/yyyy");
+
+            //Hacemos un foreach para que recorra la tabla, en caso de que encuentre una fecha que sea igual
+            // de la de hoy este mostrara la celda en rojo
+            foreach (DataGridViewRow row in dgvcitas.Rows)
+            {
+                if (row.Cells[5].Value.ToString().Equals(fechacompar))
+                {
+                    //rowIndex = row.Index;
+                    row.DefaultCellStyle.BackColor = Color.Red;
+                    row.DefaultCellStyle.ForeColor = Color.Red;
+                    // break;
+                }
+                else
+                {
+
+
+
+                }
+            }
+
         }
 
         private void AgregarCitas_Load(object sender, EventArgs e)
@@ -191,6 +214,11 @@ namespace Medical_Control_System__MCY_.Pantallas
 
             }
         }
+
+        private void dgvcitas_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+        }
     }
-    
+
 }

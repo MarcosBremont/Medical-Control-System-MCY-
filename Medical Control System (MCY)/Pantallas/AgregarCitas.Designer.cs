@@ -457,6 +457,7 @@
             this.dgvcitas.Size = new System.Drawing.Size(1116, 132);
             this.dgvcitas.TabIndex = 80;
             this.dgvcitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcitas_CellClick);
+            this.dgvcitas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvcitas_CellFormatting);
             // 
             // dateTimePicker1
             // 
