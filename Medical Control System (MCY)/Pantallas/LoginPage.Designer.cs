@@ -44,6 +44,8 @@
             this.BtnIniciarSesion2 = new System.Windows.Forms.Button();
             this.txtContraseñaIniciarSesion = new System.Windows.Forms.TextBox();
             this.txtemailIniciarSesion = new System.Windows.Forms.TextBox();
+            this.panelloginarriba = new System.Windows.Forms.Panel();
+            this.panelregistroarriba = new System.Windows.Forms.Panel();
             this.panelRegistro.SuspendLayout();
             this.panelLogin.SuspendLayout();
             this.SuspendLayout();
@@ -100,6 +102,8 @@
             this.txtusuario.Size = new System.Drawing.Size(250, 30);
             this.txtusuario.TabIndex = 3;
             this.txtusuario.Text = "Nombre";
+            this.txtusuario.Enter += new System.EventHandler(this.txtusuario_Enter);
+            this.txtusuario.Leave += new System.EventHandler(this.txtusuario_Leave);
             // 
             // btnregistro
             // 
@@ -127,6 +131,8 @@
             this.txtapellido.Size = new System.Drawing.Size(178, 30);
             this.txtapellido.TabIndex = 8;
             this.txtapellido.Text = "Apellido";
+            this.txtapellido.Enter += new System.EventHandler(this.txtapellido_Enter);
+            this.txtapellido.Leave += new System.EventHandler(this.txtapellido_Leave);
             // 
             // txtcorreo
             // 
@@ -138,7 +144,9 @@
             this.txtcorreo.Name = "txtcorreo";
             this.txtcorreo.Size = new System.Drawing.Size(434, 30);
             this.txtcorreo.TabIndex = 9;
-            this.txtcorreo.Text = "Correo";
+            this.txtcorreo.Text = "Email";
+            this.txtcorreo.Enter += new System.EventHandler(this.txtcorreo_Enter);
+            this.txtcorreo.Leave += new System.EventHandler(this.txtcorreo_Leave);
             // 
             // txtcontrasena
             // 
@@ -151,6 +159,8 @@
             this.txtcontrasena.Size = new System.Drawing.Size(434, 30);
             this.txtcontrasena.TabIndex = 10;
             this.txtcontrasena.Text = "Contraseña";
+            this.txtcontrasena.Enter += new System.EventHandler(this.txtcontrasena_Enter);
+            this.txtcontrasena.Leave += new System.EventHandler(this.txtcontrasena_Leave);
             // 
             // LblIniciarSesion
             // 
@@ -199,6 +209,7 @@
             this.panelLogin.Name = "panelLogin";
             this.panelLogin.Size = new System.Drawing.Size(524, 329);
             this.panelLogin.TabIndex = 13;
+            this.panelLogin.Paint += new System.Windows.Forms.PaintEventHandler(this.panelLogin_Paint);
             this.panelLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLogin_MouseDown);
             // 
             // BtnSalir
@@ -208,7 +219,7 @@
             this.BtnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalir.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalir.ForeColor = System.Drawing.Color.White;
-            this.BtnSalir.Location = new System.Drawing.Point(149, 288);
+            this.BtnSalir.Location = new System.Drawing.Point(159, 282);
             this.BtnSalir.Name = "BtnSalir";
             this.BtnSalir.Size = new System.Drawing.Size(217, 34);
             this.BtnSalir.TabIndex = 15;
@@ -223,7 +234,7 @@
             this.BtnIniciarSesion2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnIniciarSesion2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnIniciarSesion2.ForeColor = System.Drawing.Color.White;
-            this.BtnIniciarSesion2.Location = new System.Drawing.Point(149, 237);
+            this.BtnIniciarSesion2.Location = new System.Drawing.Point(159, 231);
             this.BtnIniciarSesion2.Name = "BtnIniciarSesion2";
             this.BtnIniciarSesion2.Size = new System.Drawing.Size(217, 45);
             this.BtnIniciarSesion2.TabIndex = 14;
@@ -242,6 +253,8 @@
             this.txtContraseñaIniciarSesion.Size = new System.Drawing.Size(346, 30);
             this.txtContraseñaIniciarSesion.TabIndex = 13;
             this.txtContraseñaIniciarSesion.Text = "Contraseña";
+            this.txtContraseñaIniciarSesion.Enter += new System.EventHandler(this.txtContraseñaIniciarSesion_Enter);
+            this.txtContraseñaIniciarSesion.Leave += new System.EventHandler(this.txtContraseñaIniciarSesion_Leave);
             // 
             // txtemailIniciarSesion
             // 
@@ -254,6 +267,24 @@
             this.txtemailIniciarSesion.Size = new System.Drawing.Size(346, 30);
             this.txtemailIniciarSesion.TabIndex = 12;
             this.txtemailIniciarSesion.Text = "Email";
+            this.txtemailIniciarSesion.Enter += new System.EventHandler(this.txtemailIniciarSesion_Enter);
+            this.txtemailIniciarSesion.Leave += new System.EventHandler(this.txtemailIniciarSesion_Leave);
+            // 
+            // panelloginarriba
+            // 
+            this.panelloginarriba.BackColor = System.Drawing.Color.OrangeRed;
+            this.panelloginarriba.Location = new System.Drawing.Point(290, 23);
+            this.panelloginarriba.Name = "panelloginarriba";
+            this.panelloginarriba.Size = new System.Drawing.Size(167, 10);
+            this.panelloginarriba.TabIndex = 16;
+            // 
+            // panelregistroarriba
+            // 
+            this.panelregistroarriba.BackColor = System.Drawing.Color.OrangeRed;
+            this.panelregistroarriba.Location = new System.Drawing.Point(88, 23);
+            this.panelregistroarriba.Name = "panelregistroarriba";
+            this.panelregistroarriba.Size = new System.Drawing.Size(149, 10);
+            this.panelregistroarriba.TabIndex = 17;
             // 
             // LoginPage
             // 
@@ -261,6 +292,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(549, 437);
+            this.Controls.Add(this.panelregistroarriba);
+            this.Controls.Add(this.panelloginarriba);
             this.Controls.Add(this.panelLogin);
             this.Controls.Add(this.txtcontrasena);
             this.Controls.Add(this.txtcorreo);
@@ -302,6 +335,8 @@
         private System.Windows.Forms.TextBox txtemailIniciarSesion;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.Button BtnSalir2;
+        private System.Windows.Forms.Panel panelloginarriba;
+        private System.Windows.Forms.Panel panelregistroarriba;
     }
 }
 

@@ -18,6 +18,10 @@ namespace Medical_Control_System__MCY_.Pantallas
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+     
+        private Panel leftBorderBtn;
+        private Form currentChildForm;
         public Dashboard()
         {
             InitializeComponent();
@@ -28,6 +32,87 @@ namespace Medical_Control_System__MCY_.Pantallas
             //Codigo para poder mover el formulario sin bordes
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+
+        private void OpenChildForm(Form childForm)
+        {
+            //open only form
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            //End
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            pnlDesktop.Controls.Add(childForm);
+            pnlDesktop.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+           
+        }
+
+        private void btnCitas_Click(object sender, EventArgs e)
+        {
+         
+            OpenChildForm(new AgregarCitas());
+           
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+           
+        }
+
+        private void picClose_Click(object sender, EventArgs e)
+        {
+            Opacity = 0.5;
+            Application.Exit();
+            Opacity = 1;
+        }
+
+        private void picMinimize_Click(object sender, EventArgs e)
+        {
+            Opacity = 0.5;
+            this.WindowState = FormWindowState.Minimized;
+            Opacity = 1;
+        }
+
+        private void picMaximize_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Maximized;
+        }
+
+        private void btnCitas_MouseEnter(object sender, EventArgs e)
+        {
+            btnCitas.BackColor = System.Drawing.ColorTranslator.FromHtml("#0C3A2D"); // or Color.Red or whatever you want
+        }
+
+        private void btnCitas_MouseLeave(object sender, EventArgs e)
+        {
+            btnCitas.BackColor = System.Drawing.ColorTranslator.FromHtml("#24B089"); // or Color.Red or whatever you want
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            //Codigo para poder mover el formulario sin bordes
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+
+        }
+
+        private void panel6_MouseDown(object sender, MouseEventArgs e)
+        {
+            //Codigo para poder mover el formulario sin bordes
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+
         }
     }
 }

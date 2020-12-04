@@ -16,7 +16,10 @@ namespace Medical_Control_System__MCY_.Pantallas
         public SplashScreen()
         {
             InitializeComponent();
-           
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.pictureBox2.BackColor = Color.Transparent;
+            //pictureBox2.BackColor = Color.Transparent;
+
         }
         //Use timer class
 
@@ -43,14 +46,37 @@ namespace Medical_Control_System__MCY_.Pantallas
 
         }
 
-        private void SplashScreen_Load(object sender, EventArgs e)
+        private async void SplashScreen_Load(object sender, EventArgs e)
         {
             this.timer1.Start();
+            SetStyle(ControlStyles.SupportsTransparentBackColor, true);
+            this.pictureBox2.BackColor = Color.Transparent;
+            lblloading.Visible = true;
+            await Task.Delay(300);
+            lblloading.Visible = false;
+            await Task.Delay(300);
+            lblloading.Visible = true;
+            await Task.Delay(300);
+            lblloading.Visible = false;
+            await Task.Delay(300);
+            lblloading.Visible = true;
+            await Task.Delay(300);
+            lblloading.Visible = false;
+            await Task.Delay(300);
+            lblloading.Visible = true;
+            await Task.Delay(300);
+            lblloading.Visible = false;
+            await Task.Delay(300);
+            lblloading.Visible = true;
+
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            this.progressBar1.Increment(5);
+
+            progressBar1.Increment(5);
         }
+
+      
     }
 }
