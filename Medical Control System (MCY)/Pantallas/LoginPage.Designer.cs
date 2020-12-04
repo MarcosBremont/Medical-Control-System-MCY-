@@ -38,12 +38,12 @@
             this.txtcontrasena = new System.Windows.Forms.TextBox();
             this.LblIniciarSesion = new System.Windows.Forms.Label();
             this.panelRegistro = new System.Windows.Forms.Panel();
-            this.panelLogin = new System.Windows.Forms.Panel();
-            this.txtemailIniciarSesion = new System.Windows.Forms.TextBox();
-            this.txtContraseñaIniciarSesion = new System.Windows.Forms.TextBox();
-            this.BtnIniciarSesion2 = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
             this.BtnSalir2 = new System.Windows.Forms.Button();
+            this.panelLogin = new System.Windows.Forms.Panel();
+            this.BtnSalir = new System.Windows.Forms.Button();
+            this.BtnIniciarSesion2 = new System.Windows.Forms.Button();
+            this.txtContraseñaIniciarSesion = new System.Windows.Forms.TextBox();
+            this.txtemailIniciarSesion = new System.Windows.Forms.TextBox();
             this.panelRegistro.SuspendLayout();
             this.panelLogin.SuspendLayout();
             this.SuspendLayout();
@@ -173,6 +173,21 @@
             this.panelRegistro.TabIndex = 12;
             this.panelRegistro.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelRegistro_MouseDown);
             // 
+            // BtnSalir2
+            // 
+            this.BtnSalir2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(83)))), ((int)(((byte)(90)))));
+            this.BtnSalir2.FlatAppearance.BorderSize = 0;
+            this.BtnSalir2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalir2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir2.ForeColor = System.Drawing.Color.White;
+            this.BtnSalir2.Location = new System.Drawing.Point(158, 282);
+            this.BtnSalir2.Name = "BtnSalir2";
+            this.BtnSalir2.Size = new System.Drawing.Size(217, 34);
+            this.BtnSalir2.TabIndex = 16;
+            this.BtnSalir2.Text = "Salir";
+            this.BtnSalir2.UseVisualStyleBackColor = false;
+            this.BtnSalir2.Click += new System.EventHandler(this.BtnSalir2_Click);
+            // 
             // panelLogin
             // 
             this.panelLogin.Controls.Add(this.BtnSalir);
@@ -185,45 +200,6 @@
             this.panelLogin.Size = new System.Drawing.Size(524, 329);
             this.panelLogin.TabIndex = 13;
             this.panelLogin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelLogin_MouseDown);
-            // 
-            // txtemailIniciarSesion
-            // 
-            this.txtemailIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
-            this.txtemailIniciarSesion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtemailIniciarSesion.ForeColor = System.Drawing.Color.Silver;
-            this.txtemailIniciarSesion.Location = new System.Drawing.Point(80, 74);
-            this.txtemailIniciarSesion.Multiline = true;
-            this.txtemailIniciarSesion.Name = "txtemailIniciarSesion";
-            this.txtemailIniciarSesion.Size = new System.Drawing.Size(346, 30);
-            this.txtemailIniciarSesion.TabIndex = 12;
-            this.txtemailIniciarSesion.Text = "Email";
-            // 
-            // txtContraseñaIniciarSesion
-            // 
-            this.txtContraseñaIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
-            this.txtContraseñaIniciarSesion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseñaIniciarSesion.ForeColor = System.Drawing.Color.Silver;
-            this.txtContraseñaIniciarSesion.Location = new System.Drawing.Point(80, 149);
-            this.txtContraseñaIniciarSesion.Multiline = true;
-            this.txtContraseñaIniciarSesion.Name = "txtContraseñaIniciarSesion";
-            this.txtContraseñaIniciarSesion.Size = new System.Drawing.Size(346, 30);
-            this.txtContraseñaIniciarSesion.TabIndex = 13;
-            this.txtContraseñaIniciarSesion.Text = "Contraseña";
-            // 
-            // BtnIniciarSesion2
-            // 
-            this.BtnIniciarSesion2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.BtnIniciarSesion2.FlatAppearance.BorderSize = 0;
-            this.BtnIniciarSesion2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnIniciarSesion2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnIniciarSesion2.ForeColor = System.Drawing.Color.White;
-            this.BtnIniciarSesion2.Location = new System.Drawing.Point(149, 237);
-            this.BtnIniciarSesion2.Name = "BtnIniciarSesion2";
-            this.BtnIniciarSesion2.Size = new System.Drawing.Size(217, 45);
-            this.BtnIniciarSesion2.TabIndex = 14;
-            this.BtnIniciarSesion2.Text = "Iniciar Sesión";
-            this.BtnIniciarSesion2.UseVisualStyleBackColor = false;
-            this.BtnIniciarSesion2.Click += new System.EventHandler(this.BtnIniciarSesion2_Click);
             // 
             // BtnSalir
             // 
@@ -240,20 +216,44 @@
             this.BtnSalir.UseVisualStyleBackColor = false;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
             // 
-            // BtnSalir2
+            // BtnIniciarSesion2
             // 
-            this.BtnSalir2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(83)))), ((int)(((byte)(90)))));
-            this.BtnSalir2.FlatAppearance.BorderSize = 0;
-            this.BtnSalir2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnSalir2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir2.ForeColor = System.Drawing.Color.White;
-            this.BtnSalir2.Location = new System.Drawing.Point(158, 282);
-            this.BtnSalir2.Name = "BtnSalir2";
-            this.BtnSalir2.Size = new System.Drawing.Size(217, 34);
-            this.BtnSalir2.TabIndex = 16;
-            this.BtnSalir2.Text = "Salir";
-            this.BtnSalir2.UseVisualStyleBackColor = false;
-            this.BtnSalir2.Click += new System.EventHandler(this.BtnSalir2_Click);
+            this.BtnIniciarSesion2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.BtnIniciarSesion2.FlatAppearance.BorderSize = 0;
+            this.BtnIniciarSesion2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnIniciarSesion2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnIniciarSesion2.ForeColor = System.Drawing.Color.White;
+            this.BtnIniciarSesion2.Location = new System.Drawing.Point(149, 237);
+            this.BtnIniciarSesion2.Name = "BtnIniciarSesion2";
+            this.BtnIniciarSesion2.Size = new System.Drawing.Size(217, 45);
+            this.BtnIniciarSesion2.TabIndex = 14;
+            this.BtnIniciarSesion2.Text = "Iniciar Sesión";
+            this.BtnIniciarSesion2.UseVisualStyleBackColor = false;
+            this.BtnIniciarSesion2.Click += new System.EventHandler(this.BtnIniciarSesion2_Click);
+            // 
+            // txtContraseñaIniciarSesion
+            // 
+            this.txtContraseñaIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txtContraseñaIniciarSesion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseñaIniciarSesion.ForeColor = System.Drawing.Color.Silver;
+            this.txtContraseñaIniciarSesion.Location = new System.Drawing.Point(80, 149);
+            this.txtContraseñaIniciarSesion.Multiline = true;
+            this.txtContraseñaIniciarSesion.Name = "txtContraseñaIniciarSesion";
+            this.txtContraseñaIniciarSesion.Size = new System.Drawing.Size(346, 30);
+            this.txtContraseñaIniciarSesion.TabIndex = 13;
+            this.txtContraseñaIniciarSesion.Text = "Contraseña";
+            // 
+            // txtemailIniciarSesion
+            // 
+            this.txtemailIniciarSesion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txtemailIniciarSesion.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtemailIniciarSesion.ForeColor = System.Drawing.Color.Silver;
+            this.txtemailIniciarSesion.Location = new System.Drawing.Point(80, 74);
+            this.txtemailIniciarSesion.Multiline = true;
+            this.txtemailIniciarSesion.Name = "txtemailIniciarSesion";
+            this.txtemailIniciarSesion.Size = new System.Drawing.Size(346, 30);
+            this.txtemailIniciarSesion.TabIndex = 12;
+            this.txtemailIniciarSesion.Text = "Email";
             // 
             // LoginPage
             // 
@@ -272,6 +272,7 @@
             this.Controls.Add(this.panelRegistro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginPage_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LoginPage_MouseDown);
