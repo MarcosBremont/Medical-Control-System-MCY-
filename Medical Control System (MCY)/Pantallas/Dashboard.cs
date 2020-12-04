@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,12 +20,21 @@ namespace Medical_Control_System__MCY_.Pantallas
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
-     
+
+        MySqlDataReader rdr = null;
+        DataTable dt = new DataTable();
+
+        MySqlConnection con = null;
+        MySqlCommand cmd = null;
+        String cs = ("Server=localhost; database=medicalcontrolsystemmcs; user=root; password=1234");
+
+
         private Panel leftBorderBtn;
         private Form currentChildForm;
         public Dashboard()
         {
             InitializeComponent();
+            CargarCantidadCita();
         }
 
         private void Dashboard_MouseDown(object sender, MouseEventArgs e)
@@ -51,23 +61,24 @@ namespace Medical_Control_System__MCY_.Pantallas
             pnlDesktop.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
-           
+
         }
 
         private void btnCitas_Click(object sender, EventArgs e)
         {
-         
+
             OpenChildForm(new AgregarCitas());
-           
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+
             if (currentChildForm != null)
             {
                 currentChildForm.Close();
             }
-           
+
         }
 
         private void picClose_Click(object sender, EventArgs e)
@@ -113,6 +124,26 @@ namespace Medical_Control_System__MCY_.Pantallas
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
 
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+            AgregarCitas agr = new AgregarCitas();
+            agr.CargarDgvCitas();
+            CargarCantidadCita();
+
+        }
+
+        public void CargarCantidadCita()
+        {
+            AgregarCitas agr = new AgregarCitas();
+            btnCitasParaHoy.Text = agr.dgvcitas.RowCount.ToString();
+        }
+
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lblreloj.Text = (DateTime.Now.ToString("hh:mm:ss tt"));
         }
     }
 }

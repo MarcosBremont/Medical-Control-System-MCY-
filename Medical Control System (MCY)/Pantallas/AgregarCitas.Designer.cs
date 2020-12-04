@@ -869,14 +869,11 @@
         private System.Windows.Forms.Label lblotrosproblemas;
         private System.Windows.Forms.ComboBox cmbSexo;
         private System.Windows.Forms.Button btnAgregarCita;
-        private System.Windows.Forms.DateTimePicker dtpfechacita;
         private System.Windows.Forms.Label lblfechacita;
         private System.Windows.Forms.Label lblhoracita;
         private System.Windows.Forms.DateTimePicker dtphoracita;
         private System.Windows.Forms.Label lblagregarcita;
         public System.Windows.Forms.DataGridView dgvcitas;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Button btnBuscarFecha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -909,5 +906,8 @@
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lblnumero;
+        public System.Windows.Forms.DateTimePicker dtpfechacita;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }
