@@ -17,7 +17,7 @@ namespace Medical_Control_System__MCY_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SplashScreen());
+            Application.Run(new FrmOdontodiagrama());
         }
     }
 }

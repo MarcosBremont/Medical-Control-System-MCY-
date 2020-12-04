@@ -254,6 +254,7 @@
             this.txtContraseñaIniciarSesion.TabIndex = 13;
             this.txtContraseñaIniciarSesion.Text = "Contraseña";
             this.txtContraseñaIniciarSesion.Enter += new System.EventHandler(this.txtContraseñaIniciarSesion_Enter);
+            this.txtContraseñaIniciarSesion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContraseñaIniciarSesion_KeyPress);
             this.txtContraseñaIniciarSesion.Leave += new System.EventHandler(this.txtContraseñaIniciarSesion_Leave);
             // 
             // txtemailIniciarSesion

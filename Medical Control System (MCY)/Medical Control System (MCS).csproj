@@ -93,6 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Pantallas\FrmOdontodiagrama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\FrmOdontodiagrama.Designer.cs">
+      <DependentUpon>FrmOdontodiagrama.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\FrmVerPagos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Pantallas\FrmOdontodiagrama.resx">
+      <DependentUpon>FrmOdontodiagrama.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\FrmVerPagos.resx">
       <DependentUpon>FrmVerPagos.cs</DependentUpon>
     </EmbeddedResource>
@@ -171,6 +180,7 @@
     <None Include="Resources\hermosa-chica-sentada-oficina-dentista_1157-21014.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\odontograma-DT.png" />
     <None Include="Resources\notificacion.png" />
     <None Include="Resources\338 [Convertido]1.png" />
     <None Include="Resources\aaaaa.png" />

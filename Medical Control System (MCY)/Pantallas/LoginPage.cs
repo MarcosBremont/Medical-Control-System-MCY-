@@ -328,5 +328,13 @@ namespace Medical_Control_System__MCY_
         {
 
         }
+
+        private void txtContraseñaIniciarSesion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                Ingresar();
+            }
+        }
     }
 }

@@ -37,10 +37,10 @@
             this.panel6 = new System.Windows.Forms.Panel();
             this.lbluser = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
-            this.lblversion = new System.Windows.Forms.Label();
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMaximize = new System.Windows.Forms.PictureBox();
+            this.lblversion = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
@@ -131,7 +131,7 @@
             // 
             this.pnlDesktop.Location = new System.Drawing.Point(221, 46);
             this.pnlDesktop.Name = "pnlDesktop";
-            this.pnlDesktop.Size = new System.Drawing.Size(1131, 516);
+            this.pnlDesktop.Size = new System.Drawing.Size(1131, 595);
             this.pnlDesktop.TabIndex = 26;
             // 
             // panel6
@@ -167,17 +167,6 @@
             this.lblBienvenido.Size = new System.Drawing.Size(102, 19);
             this.lblBienvenido.TabIndex = 0;
             this.lblBienvenido.Text = "Bienvenido:";
-            // 
-            // lblversion
-            // 
-            this.lblversion.AutoSize = true;
-            this.lblversion.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblversion.ForeColor = System.Drawing.Color.White;
-            this.lblversion.Location = new System.Drawing.Point(12, 546);
-            this.lblversion.Name = "lblversion";
-            this.lblversion.Size = new System.Drawing.Size(33, 16);
-            this.lblversion.TabIndex = 29;
-            this.lblversion.Text = "V 1.0";
             // 
             // picMinimize
             // 
@@ -215,6 +204,17 @@
             this.picMaximize.TabStop = false;
             this.picMaximize.Click += new System.EventHandler(this.picMaximize_Click);
             // 
+            // lblversion
+            // 
+            this.lblversion.AutoSize = true;
+            this.lblversion.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblversion.ForeColor = System.Drawing.Color.White;
+            this.lblversion.Location = new System.Drawing.Point(12, 546);
+            this.lblversion.Name = "lblversion";
+            this.lblversion.Size = new System.Drawing.Size(33, 16);
+            this.lblversion.TabIndex = 29;
+            this.lblversion.Text = "V 1.0";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Medical_Control_System__MCY_.Properties.Resources.Makeup___ore_removebg_preview__1_;
@@ -232,7 +232,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(1364, 571);
+            this.ClientSize = new System.Drawing.Size(1364, 653);
             this.Controls.Add(this.lblversion);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pnlDesktop);
