@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace Medical_Control_System__MCY_.Pantallas
 {
-    public partial class Dashboard : Form
+    public partial class FrmDashboard : Form
     {
         //Dll para mover el formulario si no tiene bordes
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -31,7 +31,7 @@ namespace Medical_Control_System__MCY_.Pantallas
 
         private Panel leftBorderBtn;
         private Form currentChildForm;
-        public Dashboard()
+        public FrmDashboard()
         {
             InitializeComponent();
             CargarCantidadCita();
@@ -67,7 +67,7 @@ namespace Medical_Control_System__MCY_.Pantallas
         private void btnCitas_Click(object sender, EventArgs e)
         {
 
-            OpenChildForm(new AgregarCitas());
+            OpenChildForm(new FrmAgregarCitas());
 
         }
 
@@ -128,7 +128,7 @@ namespace Medical_Control_System__MCY_.Pantallas
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            AgregarCitas agr = new AgregarCitas();
+            FrmAgregarCitas agr = new FrmAgregarCitas();
             agr.CargarDgvCitas();
             CargarCantidadCita();
 
@@ -136,7 +136,7 @@ namespace Medical_Control_System__MCY_.Pantallas
 
         public void CargarCantidadCita()
         {
-            AgregarCitas agr = new AgregarCitas();
+            FrmAgregarCitas agr = new FrmAgregarCitas();
             lblcitasparahoy.Text = agr.dgvcitas.RowCount.ToString();
         }
 
@@ -152,11 +152,22 @@ namespace Medical_Control_System__MCY_.Pantallas
         {
 
         }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void pbFacebook_Click(object sender, EventArgs e)
         {
+            System.Diagnostics.Process.Start("https://www.facebook.com/people/Marcos-Bremont/100014045828077");
+        }
 
+        private void pbGmail_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCJvnrLGFNgVcgGkzMHPXZZZFZJrBPPmNdkrlnFvbQsdgqXqdPDkFXPpcxDqBgCZZnpgQSjB");
+        }
 
+        private void pbLogout_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            LoginPage Log = new LoginPage();
+            Log.Show();
+           
         }
     }
 }

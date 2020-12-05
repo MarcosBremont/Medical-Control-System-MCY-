@@ -1,6 +1,6 @@
 ﻿namespace Medical_Control_System__MCY_
 {
-    partial class FrmVerCitas
+    partial class FrmVerPagos
     {
         /// <summary>
         /// Required designer variable.
@@ -37,6 +37,7 @@
             this.NombreProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CategoriaProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cmbPaciente = new System.Windows.Forms.ComboBox();
+            this.txtrestante = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -134,18 +135,28 @@
             this.cmbPaciente.TabIndex = 81;
             this.cmbPaciente.Text = "Seleccione el paciente";
             // 
-            // FrmVerCitas
+            // txtrestante
+            // 
+            this.txtrestante.Location = new System.Drawing.Point(629, 428);
+            this.txtrestante.Name = "txtrestante";
+            this.txtrestante.Size = new System.Drawing.Size(100, 20);
+            this.txtrestante.TabIndex = 82;
+            // 
+            // FrmVerPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtrestante);
             this.Controls.Add(this.cmbPaciente);
             this.Controls.Add(this.dgvInventario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "FrmVerCitas";
-            this.Text = "FrmVerCitas";
+            this.Name = "FrmVerPagos";
+            this.Text = "FrmVerPagos";
+            this.Load += new System.EventHandler(this.FrmVerCitas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -156,5 +167,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NombreProducto;
         private System.Windows.Forms.DataGridViewTextBoxColumn CategoriaProducto;
         private System.Windows.Forms.ComboBox cmbPaciente;
+        private System.Windows.Forms.TextBox txtrestante;
     }
 }

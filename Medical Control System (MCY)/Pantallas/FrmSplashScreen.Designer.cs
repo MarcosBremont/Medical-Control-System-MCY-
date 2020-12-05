@@ -1,6 +1,6 @@
 ﻿namespace Medical_Control_System__MCY_.Pantallas
 {
-    partial class SplashScreen
+    partial class FrmSplashScreen
     {
         /// <summary>
         /// Required designer variable.

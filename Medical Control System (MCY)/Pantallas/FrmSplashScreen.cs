@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace Medical_Control_System__MCY_.Pantallas
 {
-    public partial class SplashScreen : Form
+    public partial class FrmSplashScreen : Form
     {
         
-        public SplashScreen()
+        public FrmSplashScreen()
         {
             InitializeComponent();
             SetStyle(ControlStyles.SupportsTransparentBackColor, true);

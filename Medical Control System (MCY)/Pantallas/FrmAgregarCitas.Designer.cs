@@ -1,6 +1,6 @@
 ﻿namespace Medical_Control_System__MCY_.Pantallas
 {
-    partial class AgregarCitas
+    partial class FrmAgregarCitas
     {
         /// <summary>
         /// Required designer variable.
