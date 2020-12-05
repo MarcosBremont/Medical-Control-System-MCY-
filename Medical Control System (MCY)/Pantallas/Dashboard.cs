@@ -137,13 +137,26 @@ namespace Medical_Control_System__MCY_.Pantallas
         public void CargarCantidadCita()
         {
             AgregarCitas agr = new AgregarCitas();
-            btnCitasParaHoy.Text = agr.dgvcitas.RowCount.ToString();
+            lblcitasparahoy.Text = agr.dgvcitas.RowCount.ToString();
         }
 
 
         private void timer1_Tick(object sender, EventArgs e)
         {
             lblreloj.Text = (DateTime.Now.ToString("hh:mm:ss tt"));
+            lblfecha.Text = DateTime.Now.ToString("dddd d MMMM yyyy");
+
+        }
+
+        private void pnlDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+
         }
     }
 }

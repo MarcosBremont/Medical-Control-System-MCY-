@@ -180,6 +180,11 @@
     <None Include="Resources\hermosa-chica-sentada-oficina-dentista_1157-21014.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\configurar.png" />
+    <None Include="Resources\logout.png" />
+    <None Include="Resources\facebook.png" />
+    <None Include="Resources\gmail %281%29.png" />
+    <None Include="Resources\gmail.png" />
     <None Include="Resources\calendario %283%29.png" />
     <None Include="Resources\calendario %282%29.png" />
     <None Include="Resources\calendario %281%29.png" />

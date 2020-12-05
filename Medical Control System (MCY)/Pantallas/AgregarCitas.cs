@@ -150,6 +150,8 @@ namespace Medical_Control_System__MCY_.Pantallas
             DateTime fecha2 = dateTimePicker2.Value;
             S_fecha(fecha1, fecha2);
             CargarColores();
+            lblnumero.Text = dgvcitas.RowCount.ToString();
+
         }
 
         public void S_fecha(DateTime prm_fechainicial, DateTime prm_fechafinal)
