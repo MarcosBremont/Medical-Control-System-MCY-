@@ -25,7 +25,22 @@ namespace Medical_Control_System__MCY_
 
         private void FrmVerCitas_Load(object sender, EventArgs e)
         {
+            dgvInventario.AutoGenerateColumns = true;
+            string NombrePaciente = cmbPaciente.Text;
+            S_PagosPacientes(NombrePaciente);
             CargarComboboxPaciente();
+        }
+
+        public void S_PagosPacientes(string prm_nombre_paciente)
+        {
+            con = new MySqlConnection(cs);
+            DataTable tabla = new DataTable();
+            MySqlDataAdapter da = new MySqlDataAdapter("S_PagosPacientes", con);
+            da.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
+            da.SelectCommand.Parameters.Add("prm_nombre_paciente", MySqlDbType.String).Value = prm_nombre_paciente;
+            da.Fill(tabla);
+            dgvInventario.DataSource = tabla;
+            
         }
 
         public void CargarComboboxPaciente()
@@ -45,6 +60,12 @@ namespace Medical_Control_System__MCY_
             cmbPaciente.DisplayMember = "nombre_paciente";  
             cmbPaciente.ValueMember = "idt_citapaciente";
             cmbPaciente.DataSource = dt;
+        }
+
+        private void cmbPaciente_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string NombrePaciente = cmbPaciente.Text;
+            S_PagosPacientes(NombrePaciente);
         }
     }
 }
