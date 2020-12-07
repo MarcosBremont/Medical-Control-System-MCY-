@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace Medical_Control_System__MCY_.Pantallas
 {
-    public partial class AgregarCitas : Form
+    public partial class FrmAgregarCitas : Form
     {
-        public AgregarCitas()
+        public FrmAgregarCitas()
         {
             InitializeComponent();
         }

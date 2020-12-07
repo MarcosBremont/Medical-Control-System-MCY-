@@ -1,6 +1,6 @@
 ﻿namespace Medical_Control_System__MCY_.Pantallas
 {
-    partial class Dashboard
+    partial class FrmDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,14 @@
             this.components = new System.ComponentModel.Container();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.btnMyCart = new System.Windows.Forms.Button();
-            this.btnPagos = new System.Windows.Forms.Button();
+            this.btnDrinks = new System.Windows.Forms.Button();
             this.btnDeserts = new System.Windows.Forms.Button();
             this.btnCitas = new System.Windows.Forms.Button();
             this.pnlDesktop = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pbAjustes = new System.Windows.Forms.PictureBox();
+            this.pbLogout = new System.Windows.Forms.PictureBox();
+            this.pbGmail = new System.Windows.Forms.PictureBox();
+            this.pbFacebook = new System.Windows.Forms.PictureBox();
             this.lblfecha = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -65,10 +65,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlDesktop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGmail)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFacebook)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -109,21 +109,20 @@
             this.btnMyCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMyCart.UseVisualStyleBackColor = false;
             // 
-            // btnPagos
+            // btnDrinks
             // 
-            this.btnPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.btnPagos.FlatAppearance.BorderSize = 0;
-            this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPagos.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnPagos.Location = new System.Drawing.Point(3, 230);
-            this.btnPagos.Name = "btnPagos";
-            this.btnPagos.Size = new System.Drawing.Size(216, 37);
-            this.btnPagos.TabIndex = 18;
-            this.btnPagos.Text = "   Ver Pagos";
-            this.btnPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnPagos.UseVisualStyleBackColor = false;
-            this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
+            this.btnDrinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnDrinks.FlatAppearance.BorderSize = 0;
+            this.btnDrinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDrinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDrinks.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDrinks.Location = new System.Drawing.Point(3, 230);
+            this.btnDrinks.Name = "btnDrinks";
+            this.btnDrinks.Size = new System.Drawing.Size(216, 37);
+            this.btnDrinks.TabIndex = 18;
+            this.btnDrinks.Text = "   Ver Citas";
+            this.btnDrinks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDrinks.UseVisualStyleBackColor = false;
             // 
             // btnDeserts
             // 
@@ -161,10 +160,10 @@
             // pnlDesktop
             // 
             this.pnlDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(68)))), ((int)(((byte)(83)))));
-            this.pnlDesktop.Controls.Add(this.pictureBox8);
-            this.pnlDesktop.Controls.Add(this.pictureBox9);
-            this.pnlDesktop.Controls.Add(this.pictureBox7);
-            this.pnlDesktop.Controls.Add(this.pictureBox5);
+            this.pnlDesktop.Controls.Add(this.pbAjustes);
+            this.pnlDesktop.Controls.Add(this.pbLogout);
+            this.pnlDesktop.Controls.Add(this.pbGmail);
+            this.pnlDesktop.Controls.Add(this.pbFacebook);
             this.pnlDesktop.Controls.Add(this.lblfecha);
             this.pnlDesktop.Controls.Add(this.panel1);
             this.pnlDesktop.Controls.Add(this.pictureBox4);
@@ -187,41 +186,44 @@
             this.pnlDesktop.TabIndex = 26;
             this.pnlDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDesktop_Paint);
             // 
-            // pictureBox8
+            // pbAjustes
             // 
-            this.pictureBox8.Image = global::Medical_Control_System__MCY_.Properties.Resources.configurar;
-            this.pictureBox8.Location = new System.Drawing.Point(973, 540);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(70, 67);
-            this.pictureBox8.TabIndex = 55;
-            this.pictureBox8.TabStop = false;
+            this.pbAjustes.Image = global::Medical_Control_System__MCY_.Properties.Resources.configurar;
+            this.pbAjustes.Location = new System.Drawing.Point(973, 540);
+            this.pbAjustes.Name = "pbAjustes";
+            this.pbAjustes.Size = new System.Drawing.Size(70, 67);
+            this.pbAjustes.TabIndex = 55;
+            this.pbAjustes.TabStop = false;
             // 
-            // pictureBox9
+            // pbLogout
             // 
-            this.pictureBox9.Image = global::Medical_Control_System__MCY_.Properties.Resources.logout;
-            this.pictureBox9.Location = new System.Drawing.Point(1049, 540);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(70, 67);
-            this.pictureBox9.TabIndex = 54;
-            this.pictureBox9.TabStop = false;
+            this.pbLogout.Image = global::Medical_Control_System__MCY_.Properties.Resources.logout;
+            this.pbLogout.Location = new System.Drawing.Point(1049, 540);
+            this.pbLogout.Name = "pbLogout";
+            this.pbLogout.Size = new System.Drawing.Size(70, 67);
+            this.pbLogout.TabIndex = 54;
+            this.pbLogout.TabStop = false;
+            this.pbLogout.Click += new System.EventHandler(this.pbLogout_Click);
             // 
-            // pictureBox7
+            // pbGmail
             // 
-            this.pictureBox7.Image = global::Medical_Control_System__MCY_.Properties.Resources.gmail__1_;
-            this.pictureBox7.Location = new System.Drawing.Point(897, 540);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(70, 67);
-            this.pictureBox7.TabIndex = 53;
-            this.pictureBox7.TabStop = false;
+            this.pbGmail.Image = global::Medical_Control_System__MCY_.Properties.Resources.gmail__1_;
+            this.pbGmail.Location = new System.Drawing.Point(897, 540);
+            this.pbGmail.Name = "pbGmail";
+            this.pbGmail.Size = new System.Drawing.Size(70, 67);
+            this.pbGmail.TabIndex = 53;
+            this.pbGmail.TabStop = false;
+            this.pbGmail.Click += new System.EventHandler(this.pbGmail_Click);
             // 
-            // pictureBox5
+            // pbFacebook
             // 
-            this.pictureBox5.Image = global::Medical_Control_System__MCY_.Properties.Resources.facebook;
-            this.pictureBox5.Location = new System.Drawing.Point(826, 540);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(70, 67);
-            this.pictureBox5.TabIndex = 51;
-            this.pictureBox5.TabStop = false;
+            this.pbFacebook.Image = global::Medical_Control_System__MCY_.Properties.Resources.facebook;
+            this.pbFacebook.Location = new System.Drawing.Point(826, 540);
+            this.pbFacebook.Name = "pbFacebook";
+            this.pbFacebook.Size = new System.Drawing.Size(70, 67);
+            this.pbFacebook.TabIndex = 51;
+            this.pbFacebook.TabStop = false;
+            this.pbFacebook.Click += new System.EventHandler(this.pbFacebook_Click);
             // 
             // lblfecha
             // 
@@ -512,7 +514,7 @@
             this.Controls.Add(this.pnlDesktop);
             this.Controls.Add(this.btnAboutUs);
             this.Controls.Add(this.btnMyCart);
-            this.Controls.Add(this.btnPagos);
+            this.Controls.Add(this.btnDrinks);
             this.Controls.Add(this.btnDeserts);
             this.Controls.Add(this.btnCitas);
             this.Controls.Add(this.pictureBox1);
@@ -524,10 +526,10 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseDown);
             this.pnlDesktop.ResumeLayout(false);
             this.pnlDesktop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbGmail)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbFacebook)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -548,7 +550,7 @@
         internal System.Windows.Forms.PictureBox picClose;
         internal System.Windows.Forms.Button btnAboutUs;
         internal System.Windows.Forms.Button btnMyCart;
-        internal System.Windows.Forms.Button btnPagos;
+        internal System.Windows.Forms.Button btnDrinks;
         internal System.Windows.Forms.Button btnDeserts;
         internal System.Windows.Forms.Button btnCitas;
         private System.Windows.Forms.Panel panel6;
@@ -574,9 +576,9 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label lblfecha;
-        private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox pbAjustes;
+        private System.Windows.Forms.PictureBox pbLogout;
+        private System.Windows.Forms.PictureBox pbGmail;
+        private System.Windows.Forms.PictureBox pbFacebook;
     }
 }

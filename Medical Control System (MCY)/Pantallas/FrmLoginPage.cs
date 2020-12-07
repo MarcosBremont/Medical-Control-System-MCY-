@@ -42,7 +42,9 @@ namespace Medical_Control_System__MCY_
             txtContraseñaIniciarSesion.Visible = true;
             BtnIniciarSesion2.Visible = true;
             panelRegistro.Visible = false;
-            
+            txtContraseñaIniciarSesion.PasswordChar = '●';
+
+
         }
 
         private void BtnIniciarSesion_Click(object sender, EventArgs e)
@@ -188,7 +190,7 @@ namespace Medical_Control_System__MCY_
                     int i;
 
                     this.Hide();
-                    Dashboard dashboard = new Dashboard();
+                    FrmDashboard dashboard = new FrmDashboard();
                     dashboard.Show();
                     dashboard.lbluser.Text = txtemailIniciarSesion.Text;
                 }
