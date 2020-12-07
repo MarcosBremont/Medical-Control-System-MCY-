@@ -136,9 +136,10 @@
             this.btnDeserts.Name = "btnDeserts";
             this.btnDeserts.Size = new System.Drawing.Size(216, 37);
             this.btnDeserts.TabIndex = 17;
-            this.btnDeserts.Text = "   Historial Clinico";
+            this.btnDeserts.Text = "   Historial Citas C.";
             this.btnDeserts.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnDeserts.UseVisualStyleBackColor = false;
+            this.btnDeserts.Click += new System.EventHandler(this.btnDeserts_Click);
             // 
             // btnCitas
             // 

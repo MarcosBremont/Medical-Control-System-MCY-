@@ -33,14 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvHistorial = new System.Windows.Forms.DataGridView();
-            this.lblhistorialcitas = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnBuscarFecha = new System.Windows.Forms.Button();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cmbEstado = new System.Windows.Forms.ComboBox();
-            this.lblestado = new System.Windows.Forms.Label();
             this.idt_citapaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombre_Completo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,6 +48,14 @@
             this.totaldinero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblhistorialcitas = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscarFecha = new System.Windows.Forms.Button();
+            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.lblestado = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvHistorial)).BeginInit();
             this.SuspendLayout();
             // 
@@ -129,94 +129,8 @@
             this.dgvHistorial.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvHistorial.RowTemplate.Height = 30;
             this.dgvHistorial.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvHistorial.Size = new System.Drawing.Size(947, 381);
+            this.dgvHistorial.Size = new System.Drawing.Size(1101, 381);
             this.dgvHistorial.TabIndex = 82;
-            // 
-            // lblhistorialcitas
-            // 
-            this.lblhistorialcitas.AutoSize = true;
-            this.lblhistorialcitas.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblhistorialcitas.ForeColor = System.Drawing.Color.White;
-            this.lblhistorialcitas.Location = new System.Drawing.Point(371, 9);
-            this.lblhistorialcitas.Name = "lblhistorialcitas";
-            this.lblhistorialcitas.Size = new System.Drawing.Size(145, 19);
-            this.lblhistorialcitas.TabIndex = 83;
-            this.lblhistorialcitas.Text = "Citas Completadas";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(464, 447);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 19);
-            this.label2.TabIndex = 90;
-            this.label2.Text = "Fecha Final";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(278, 446);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(94, 19);
-            this.label1.TabIndex = 89;
-            this.label1.Text = "Fecha Inical";
-            // 
-            // btnBuscarFecha
-            // 
-            this.btnBuscarFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.btnBuscarFecha.FlatAppearance.BorderSize = 0;
-            this.btnBuscarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscarFecha.Font = new System.Drawing.Font("Century Gothic", 10.25F);
-            this.btnBuscarFecha.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarFecha.Location = new System.Drawing.Point(661, 441);
-            this.btnBuscarFecha.Name = "btnBuscarFecha";
-            this.btnBuscarFecha.Size = new System.Drawing.Size(75, 28);
-            this.btnBuscarFecha.TabIndex = 88;
-            this.btnBuscarFecha.Text = "Buscar";
-            this.btnBuscarFecha.UseVisualStyleBackColor = false;
-            this.btnBuscarFecha.Click += new System.EventHandler(this.btnBuscarFecha_Click);
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker2.Location = new System.Drawing.Point(556, 445);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(83, 20);
-            this.dateTimePicker2.TabIndex = 87;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(375, 446);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(83, 20);
-            this.dateTimePicker1.TabIndex = 86;
-            // 
-            // cmbEstado
-            // 
-            this.cmbEstado.FormattingEnabled = true;
-            this.cmbEstado.Items.AddRange(new object[] {
-            "Completada",
-            "Pendiente"});
-            this.cmbEstado.Location = new System.Drawing.Point(93, 449);
-            this.cmbEstado.Name = "cmbEstado";
-            this.cmbEstado.Size = new System.Drawing.Size(121, 21);
-            this.cmbEstado.TabIndex = 91;
-            // 
-            // lblestado
-            // 
-            this.lblestado.AutoSize = true;
-            this.lblestado.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblestado.ForeColor = System.Drawing.Color.White;
-            this.lblestado.Location = new System.Drawing.Point(31, 448);
-            this.lblestado.Name = "lblestado";
-            this.lblestado.Size = new System.Drawing.Size(56, 19);
-            this.lblestado.TabIndex = 89;
-            this.lblestado.Text = "Estado";
             // 
             // idt_citapaciente
             // 
@@ -323,12 +237,98 @@
             this.estado.Name = "estado";
             this.estado.ReadOnly = true;
             // 
+            // lblhistorialcitas
+            // 
+            this.lblhistorialcitas.AutoSize = true;
+            this.lblhistorialcitas.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhistorialcitas.ForeColor = System.Drawing.Color.White;
+            this.lblhistorialcitas.Location = new System.Drawing.Point(371, 9);
+            this.lblhistorialcitas.Name = "lblhistorialcitas";
+            this.lblhistorialcitas.Size = new System.Drawing.Size(145, 19);
+            this.lblhistorialcitas.TabIndex = 83;
+            this.lblhistorialcitas.Text = "Citas Completadas";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(464, 447);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 19);
+            this.label2.TabIndex = 90;
+            this.label2.Text = "Fecha Final";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(278, 446);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(94, 19);
+            this.label1.TabIndex = 89;
+            this.label1.Text = "Fecha Inical";
+            // 
+            // btnBuscarFecha
+            // 
+            this.btnBuscarFecha.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnBuscarFecha.FlatAppearance.BorderSize = 0;
+            this.btnBuscarFecha.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarFecha.Font = new System.Drawing.Font("Century Gothic", 10.25F);
+            this.btnBuscarFecha.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarFecha.Location = new System.Drawing.Point(661, 441);
+            this.btnBuscarFecha.Name = "btnBuscarFecha";
+            this.btnBuscarFecha.Size = new System.Drawing.Size(75, 28);
+            this.btnBuscarFecha.TabIndex = 88;
+            this.btnBuscarFecha.Text = "Buscar";
+            this.btnBuscarFecha.UseVisualStyleBackColor = false;
+            this.btnBuscarFecha.Click += new System.EventHandler(this.btnBuscarFecha_Click);
+            // 
+            // dateTimePicker2
+            // 
+            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker2.Location = new System.Drawing.Point(556, 445);
+            this.dateTimePicker2.Name = "dateTimePicker2";
+            this.dateTimePicker2.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePicker2.TabIndex = 87;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(375, 446);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(83, 20);
+            this.dateTimePicker1.TabIndex = 86;
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Completada",
+            "Pendiente"});
+            this.cmbEstado.Location = new System.Drawing.Point(93, 449);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(121, 21);
+            this.cmbEstado.TabIndex = 91;
+            // 
+            // lblestado
+            // 
+            this.lblestado.AutoSize = true;
+            this.lblestado.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblestado.ForeColor = System.Drawing.Color.White;
+            this.lblestado.Location = new System.Drawing.Point(31, 448);
+            this.lblestado.Name = "lblestado";
+            this.lblestado.Size = new System.Drawing.Size(56, 19);
+            this.lblestado.TabIndex = 89;
+            this.lblestado.Text = "Estado";
+            // 
             // FrmHistorialCitasCompletas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(51)))), ((int)(((byte)(61)))));
-            this.ClientSize = new System.Drawing.Size(1006, 482);
+            this.ClientSize = new System.Drawing.Size(1166, 482);
             this.Controls.Add(this.cmbEstado);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.lblestado);

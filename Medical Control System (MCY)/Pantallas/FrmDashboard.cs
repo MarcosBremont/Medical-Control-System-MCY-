@@ -174,5 +174,10 @@ namespace Medical_Control_System__MCY_.Pantallas
         {
             OpenChildForm(new FrmVerPagos());
         }
+
+        private void btnDeserts_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmHistorialCitasCompletas());
+        }
     }
 }

@@ -24,6 +24,8 @@ namespace Medical_Control_System__MCY_.Pantallas
         MySqlConnection con = null;
         MySqlCommand cmd = null;
         String cs = ("Server=localhost; database=medicalcontrolsystemmcs; user=root; password=1234");
+
+
         private void AgregarCitas_KeyDown(object sender, KeyEventArgs e)
         {
 
@@ -166,7 +168,7 @@ namespace Medical_Control_System__MCY_.Pantallas
 
         private void btnPagos_Click(object sender, EventArgs e)
         {
-
+          
         }
 
         private void btnActualizar_Click(object sender, EventArgs e)
