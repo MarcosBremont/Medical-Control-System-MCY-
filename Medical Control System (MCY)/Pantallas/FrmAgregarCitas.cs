@@ -49,7 +49,7 @@ namespace Medical_Control_System__MCY_.Pantallas
             {
                 con = new MySqlConnection(cs);
                 con.Open();
-                string query = "INSERT INTO t_citapaciente (nombre_Completo, fecha_nacimiento, edad, sexo, telefono, celular, direccion, alergias, otros_problemas, fecha_cita, hora_cita, totaldinero, abono) values (@nombre_Completo, @fecha_nacimiento, @edad, @sexo, @telefono, @celular, @direccion, @alergias, @otros_problemas, @fecha_cita, @hora_cita, @totaldinero, @abono)";
+                string query = "INSERT INTO t_citapaciente (nombre_Completo, fecha_nacimiento, edad, sexo, telefono, celular, direccion, alergias, otros_problemas, fecha_cita, hora_cita, totaldinero, abono, estado) values (@nombre_Completo, @fecha_nacimiento, @edad, @sexo, @telefono, @celular, @direccion, @alergias, @otros_problemas, @fecha_cita, @hora_cita, @totaldinero, @abono, @estado)";
                 MySqlCommand comando = new MySqlCommand(query, con);
                 comando.Parameters.AddWithValue("@nombre_Completo", txtnombrepaciente.Text);
                 comando.Parameters.AddWithValue("@fecha_nacimiento", txtfechanacimiento.Text);
@@ -172,7 +172,7 @@ namespace Medical_Control_System__MCY_.Pantallas
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "UPDATE t_citapaciente SET nombre_Completo = @nombre_Completo, fecha_nacimiento = @fecha_nacimiento, edad = @edad, sexo = @sexo, telefono = @telefono, celular = @celular, direccion = @direccion, alergias = @alergias, otros_problemas = @otros_problemas, fecha_cita = @fecha_cita, hora_cita = @hora_cita, totaldinero = @totaldinero, abono = @abono where idt_citapaciente=@idt_citapaciente";
+            string query = "UPDATE t_citapaciente SET nombre_Completo = @nombre_Completo, fecha_nacimiento = @fecha_nacimiento, edad = @edad, sexo = @sexo, telefono = @telefono, celular = @celular, direccion = @direccion, alergias = @alergias, otros_problemas = @otros_problemas, fecha_cita = @fecha_cita, hora_cita = @hora_cita, totaldinero = @totaldinero, abono = @abono, estado = @estado where idt_citapaciente=@idt_citapaciente";
             MySqlCommand comando = new MySqlCommand(query, con);
             comando.Parameters.AddWithValue("@idt_citapaciente", lblid.Text);
             comando.Parameters.AddWithValue("@nombre_Completo", txtnombrepaciente.Text);

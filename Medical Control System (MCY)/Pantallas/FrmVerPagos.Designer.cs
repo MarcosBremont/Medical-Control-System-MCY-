@@ -33,12 +33,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgvInventario = new System.Windows.Forms.DataGridView();
-            this.cmbPaciente = new System.Windows.Forms.ComboBox();
-            this.txtrestante = new System.Windows.Forms.TextBox();
             this.nombre_Completo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totaldinero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbPaciente = new System.Windows.Forms.ComboBox();
+            this.txtrestante = new System.Windows.Forms.TextBox();
             this.txttotal = new System.Windows.Forms.TextBox();
             this.lbltotal = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +61,6 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -108,23 +107,6 @@
             this.dgvInventario.Size = new System.Drawing.Size(947, 381);
             this.dgvInventario.TabIndex = 80;
             // 
-            // cmbPaciente
-            // 
-            this.cmbPaciente.FormattingEnabled = true;
-            this.cmbPaciente.Location = new System.Drawing.Point(55, 13);
-            this.cmbPaciente.Name = "cmbPaciente";
-            this.cmbPaciente.Size = new System.Drawing.Size(234, 21);
-            this.cmbPaciente.TabIndex = 81;
-            this.cmbPaciente.Text = "Seleccione el paciente";
-            this.cmbPaciente.SelectedIndexChanged += new System.EventHandler(this.cmbPaciente_SelectedIndexChanged);
-            // 
-            // txtrestante
-            // 
-            this.txtrestante.Location = new System.Drawing.Point(902, 428);
-            this.txtrestante.Name = "txtrestante";
-            this.txtrestante.Size = new System.Drawing.Size(100, 20);
-            this.txtrestante.TabIndex = 82;
-            // 
             // nombre_Completo
             // 
             this.nombre_Completo.DataPropertyName = "nombre_Completo";
@@ -152,6 +134,23 @@
             this.abono.HeaderText = "Abono";
             this.abono.Name = "abono";
             this.abono.ReadOnly = true;
+            // 
+            // cmbPaciente
+            // 
+            this.cmbPaciente.FormattingEnabled = true;
+            this.cmbPaciente.Location = new System.Drawing.Point(55, 13);
+            this.cmbPaciente.Name = "cmbPaciente";
+            this.cmbPaciente.Size = new System.Drawing.Size(234, 21);
+            this.cmbPaciente.TabIndex = 81;
+            this.cmbPaciente.Text = "Seleccione el paciente";
+            this.cmbPaciente.SelectedIndexChanged += new System.EventHandler(this.cmbPaciente_SelectedIndexChanged);
+            // 
+            // txtrestante
+            // 
+            this.txtrestante.Location = new System.Drawing.Point(902, 428);
+            this.txtrestante.Name = "txtrestante";
+            this.txtrestante.Size = new System.Drawing.Size(100, 20);
+            this.txtrestante.TabIndex = 82;
             // 
             // txttotal
             // 
@@ -184,6 +183,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1033, 464);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbltotal);

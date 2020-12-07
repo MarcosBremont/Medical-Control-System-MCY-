@@ -93,6 +93,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\Conexion.cs" />
+    <Compile Include="Pantallas\FrmHistorialCitasCompletas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\FrmHistorialCitasCompletas.Designer.cs">
+      <DependentUpon>FrmHistorialCitasCompletas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\FrmOdontodiagrama.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Pantallas\FrmHistorialCitasCompletas.resx">
+      <DependentUpon>FrmHistorialCitasCompletas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\FrmOdontodiagrama.resx">
       <DependentUpon>FrmOdontodiagrama.cs</DependentUpon>
     </EmbeddedResource>
