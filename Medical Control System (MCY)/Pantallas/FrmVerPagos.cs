@@ -29,6 +29,13 @@ namespace Medical_Control_System__MCY_
             string prm_nombre_Completo = cmbPaciente.Text;
             S_PagosPacientes(prm_nombre_Completo);
             CargarComboboxPaciente();
+            CargarTotalDinero();
+        }
+
+        public void CargarTotalDinero()
+        {
+            int Total = (int)dgvInventario.Rows[0].Cells[2].Value;
+            txttotal.Text = Total.ToString();
         }
 
         public void S_PagosPacientes(string prm_nombre_Completo)
@@ -40,7 +47,8 @@ namespace Medical_Control_System__MCY_
             da.SelectCommand.Parameters.Add("prm_nombre_Completo", MySqlDbType.String).Value = prm_nombre_Completo;
             da.Fill(tabla);
             dgvInventario.DataSource = tabla;
-            
+            txtrestante.Text = tabla.Compute("Sum(abono)", "").ToString();
+
         }
 
         public void CargarComboboxPaciente()
@@ -49,7 +57,7 @@ namespace Medical_Control_System__MCY_
             DataTable dt = new DataTable();
             using (MySqlConnection conn = new MySqlConnection("Server=localhost; database=medicalcontrolsystemmcs; user=root; password=1234"))
             {
-                string query = "select idt_citapaciente, nombre_Completo from t_citapaciente";
+                string query = "select idt_citapaciente, nombre_Completo from t_citapaciente group by nombre_Completo";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
@@ -57,7 +65,7 @@ namespace Medical_Control_System__MCY_
                 da.Fill(dt);
             }
 
-            cmbPaciente.DisplayMember = "nombre_Completo";  
+            cmbPaciente.DisplayMember = "nombre_Completo";
             cmbPaciente.ValueMember = "idt_citapaciente";
             cmbPaciente.DataSource = dt;
         }
@@ -67,6 +75,9 @@ namespace Medical_Control_System__MCY_
         {
             string nombre_Completo = cmbPaciente.Text;
             S_PagosPacientes(nombre_Completo);
+            CargarTotalDinero();
+            //int num1 = (int)dgvInventario.Rows[0].Cells[3].Value;
+            //txtrestante.Text = (num1).ToString();
         }
     }
 }

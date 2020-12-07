@@ -39,6 +39,9 @@
             this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.totaldinero = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.abono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txttotal = new System.Windows.Forms.TextBox();
+            this.lbltotal = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,10 +58,10 @@
             this.dgvInventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvInventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(167)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Empty;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvInventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
@@ -102,7 +105,7 @@
             this.dgvInventario.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvInventario.RowTemplate.Height = 30;
             this.dgvInventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvInventario.Size = new System.Drawing.Size(693, 381);
+            this.dgvInventario.Size = new System.Drawing.Size(947, 381);
             this.dgvInventario.TabIndex = 80;
             // 
             // cmbPaciente
@@ -110,14 +113,14 @@
             this.cmbPaciente.FormattingEnabled = true;
             this.cmbPaciente.Location = new System.Drawing.Point(55, 13);
             this.cmbPaciente.Name = "cmbPaciente";
-            this.cmbPaciente.Size = new System.Drawing.Size(131, 21);
+            this.cmbPaciente.Size = new System.Drawing.Size(234, 21);
             this.cmbPaciente.TabIndex = 81;
             this.cmbPaciente.Text = "Seleccione el paciente";
             this.cmbPaciente.SelectedIndexChanged += new System.EventHandler(this.cmbPaciente_SelectedIndexChanged);
             // 
             // txtrestante
             // 
-            this.txtrestante.Location = new System.Drawing.Point(629, 428);
+            this.txtrestante.Location = new System.Drawing.Point(902, 428);
             this.txtrestante.Name = "txtrestante";
             this.txtrestante.Size = new System.Drawing.Size(100, 20);
             this.txtrestante.TabIndex = 82;
@@ -150,11 +153,41 @@
             this.abono.Name = "abono";
             this.abono.ReadOnly = true;
             // 
+            // txttotal
+            // 
+            this.txttotal.Location = new System.Drawing.Point(737, 430);
+            this.txttotal.Name = "txttotal";
+            this.txttotal.Size = new System.Drawing.Size(100, 20);
+            this.txttotal.TabIndex = 83;
+            // 
+            // lbltotal
+            // 
+            this.lbltotal.AutoSize = true;
+            this.lbltotal.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltotal.Location = new System.Drawing.Point(629, 429);
+            this.lbltotal.Name = "lbltotal";
+            this.lbltotal.Size = new System.Drawing.Size(102, 19);
+            this.lbltotal.TabIndex = 84;
+            this.lbltotal.Text = "Total Trabajo";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(841, 428);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 19);
+            this.label1.TabIndex = 85;
+            this.label1.Text = "Abono";
+            // 
             // FrmVerPagos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1033, 464);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbltotal);
+            this.Controls.Add(this.txttotal);
             this.Controls.Add(this.txtrestante);
             this.Controls.Add(this.cmbPaciente);
             this.Controls.Add(this.dgvInventario);
@@ -177,5 +210,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn celular;
         private System.Windows.Forms.DataGridViewTextBoxColumn totaldinero;
         private System.Windows.Forms.DataGridViewTextBoxColumn abono;
+        private System.Windows.Forms.TextBox txttotal;
+        private System.Windows.Forms.Label lbltotal;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.btnAboutUs = new System.Windows.Forms.Button();
             this.btnMyCart = new System.Windows.Forms.Button();
-            this.btnDrinks = new System.Windows.Forms.Button();
+            this.btnVerPagos = new System.Windows.Forms.Button();
             this.btnDeserts = new System.Windows.Forms.Button();
             this.btnCitas = new System.Windows.Forms.Button();
             this.pnlDesktop = new System.Windows.Forms.Panel();
@@ -109,20 +109,21 @@
             this.btnMyCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnMyCart.UseVisualStyleBackColor = false;
             // 
-            // btnDrinks
+            // btnVerPagos
             // 
-            this.btnDrinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.btnDrinks.FlatAppearance.BorderSize = 0;
-            this.btnDrinks.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDrinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDrinks.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnDrinks.Location = new System.Drawing.Point(3, 230);
-            this.btnDrinks.Name = "btnDrinks";
-            this.btnDrinks.Size = new System.Drawing.Size(216, 37);
-            this.btnDrinks.TabIndex = 18;
-            this.btnDrinks.Text = "   Ver Citas";
-            this.btnDrinks.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnDrinks.UseVisualStyleBackColor = false;
+            this.btnVerPagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnVerPagos.FlatAppearance.BorderSize = 0;
+            this.btnVerPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVerPagos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVerPagos.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnVerPagos.Location = new System.Drawing.Point(3, 230);
+            this.btnVerPagos.Name = "btnVerPagos";
+            this.btnVerPagos.Size = new System.Drawing.Size(216, 37);
+            this.btnVerPagos.TabIndex = 18;
+            this.btnVerPagos.Text = "   Ver Pagos";
+            this.btnVerPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnVerPagos.UseVisualStyleBackColor = false;
+            this.btnVerPagos.Click += new System.EventHandler(this.btnVerPagos_Click);
             // 
             // btnDeserts
             // 
@@ -503,7 +504,7 @@
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
-            // Dashboard
+            // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -514,12 +515,12 @@
             this.Controls.Add(this.pnlDesktop);
             this.Controls.Add(this.btnAboutUs);
             this.Controls.Add(this.btnMyCart);
-            this.Controls.Add(this.btnDrinks);
+            this.Controls.Add(this.btnVerPagos);
             this.Controls.Add(this.btnDeserts);
             this.Controls.Add(this.btnCitas);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Dashboard";
+            this.Name = "FrmDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Dashboard";
             this.Load += new System.EventHandler(this.Dashboard_Load);
@@ -550,7 +551,7 @@
         internal System.Windows.Forms.PictureBox picClose;
         internal System.Windows.Forms.Button btnAboutUs;
         internal System.Windows.Forms.Button btnMyCart;
-        internal System.Windows.Forms.Button btnDrinks;
+        internal System.Windows.Forms.Button btnVerPagos;
         internal System.Windows.Forms.Button btnDeserts;
         internal System.Windows.Forms.Button btnCitas;
         private System.Windows.Forms.Panel panel6;

@@ -32,7 +32,6 @@ namespace Medical_Control_System__MCY_.Pantallas
         public void clear()
         {
             txtnombrepaciente.Text = "";
-            txtapellidopaciente.Text = "";
             txtedad.Text = "";
             txtCelular.Text = "";
             txtDireccion.Text = "";
@@ -50,7 +49,7 @@ namespace Medical_Control_System__MCY_.Pantallas
             {
                 con = new MySqlConnection(cs);
                 con.Open();
-                string query = "INSERT INTO t_citapaciente (nombre_Completo, fecha_nacimiento, edad, sexo, telefono, celular, direccion, alergias, otros_problemas, fecha_cita, hora_cita, totaldinero, abono) values (@nombre_Completo, @fecha_nacimiento, @edad, @sexo, @telefono, @celular, @direccion, @alergias, @otros_problemas, @fecha_cita, @hora_cita, totaldinero, abono)";
+                string query = "INSERT INTO t_citapaciente (nombre_Completo, fecha_nacimiento, edad, sexo, telefono, celular, direccion, alergias, otros_problemas, fecha_cita, hora_cita, totaldinero, abono) values (@nombre_Completo, @fecha_nacimiento, @edad, @sexo, @telefono, @celular, @direccion, @alergias, @otros_problemas, @fecha_cita, @hora_cita, @totaldinero, @abono)";
                 MySqlCommand comando = new MySqlCommand(query, con);
                 comando.Parameters.AddWithValue("@nombre_Completo", txtnombrepaciente.Text);
                 comando.Parameters.AddWithValue("@fecha_nacimiento", txtfechanacimiento.Text);
@@ -133,13 +132,13 @@ namespace Medical_Control_System__MCY_.Pantallas
             dtphoracita.Text = dgvcitas.CurrentRow.Cells[5].Value.ToString();
             txtfechanacimiento.Text = dgvcitas.CurrentRow.Cells[6].Value.ToString();
             txtedad.Text = dgvcitas.CurrentRow.Cells[7].Value.ToString();
-            cmbSexo.Text = dgvcitas.CurrentRow.Cells[9].Value.ToString();
-            txtDireccion.Text = dgvcitas.CurrentRow.Cells[10].Value.ToString();
-            txtAlergias.Text = dgvcitas.CurrentRow.Cells[11].Value.ToString();
-            txtOtrosProblemas.Text = dgvcitas.CurrentRow.Cells[12].Value.ToString();
-            txttotaldinero.Text = dgvcitas.CurrentRow.Cells[13].Value.ToString();
-            txtabono.Text = dgvcitas.CurrentRow.Cells[14].Value.ToString();
-            cmbEstado.Text = dgvcitas.CurrentRow.Cells[15].Value.ToString();
+            cmbSexo.Text = dgvcitas.CurrentRow.Cells[8].Value.ToString();
+            txtDireccion.Text = dgvcitas.CurrentRow.Cells[9].Value.ToString();
+            txtAlergias.Text = dgvcitas.CurrentRow.Cells[10].Value.ToString();
+            txtOtrosProblemas.Text = dgvcitas.CurrentRow.Cells[11].Value.ToString();
+            txttotaldinero.Text = dgvcitas.CurrentRow.Cells[12].Value.ToString();
+            txtabono.Text = dgvcitas.CurrentRow.Cells[13].Value.ToString();
+            cmbEstado.Text = dgvcitas.CurrentRow.Cells[14].Value.ToString();
         }
 
         private void btnBuscarFecha_Click(object sender, EventArgs e)
