@@ -28,14 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblnombrepaciente = new System.Windows.Forms.Label();
             this.txtnombrepaciente = new System.Windows.Forms.TextBox();
-            this.txtapellidopaciente = new System.Windows.Forms.TextBox();
-            this.lblapellidopaciente = new System.Windows.Forms.Label();
             this.txtfechanacimiento = new System.Windows.Forms.TextBox();
             this.lblfechanacimiento = new System.Windows.Forms.Label();
             this.txtedad = new System.Windows.Forms.TextBox();
@@ -59,22 +57,6 @@
             this.dtphoracita = new System.Windows.Forms.DateTimePicker();
             this.lblagregarcita = new System.Windows.Forms.Label();
             this.dgvcitas = new System.Windows.Forms.DataGridView();
-            this.idt_citapaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre_paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido_paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_cita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hora_cita = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alergias = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.otros_problemas = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.totaldinero = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.abono = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.btnBuscarFecha = new System.Windows.Forms.Button();
@@ -93,6 +75,21 @@
             this.cmbEstado = new System.Windows.Forms.ComboBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblnumero = new System.Windows.Forms.Label();
+            this.idt_citapaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_Completo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_cita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hora_cita = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fecha_nacimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.edad = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sexo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.direccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.alergias = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.otros_problemas = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.totaldinero = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.abono = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.estado = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcitas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -118,28 +115,6 @@
             this.txtnombrepaciente.Name = "txtnombrepaciente";
             this.txtnombrepaciente.Size = new System.Drawing.Size(165, 30);
             this.txtnombrepaciente.TabIndex = 13;
-            // 
-            // txtapellidopaciente
-            // 
-            this.txtapellidopaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
-            this.txtapellidopaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtapellidopaciente.ForeColor = System.Drawing.Color.Silver;
-            this.txtapellidopaciente.Location = new System.Drawing.Point(214, 241);
-            this.txtapellidopaciente.Multiline = true;
-            this.txtapellidopaciente.Name = "txtapellidopaciente";
-            this.txtapellidopaciente.Size = new System.Drawing.Size(165, 30);
-            this.txtapellidopaciente.TabIndex = 15;
-            // 
-            // lblapellidopaciente
-            // 
-            this.lblapellidopaciente.AutoSize = true;
-            this.lblapellidopaciente.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblapellidopaciente.ForeColor = System.Drawing.Color.White;
-            this.lblapellidopaciente.Location = new System.Drawing.Point(214, 213);
-            this.lblapellidopaciente.Name = "lblapellidopaciente";
-            this.lblapellidopaciente.Size = new System.Drawing.Size(131, 19);
-            this.lblapellidopaciente.TabIndex = 14;
-            this.lblapellidopaciente.Text = "Apellido Paciente";
             // 
             // txtfechanacimiento
             // 
@@ -397,19 +372,18 @@
             this.dgvcitas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvcitas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dgvcitas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvcitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgvcitas.ColumnHeadersHeight = 40;
             this.dgvcitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idt_citapaciente,
-            this.nombre_paciente,
-            this.apellido_paciente,
+            this.nombre_Completo,
             this.telefono,
             this.celular,
             this.fecha_cita,
@@ -424,14 +398,14 @@
             this.abono,
             this.estado});
             this.dgvcitas.Cursor = System.Windows.Forms.Cursors.Hand;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(173)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvcitas.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(173)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvcitas.DefaultCellStyle = dataGridViewCellStyle6;
             this.dgvcitas.EnableHeadersVisualStyles = false;
             this.dgvcitas.GridColor = System.Drawing.SystemColors.Control;
             this.dgvcitas.Location = new System.Drawing.Point(12, 52);
@@ -439,140 +413,28 @@
             this.dgvcitas.Name = "dgvcitas";
             this.dgvcitas.ReadOnly = true;
             this.dgvcitas.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(173)))), ((int)(((byte)(168)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvcitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(173)))), ((int)(((byte)(168)))));
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvcitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgvcitas.RowHeadersVisible = false;
             this.dgvcitas.RowHeadersWidth = 10;
-            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Bahnschrift SemiLight", 10F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(111)))));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.dgvcitas.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Bahnschrift SemiLight", 10F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(22)))), ((int)(((byte)(111)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvcitas.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgvcitas.RowTemplate.Height = 30;
             this.dgvcitas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvcitas.Size = new System.Drawing.Size(1109, 146);
             this.dgvcitas.TabIndex = 80;
             this.dgvcitas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvcitas_CellClick);
             this.dgvcitas.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvcitas_CellFormatting);
-            // 
-            // idt_citapaciente
-            // 
-            this.idt_citapaciente.DataPropertyName = "idt_citapaciente";
-            this.idt_citapaciente.HeaderText = "N. Paciente";
-            this.idt_citapaciente.Name = "idt_citapaciente";
-            this.idt_citapaciente.ReadOnly = true;
-            // 
-            // nombre_paciente
-            // 
-            this.nombre_paciente.DataPropertyName = "nombre_paciente";
-            this.nombre_paciente.HeaderText = "Nombre P.";
-            this.nombre_paciente.Name = "nombre_paciente";
-            this.nombre_paciente.ReadOnly = true;
-            // 
-            // apellido_paciente
-            // 
-            this.apellido_paciente.DataPropertyName = "apellido_paciente";
-            this.apellido_paciente.HeaderText = "Apellido P.";
-            this.apellido_paciente.Name = "apellido_paciente";
-            this.apellido_paciente.ReadOnly = true;
-            // 
-            // telefono
-            // 
-            this.telefono.DataPropertyName = "telefono";
-            this.telefono.HeaderText = "Telefono";
-            this.telefono.Name = "telefono";
-            this.telefono.ReadOnly = true;
-            // 
-            // celular
-            // 
-            this.celular.DataPropertyName = "celular";
-            this.celular.HeaderText = "Celular";
-            this.celular.Name = "celular";
-            this.celular.ReadOnly = true;
-            // 
-            // fecha_cita
-            // 
-            this.fecha_cita.DataPropertyName = "fecha_cita";
-            this.fecha_cita.HeaderText = "Fecha Cita";
-            this.fecha_cita.Name = "fecha_cita";
-            this.fecha_cita.ReadOnly = true;
-            // 
-            // hora_cita
-            // 
-            this.hora_cita.DataPropertyName = "hora_cita";
-            this.hora_cita.HeaderText = "Hora Cita";
-            this.hora_cita.Name = "hora_cita";
-            this.hora_cita.ReadOnly = true;
-            // 
-            // fecha_nacimiento
-            // 
-            this.fecha_nacimiento.DataPropertyName = "fecha_nacimiento";
-            this.fecha_nacimiento.HeaderText = "Fecha N.";
-            this.fecha_nacimiento.Name = "fecha_nacimiento";
-            this.fecha_nacimiento.ReadOnly = true;
-            // 
-            // edad
-            // 
-            this.edad.DataPropertyName = "edad";
-            this.edad.HeaderText = "Edad";
-            this.edad.Name = "edad";
-            this.edad.ReadOnly = true;
-            // 
-            // sexo
-            // 
-            this.sexo.DataPropertyName = "sexo";
-            this.sexo.HeaderText = "Sexo";
-            this.sexo.Name = "sexo";
-            this.sexo.ReadOnly = true;
-            // 
-            // direccion
-            // 
-            this.direccion.DataPropertyName = "direccion";
-            this.direccion.HeaderText = "Direccion";
-            this.direccion.Name = "direccion";
-            this.direccion.ReadOnly = true;
-            // 
-            // alergias
-            // 
-            this.alergias.DataPropertyName = "alergias";
-            this.alergias.HeaderText = "Alergias";
-            this.alergias.Name = "alergias";
-            this.alergias.ReadOnly = true;
-            // 
-            // otros_problemas
-            // 
-            this.otros_problemas.DataPropertyName = "otros_problemas";
-            this.otros_problemas.HeaderText = "Otros Problemas";
-            this.otros_problemas.Name = "otros_problemas";
-            this.otros_problemas.ReadOnly = true;
-            // 
-            // totaldinero
-            // 
-            this.totaldinero.DataPropertyName = "totaldinero";
-            this.totaldinero.HeaderText = "Total Dinero";
-            this.totaldinero.Name = "totaldinero";
-            this.totaldinero.ReadOnly = true;
-            // 
-            // abono
-            // 
-            this.abono.DataPropertyName = "abono";
-            this.abono.HeaderText = "Abono";
-            this.abono.Name = "abono";
-            this.abono.ReadOnly = true;
-            // 
-            // estado
-            // 
-            this.estado.DataPropertyName = "estado";
-            this.estado.HeaderText = "Estado";
-            this.estado.Name = "estado";
-            this.estado.ReadOnly = true;
             // 
             // dateTimePicker1
             // 
@@ -784,7 +646,112 @@
             this.lblnumero.TabIndex = 98;
             this.lblnumero.Text = "..";
             // 
-            // AgregarCitas
+            // idt_citapaciente
+            // 
+            this.idt_citapaciente.DataPropertyName = "idt_citapaciente";
+            this.idt_citapaciente.HeaderText = "N. Paciente";
+            this.idt_citapaciente.Name = "idt_citapaciente";
+            this.idt_citapaciente.ReadOnly = true;
+            // 
+            // nombre_Completo
+            // 
+            this.nombre_Completo.DataPropertyName = "nombre_Completo";
+            this.nombre_Completo.HeaderText = "Nombre P.";
+            this.nombre_Completo.Name = "nombre_Completo";
+            this.nombre_Completo.ReadOnly = true;
+            // 
+            // telefono
+            // 
+            this.telefono.DataPropertyName = "telefono";
+            this.telefono.HeaderText = "Telefono";
+            this.telefono.Name = "telefono";
+            this.telefono.ReadOnly = true;
+            // 
+            // celular
+            // 
+            this.celular.DataPropertyName = "celular";
+            this.celular.HeaderText = "Celular";
+            this.celular.Name = "celular";
+            this.celular.ReadOnly = true;
+            // 
+            // fecha_cita
+            // 
+            this.fecha_cita.DataPropertyName = "fecha_cita";
+            this.fecha_cita.HeaderText = "Fecha Cita";
+            this.fecha_cita.Name = "fecha_cita";
+            this.fecha_cita.ReadOnly = true;
+            // 
+            // hora_cita
+            // 
+            this.hora_cita.DataPropertyName = "hora_cita";
+            this.hora_cita.HeaderText = "Hora Cita";
+            this.hora_cita.Name = "hora_cita";
+            this.hora_cita.ReadOnly = true;
+            // 
+            // fecha_nacimiento
+            // 
+            this.fecha_nacimiento.DataPropertyName = "fecha_nacimiento";
+            this.fecha_nacimiento.HeaderText = "Fecha N.";
+            this.fecha_nacimiento.Name = "fecha_nacimiento";
+            this.fecha_nacimiento.ReadOnly = true;
+            // 
+            // edad
+            // 
+            this.edad.DataPropertyName = "edad";
+            this.edad.HeaderText = "Edad";
+            this.edad.Name = "edad";
+            this.edad.ReadOnly = true;
+            // 
+            // sexo
+            // 
+            this.sexo.DataPropertyName = "sexo";
+            this.sexo.HeaderText = "Sexo";
+            this.sexo.Name = "sexo";
+            this.sexo.ReadOnly = true;
+            // 
+            // direccion
+            // 
+            this.direccion.DataPropertyName = "direccion";
+            this.direccion.HeaderText = "Direccion";
+            this.direccion.Name = "direccion";
+            this.direccion.ReadOnly = true;
+            // 
+            // alergias
+            // 
+            this.alergias.DataPropertyName = "alergias";
+            this.alergias.HeaderText = "Alergias";
+            this.alergias.Name = "alergias";
+            this.alergias.ReadOnly = true;
+            // 
+            // otros_problemas
+            // 
+            this.otros_problemas.DataPropertyName = "otros_problemas";
+            this.otros_problemas.HeaderText = "Otros Problemas";
+            this.otros_problemas.Name = "otros_problemas";
+            this.otros_problemas.ReadOnly = true;
+            // 
+            // totaldinero
+            // 
+            this.totaldinero.DataPropertyName = "totaldinero";
+            this.totaldinero.HeaderText = "Total Dinero";
+            this.totaldinero.Name = "totaldinero";
+            this.totaldinero.ReadOnly = true;
+            // 
+            // abono
+            // 
+            this.abono.DataPropertyName = "abono";
+            this.abono.HeaderText = "Abono";
+            this.abono.Name = "abono";
+            this.abono.ReadOnly = true;
+            // 
+            // estado
+            // 
+            this.estado.DataPropertyName = "estado";
+            this.estado.HeaderText = "Estado";
+            this.estado.Name = "estado";
+            this.estado.ReadOnly = true;
+            // 
+            // FrmAgregarCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -831,12 +798,10 @@
             this.Controls.Add(this.lbledad);
             this.Controls.Add(this.txtfechanacimiento);
             this.Controls.Add(this.lblfechanacimiento);
-            this.Controls.Add(this.txtapellidopaciente);
-            this.Controls.Add(this.lblapellidopaciente);
             this.Controls.Add(this.txtnombrepaciente);
             this.Controls.Add(this.lblnombrepaciente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AgregarCitas";
+            this.Name = "FrmAgregarCitas";
             this.Text = "AgregarCitas";
             this.Load += new System.EventHandler(this.AgregarCitas_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AgregarCitas_KeyDown);
@@ -850,8 +815,6 @@
         #endregion
         private System.Windows.Forms.Label lblnombrepaciente;
         private System.Windows.Forms.TextBox txtnombrepaciente;
-        private System.Windows.Forms.TextBox txtapellidopaciente;
-        private System.Windows.Forms.Label lblapellidopaciente;
         private System.Windows.Forms.TextBox txtfechanacimiento;
         private System.Windows.Forms.Label lblfechanacimiento;
         private System.Windows.Forms.TextBox txtedad;
@@ -886,9 +849,15 @@
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label lblnumero;
+        public System.Windows.Forms.DateTimePicker dtpfechacita;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idt_citapaciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_paciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellido_paciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_Completo;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn celular;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_cita;
@@ -902,12 +871,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totaldinero;
         private System.Windows.Forms.DataGridViewTextBoxColumn abono;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblnumero;
-        public System.Windows.Forms.DateTimePicker dtpfechacita;
-        public System.Windows.Forms.DateTimePicker dateTimePicker1;
-        public System.Windows.Forms.DateTimePicker dateTimePicker2;
     }
 }

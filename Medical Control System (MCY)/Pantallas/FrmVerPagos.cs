@@ -25,19 +25,19 @@ namespace Medical_Control_System__MCY_
 
         private void FrmVerCitas_Load(object sender, EventArgs e)
         {
-            dgvInventario.AutoGenerateColumns = true;
-            string NombrePaciente = cmbPaciente.Text;
-            S_PagosPacientes(NombrePaciente);
+            dgvInventario.AutoGenerateColumns = false;
+            string prm_nombre_Completo = cmbPaciente.Text;
+            S_PagosPacientes(prm_nombre_Completo);
             CargarComboboxPaciente();
         }
 
-        public void S_PagosPacientes(string prm_nombre_paciente)
+        public void S_PagosPacientes(string prm_nombre_Completo)
         {
             con = new MySqlConnection(cs);
             DataTable tabla = new DataTable();
             MySqlDataAdapter da = new MySqlDataAdapter("S_PagosPacientes", con);
             da.SelectCommand.CommandType = System.Data.CommandType.StoredProcedure;
-            da.SelectCommand.Parameters.Add("prm_nombre_paciente", MySqlDbType.String).Value = prm_nombre_paciente;
+            da.SelectCommand.Parameters.Add("prm_nombre_Completo", MySqlDbType.String).Value = prm_nombre_Completo;
             da.Fill(tabla);
             dgvInventario.DataSource = tabla;
             
@@ -49,7 +49,7 @@ namespace Medical_Control_System__MCY_
             DataTable dt = new DataTable();
             using (MySqlConnection conn = new MySqlConnection("Server=localhost; database=medicalcontrolsystemmcs; user=root; password=1234"))
             {
-                string query = "select idt_citapaciente, nombre_paciente from t_citapaciente";
+                string query = "select idt_citapaciente, nombre_Completo from t_citapaciente";
 
                 MySqlCommand cmd = new MySqlCommand(query, conn);
 
@@ -57,15 +57,16 @@ namespace Medical_Control_System__MCY_
                 da.Fill(dt);
             }
 
-            cmbPaciente.DisplayMember = "nombre_paciente";  
+            cmbPaciente.DisplayMember = "nombre_Completo";  
             cmbPaciente.ValueMember = "idt_citapaciente";
             cmbPaciente.DataSource = dt;
         }
 
+
         private void cmbPaciente_SelectedIndexChanged(object sender, EventArgs e)
         {
-            string NombrePaciente = cmbPaciente.Text;
-            S_PagosPacientes(NombrePaciente);
+            string nombre_Completo = cmbPaciente.Text;
+            S_PagosPacientes(nombre_Completo);
         }
     }
 }

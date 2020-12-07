@@ -50,10 +50,9 @@ namespace Medical_Control_System__MCY_.Pantallas
             {
                 con = new MySqlConnection(cs);
                 con.Open();
-                string query = "INSERT INTO t_citapaciente (nombre_paciente, apellido_paciente, fecha_nacimiento, edad, sexo, telefono, celular, direccion, alergias, otros_problemas, fecha_cita, hora_cita, totaldinero, abono) values (@nombre_paciente, @apellido_paciente, @fecha_nacimiento, @edad, @sexo, @telefono, @celular, @direccion, @alergias, @otros_problemas, @fecha_cita, @hora_cita, totaldinero, abono)";
+                string query = "INSERT INTO t_citapaciente (nombre_Completo, fecha_nacimiento, edad, sexo, telefono, celular, direccion, alergias, otros_problemas, fecha_cita, hora_cita, totaldinero, abono) values (@nombre_Completo, @fecha_nacimiento, @edad, @sexo, @telefono, @celular, @direccion, @alergias, @otros_problemas, @fecha_cita, @hora_cita, totaldinero, abono)";
                 MySqlCommand comando = new MySqlCommand(query, con);
-                comando.Parameters.AddWithValue("@nombre_paciente", txtnombrepaciente.Text);
-                comando.Parameters.AddWithValue("@apellido_paciente", txtapellidopaciente.Text);
+                comando.Parameters.AddWithValue("@nombre_Completo", txtnombrepaciente.Text);
                 comando.Parameters.AddWithValue("@fecha_nacimiento", txtfechanacimiento.Text);
                 comando.Parameters.AddWithValue("@edad", txtedad.Text);
                 comando.Parameters.AddWithValue("@sexo", cmbSexo.Text);
@@ -128,13 +127,12 @@ namespace Medical_Control_System__MCY_.Pantallas
 
             lblid.Text = dgvcitas.CurrentRow.Cells[0].Value.ToString();
             txtnombrepaciente.Text = dgvcitas.CurrentRow.Cells[1].Value.ToString();
-            txtapellidopaciente.Text = dgvcitas.CurrentRow.Cells[2].Value.ToString();
-            txtTelefono.Text = dgvcitas.CurrentRow.Cells[3].Value.ToString();
-            txtCelular.Text = dgvcitas.CurrentRow.Cells[4].Value.ToString();
-            dtpfechacita.Text = dgvcitas.CurrentRow.Cells[5].Value.ToString();
-            dtphoracita.Text = dgvcitas.CurrentRow.Cells[6].Value.ToString();
-            txtfechanacimiento.Text = dgvcitas.CurrentRow.Cells[7].Value.ToString();
-            txtedad.Text = dgvcitas.CurrentRow.Cells[8].Value.ToString();
+            txtTelefono.Text = dgvcitas.CurrentRow.Cells[2].Value.ToString();
+            txtCelular.Text = dgvcitas.CurrentRow.Cells[3].Value.ToString();
+            dtpfechacita.Text = dgvcitas.CurrentRow.Cells[4].Value.ToString();
+            dtphoracita.Text = dgvcitas.CurrentRow.Cells[5].Value.ToString();
+            txtfechanacimiento.Text = dgvcitas.CurrentRow.Cells[6].Value.ToString();
+            txtedad.Text = dgvcitas.CurrentRow.Cells[7].Value.ToString();
             cmbSexo.Text = dgvcitas.CurrentRow.Cells[9].Value.ToString();
             txtDireccion.Text = dgvcitas.CurrentRow.Cells[10].Value.ToString();
             txtAlergias.Text = dgvcitas.CurrentRow.Cells[11].Value.ToString();
@@ -175,11 +173,10 @@ namespace Medical_Control_System__MCY_.Pantallas
         private void btnActualizar_Click(object sender, EventArgs e)
         {
             con.Open();
-            string query = "UPDATE t_citapaciente SET nombre_paciente = @nombre_paciente, apellido_paciente = @apellido_paciente, fecha_nacimiento = @fecha_nacimiento, edad = @edad, sexo = @sexo, telefono = @telefono, celular = @celular, direccion = @direccion, alergias = @alergias, otros_problemas = @otros_problemas, fecha_cita = @fecha_cita, hora_cita = @hora_cita, totaldinero = @totaldinero, abono = @abono where idt_citapaciente=@idt_citapaciente";
+            string query = "UPDATE t_citapaciente SET nombre_Completo = @nombre_Completo, fecha_nacimiento = @fecha_nacimiento, edad = @edad, sexo = @sexo, telefono = @telefono, celular = @celular, direccion = @direccion, alergias = @alergias, otros_problemas = @otros_problemas, fecha_cita = @fecha_cita, hora_cita = @hora_cita, totaldinero = @totaldinero, abono = @abono where idt_citapaciente=@idt_citapaciente";
             MySqlCommand comando = new MySqlCommand(query, con);
             comando.Parameters.AddWithValue("@idt_citapaciente", lblid.Text);
-            comando.Parameters.AddWithValue("@nombre_paciente", txtnombrepaciente.Text);
-            comando.Parameters.AddWithValue("@apellido_paciente", txtapellidopaciente.Text);
+            comando.Parameters.AddWithValue("@nombre_Completo", txtnombrepaciente.Text);
             comando.Parameters.AddWithValue("@fecha_nacimiento", txtfechanacimiento.Text);
             comando.Parameters.AddWithValue("@edad", txtedad.Text);
             comando.Parameters.AddWithValue("@sexo", cmbSexo.Text);
