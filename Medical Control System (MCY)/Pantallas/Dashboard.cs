@@ -158,5 +158,10 @@ namespace Medical_Control_System__MCY_.Pantallas
 
 
         }
+
+        private void btnPagos_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmVerCitas());
+        }
     }
 }
