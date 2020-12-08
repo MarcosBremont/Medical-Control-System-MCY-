@@ -189,6 +189,7 @@
     <None Include="Resources\hermosa-chica-sentada-oficina-dentista_1157-21014.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\home.png" />
     <None Include="Resources\configurar.png" />
     <None Include="Resources\logout.png" />
     <None Include="Resources\facebook.png" />
