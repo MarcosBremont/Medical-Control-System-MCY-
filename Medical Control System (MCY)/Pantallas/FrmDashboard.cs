@@ -131,12 +131,12 @@ namespace Medical_Control_System__MCY_.Pantallas
             FrmAgregarCitas agr = new FrmAgregarCitas();
             agr.CargarDgvCitas();
             CargarCantidadCita();
-
         }
 
         public void CargarCantidadCita()
         {
             FrmAgregarCitas agr = new FrmAgregarCitas();
+            agr.CargarDgvCitas();
             lblcitasparahoy.Text = agr.dgvcitas.RowCount.ToString();
         }
 

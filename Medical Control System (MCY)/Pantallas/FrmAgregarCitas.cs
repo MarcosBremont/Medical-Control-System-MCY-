@@ -104,7 +104,7 @@ namespace Medical_Control_System__MCY_.Pantallas
                    // this.dgvcitas.RowsDefaultCellStyle.BackColor = Color.Red;
                     row.DefaultCellStyle.BackColor = Color.Red;
                     lblnumero.Text = dgvcitas.RowCount.ToString();
-
+                    int numerocount = int.Parse(lblnumero.Text);
                 }
                 else
                 {
@@ -121,6 +121,8 @@ namespace Medical_Control_System__MCY_.Pantallas
             DateTime fecha2 = dateTimePicker2.Value;
             S_fecha(fecha1, fecha2);
             CargarColores();
+            lblnumero.Text = dgvcitas.RowCount.ToString();
+            int numerocount = int.Parse(lblnumero.Text);
         }
 
         private void dgvcitas_CellClick(object sender, DataGridViewCellEventArgs e)

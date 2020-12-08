@@ -852,7 +852,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbEstado;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblnumero;
         public System.Windows.Forms.DateTimePicker dtpfechacita;
         public System.Windows.Forms.DateTimePicker dateTimePicker1;
         public System.Windows.Forms.DateTimePicker dateTimePicker2;
@@ -871,5 +870,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totaldinero;
         private System.Windows.Forms.DataGridViewTextBoxColumn abono;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
+        public System.Windows.Forms.Label lblnumero;
     }
 }

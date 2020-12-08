@@ -46,7 +46,7 @@
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblcitascompletadas = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -173,7 +173,7 @@
             this.pnlDesktop.Controls.Add(this.label6);
             this.pnlDesktop.Controls.Add(this.button2);
             this.pnlDesktop.Controls.Add(this.pictureBox3);
-            this.pnlDesktop.Controls.Add(this.label3);
+            this.pnlDesktop.Controls.Add(this.lblcitascompletadas);
             this.pnlDesktop.Controls.Add(this.label4);
             this.pnlDesktop.Controls.Add(this.button1);
             this.pnlDesktop.Controls.Add(this.pictureBox2);
@@ -303,17 +303,17 @@
             this.pictureBox3.TabIndex = 34;
             this.pictureBox3.TabStop = false;
             // 
-            // label3
+            // lblcitascompletadas
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(28)))));
-            this.label3.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(427, 39);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 33);
-            this.label3.TabIndex = 33;
-            this.label3.Text = "7";
+            this.lblcitascompletadas.AutoSize = true;
+            this.lblcitascompletadas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(28)))));
+            this.lblcitascompletadas.Font = new System.Drawing.Font("Bahnschrift", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcitascompletadas.ForeColor = System.Drawing.Color.White;
+            this.lblcitascompletadas.Location = new System.Drawing.Point(436, 48);
+            this.lblcitascompletadas.Name = "lblcitascompletadas";
+            this.lblcitascompletadas.Size = new System.Drawing.Size(29, 33);
+            this.lblcitascompletadas.TabIndex = 33;
+            this.lblcitascompletadas.Text = "7";
             // 
             // label4
             // 
@@ -323,9 +323,9 @@
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(430, 21);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(248, 18);
+            this.label4.Size = new System.Drawing.Size(278, 18);
             this.label4.TabIndex = 31;
-            this.label4.Text = "Total de citas para hoy:";
+            this.label4.Text = "Total de citas completadas:";
             // 
             // button1
             // 
@@ -336,7 +336,7 @@
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.button1.Location = new System.Drawing.Point(419, 11);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(268, 111);
+            this.button1.Size = new System.Drawing.Size(290, 111);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = false;
             // 
@@ -572,7 +572,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblcitascompletadas;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox2;
