@@ -39,7 +39,7 @@ namespace Medical_Control_System__MCY_.Pantallas
             //after 3 sec stop the timer
             tmr.Stop();
             //display mainform
-            LoginPage loginPage = new LoginPage();
+            FrmLoginPage loginPage = new FrmLoginPage();
             loginPage.Show();
             //hide this form
             this.Hide();

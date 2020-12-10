@@ -1,6 +1,6 @@
 ﻿namespace Medical_Control_System__MCY_
 {
-    partial class LoginPage
+    partial class FrmLoginPage
     {
         /// <summary>
         /// Required designer variable.
@@ -287,7 +287,7 @@
             this.panelregistroarriba.Size = new System.Drawing.Size(149, 10);
             this.panelregistroarriba.TabIndex = 17;
             // 
-            // LoginPage
+            // FrmLoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -305,7 +305,7 @@
             this.Controls.Add(this.BtnRegistrarse);
             this.Controls.Add(this.panelRegistro);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "LoginPage";
+            this.Name = "FrmLoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.Load += new System.EventHandler(this.LoginPage_Load);

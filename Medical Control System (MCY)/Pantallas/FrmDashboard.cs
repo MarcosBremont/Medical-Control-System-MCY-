@@ -134,6 +134,8 @@ namespace Medical_Control_System__MCY_.Pantallas
             CargarCantidadCita();
             SelectCitasCompletadas();
             SelectCitasPendientes();
+            FrmLoginPage frmLoginPage = new FrmLoginPage();
+            frmLoginPage
         }
 
        
@@ -193,7 +195,7 @@ namespace Medical_Control_System__MCY_.Pantallas
         private void pbLogout_Click(object sender, EventArgs e)
         {
             this.Close();
-            LoginPage Log = new LoginPage();
+            FrmLoginPage Log = new FrmLoginPage();
             Log.Show();
            
         }
@@ -213,6 +215,7 @@ namespace Medical_Control_System__MCY_.Pantallas
             this.Close();
             FrmDashboard frmDashboard = new FrmDashboard();
             frmDashboard.Show();
+
         }
 
         private void pbAjustes_Click(object sender, EventArgs e)
@@ -226,14 +229,16 @@ namespace Medical_Control_System__MCY_.Pantallas
             OpenChildForm(new FrmDoctores());
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new FrmDoctores());
-        }
+      
 
         private void BtnHistorial_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmHistorialPacientes());
+        }
+
+        private void BtnPacientes_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmPacientes());
         }
     }
 }

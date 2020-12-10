@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace Medical_Control_System__MCY_
 {
-    public partial class LoginPage : Form
+    public partial class FrmLoginPage : Form
     {
         //Dll para mover el formulario si no tiene bordes
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -28,7 +28,7 @@ namespace Medical_Control_System__MCY_
 
         String cs = ("Server=localhost; database=medicalcontrolsystemmcs; user=root; password=1234");
 
-        public LoginPage()
+        public FrmLoginPage()
         {
             InitializeComponent();
         }

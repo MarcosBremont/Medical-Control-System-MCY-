@@ -32,17 +32,11 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cmbPaciente = new System.Windows.Forms.ComboBox();
             this.LblIDD = new System.Windows.Forms.Label();
             this.lblid = new System.Windows.Forms.Label();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnActualizar = new System.Windows.Forms.Button();
-            this.btnAgregarDr = new System.Windows.Forms.Button();
-            this.txtcomentario = new System.Windows.Forms.TextBox();
-            this.lblFecha_Nac = new System.Windows.Forms.Label();
-            this.lbldireccion = new System.Windows.Forms.Label();
-            this.lblnombrepaciente = new System.Windows.Forms.Label();
+            this.btnAgregarPaciente = new System.Windows.Forms.Button();
             this.LblPacientes = new System.Windows.Forms.Label();
             this.dgvPacientes = new System.Windows.Forms.DataGridView();
             this.idt_paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,34 +50,35 @@
             this.alergias = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.otros_problemas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cmbSexo = new System.Windows.Forms.ComboBox();
+            this.txtdireccion = new System.Windows.Forms.TextBox();
+            this.lbldireccion = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.lblemail = new System.Windows.Forms.Label();
+            this.txttelefono = new System.Windows.Forms.TextBox();
+            this.lblTelefono = new System.Windows.Forms.Label();
+            this.lblsexo = new System.Windows.Forms.Label();
+            this.txtcelular = new System.Windows.Forms.TextBox();
+            this.lblcelular = new System.Windows.Forms.Label();
+            this.txtedad = new System.Windows.Forms.TextBox();
+            this.LblEdad = new System.Windows.Forms.Label();
+            this.txtfechanac = new System.Windows.Forms.TextBox();
+            this.lblfechanac = new System.Windows.Forms.Label();
+            this.txtnombrepaciente = new System.Windows.Forms.TextBox();
+            this.lblnombrePaciente = new System.Windows.Forms.Label();
+            this.txtotrosproblemas = new System.Windows.Forms.TextBox();
+            this.lblotrosproblemas = new System.Windows.Forms.Label();
+            this.txtalergias = new System.Windows.Forms.TextBox();
+            this.lblalergias = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(527, 362);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 146;
-            // 
-            // cmbPaciente
-            // 
-            this.cmbPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
-            this.cmbPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.cmbPaciente.ForeColor = System.Drawing.Color.White;
-            this.cmbPaciente.FormattingEnabled = true;
-            this.cmbPaciente.Location = new System.Drawing.Point(334, 365);
-            this.cmbPaciente.Name = "cmbPaciente";
-            this.cmbPaciente.Size = new System.Drawing.Size(162, 21);
-            this.cmbPaciente.TabIndex = 145;
-            this.cmbPaciente.Text = "Seleccione el Paciente";
             // 
             // LblIDD
             // 
             this.LblIDD.AutoSize = true;
             this.LblIDD.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.LblIDD.ForeColor = System.Drawing.Color.White;
-            this.LblIDD.Location = new System.Drawing.Point(165, 20);
+            this.LblIDD.Location = new System.Drawing.Point(139, 20);
             this.LblIDD.Name = "LblIDD";
             this.LblIDD.Size = new System.Drawing.Size(26, 19);
             this.LblIDD.TabIndex = 144;
@@ -94,7 +89,7 @@
             this.lblid.AutoSize = true;
             this.lblid.Font = new System.Drawing.Font("Century Gothic", 10F);
             this.lblid.ForeColor = System.Drawing.Color.White;
-            this.lblid.Location = new System.Drawing.Point(192, 20);
+            this.lblid.Location = new System.Drawing.Point(166, 20);
             this.lblid.Name = "lblid";
             this.lblid.Size = new System.Drawing.Size(21, 19);
             this.lblid.TabIndex = 143;
@@ -107,12 +102,13 @@
             this.BtnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEliminar.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.BtnEliminar.ForeColor = System.Drawing.Color.White;
-            this.BtnEliminar.Location = new System.Drawing.Point(863, 526);
+            this.BtnEliminar.Location = new System.Drawing.Point(837, 526);
             this.BtnEliminar.Name = "BtnEliminar";
             this.BtnEliminar.Size = new System.Drawing.Size(186, 45);
             this.BtnEliminar.TabIndex = 142;
             this.BtnEliminar.Text = "Eliminar";
             this.BtnEliminar.UseVisualStyleBackColor = false;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnActualizar
             // 
@@ -121,81 +117,39 @@
             this.BtnActualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnActualizar.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.BtnActualizar.ForeColor = System.Drawing.Color.White;
-            this.BtnActualizar.Location = new System.Drawing.Point(206, 526);
+            this.BtnActualizar.Location = new System.Drawing.Point(180, 526);
             this.BtnActualizar.Name = "BtnActualizar";
             this.BtnActualizar.Size = new System.Drawing.Size(166, 45);
             this.BtnActualizar.TabIndex = 141;
             this.BtnActualizar.Text = "Actualizar";
             this.BtnActualizar.UseVisualStyleBackColor = false;
+            this.BtnActualizar.Click += new System.EventHandler(this.BtnActualizar_Click);
             // 
-            // btnAgregarDr
+            // btnAgregarPaciente
             // 
-            this.btnAgregarDr.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.btnAgregarDr.FlatAppearance.BorderSize = 0;
-            this.btnAgregarDr.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAgregarDr.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.btnAgregarDr.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarDr.Location = new System.Drawing.Point(474, 526);
-            this.btnAgregarDr.Name = "btnAgregarDr";
-            this.btnAgregarDr.Size = new System.Drawing.Size(262, 45);
-            this.btnAgregarDr.TabIndex = 140;
-            this.btnAgregarDr.Text = "Agregar Historial";
-            this.btnAgregarDr.UseVisualStyleBackColor = false;
-            // 
-            // txtcomentario
-            // 
-            this.txtcomentario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
-            this.txtcomentario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtcomentario.ForeColor = System.Drawing.Color.Silver;
-            this.txtcomentario.Location = new System.Drawing.Point(334, 433);
-            this.txtcomentario.Multiline = true;
-            this.txtcomentario.Name = "txtcomentario";
-            this.txtcomentario.Size = new System.Drawing.Size(652, 71);
-            this.txtcomentario.TabIndex = 139;
-            // 
-            // lblFecha_Nac
-            // 
-            this.lblFecha_Nac.AutoSize = true;
-            this.lblFecha_Nac.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblFecha_Nac.ForeColor = System.Drawing.Color.White;
-            this.lblFecha_Nac.Location = new System.Drawing.Point(330, 411);
-            this.lblFecha_Nac.Name = "lblFecha_Nac";
-            this.lblFecha_Nac.Size = new System.Drawing.Size(91, 19);
-            this.lblFecha_Nac.TabIndex = 138;
-            this.lblFecha_Nac.Text = "Comentario";
-            // 
-            // lbldireccion
-            // 
-            this.lbldireccion.AutoSize = true;
-            this.lbldireccion.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lbldireccion.ForeColor = System.Drawing.Color.White;
-            this.lbldireccion.Location = new System.Drawing.Point(523, 334);
-            this.lbldireccion.Name = "lbldireccion";
-            this.lbldireccion.Size = new System.Drawing.Size(102, 19);
-            this.lbldireccion.TabIndex = 137;
-            this.lbldireccion.Text = "Fecha Actual";
-            // 
-            // lblnombrepaciente
-            // 
-            this.lblnombrepaciente.AutoSize = true;
-            this.lblnombrepaciente.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblnombrepaciente.ForeColor = System.Drawing.Color.White;
-            this.lblnombrepaciente.Location = new System.Drawing.Point(330, 334);
-            this.lblnombrepaciente.Name = "lblnombrepaciente";
-            this.lblnombrepaciente.Size = new System.Drawing.Size(130, 19);
-            this.lblnombrepaciente.TabIndex = 136;
-            this.lblnombrepaciente.Text = "Nombre Paciente";
+            this.btnAgregarPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnAgregarPaciente.FlatAppearance.BorderSize = 0;
+            this.btnAgregarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAgregarPaciente.Font = new System.Drawing.Font("Century Gothic", 14.25F);
+            this.btnAgregarPaciente.ForeColor = System.Drawing.Color.White;
+            this.btnAgregarPaciente.Location = new System.Drawing.Point(448, 526);
+            this.btnAgregarPaciente.Name = "btnAgregarPaciente";
+            this.btnAgregarPaciente.Size = new System.Drawing.Size(262, 45);
+            this.btnAgregarPaciente.TabIndex = 140;
+            this.btnAgregarPaciente.Text = "Agregar Paciente";
+            this.btnAgregarPaciente.UseVisualStyleBackColor = false;
+            this.btnAgregarPaciente.Click += new System.EventHandler(this.btnAgregarPaciente_Click);
             // 
             // LblPacientes
             // 
             this.LblPacientes.AutoSize = true;
             this.LblPacientes.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblPacientes.ForeColor = System.Drawing.Color.White;
-            this.LblPacientes.Location = new System.Drawing.Point(523, 16);
+            this.LblPacientes.Location = new System.Drawing.Point(497, 16);
             this.LblPacientes.Name = "LblPacientes";
-            this.LblPacientes.Size = new System.Drawing.Size(146, 19);
+            this.LblPacientes.Size = new System.Drawing.Size(80, 19);
             this.LblPacientes.TabIndex = 135;
-            this.LblPacientes.Text = "Historial Pacientes";
+            this.LblPacientes.Text = "Pacientes";
             // 
             // dgvPacientes
             // 
@@ -240,7 +194,7 @@
             this.dgvPacientes.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgvPacientes.EnableHeadersVisualStyles = false;
             this.dgvPacientes.GridColor = System.Drawing.SystemColors.Control;
-            this.dgvPacientes.Location = new System.Drawing.Point(165, 45);
+            this.dgvPacientes.Location = new System.Drawing.Point(139, 45);
             this.dgvPacientes.MultiSelect = false;
             this.dgvPacientes.Name = "dgvPacientes";
             this.dgvPacientes.ReadOnly = true;
@@ -265,6 +219,7 @@
             this.dgvPacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvPacientes.Size = new System.Drawing.Size(891, 277);
             this.dgvPacientes.TabIndex = 134;
+            this.dgvPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPacientes_CellClick);
             // 
             // idt_paciente
             // 
@@ -276,7 +231,7 @@
             // nombre_Completo
             // 
             this.nombre_Completo.DataPropertyName = "nombre_Completo";
-            this.nombre_Completo.HeaderText = "Nombre Completo";
+            this.nombre_Completo.HeaderText = "Nombre Paciente";
             this.nombre_Completo.Name = "nombre_Completo";
             this.nombre_Completo.ReadOnly = true;
             // 
@@ -290,58 +245,282 @@
             // edad
             // 
             this.edad.DataPropertyName = "edad";
-            this.edad.HeaderText = "edad";
+            this.edad.HeaderText = "Edad";
             this.edad.Name = "edad";
             this.edad.ReadOnly = true;
             // 
             // sexo
             // 
             this.sexo.DataPropertyName = "sexo";
-            this.sexo.HeaderText = "sexo";
+            this.sexo.HeaderText = "Sexo";
             this.sexo.Name = "sexo";
             this.sexo.ReadOnly = true;
             // 
             // telefono
             // 
             this.telefono.DataPropertyName = "telefono";
-            this.telefono.HeaderText = "telefono";
+            this.telefono.HeaderText = "Telefono";
             this.telefono.Name = "telefono";
             this.telefono.ReadOnly = true;
             // 
             // celular
             // 
             this.celular.DataPropertyName = "celular";
-            this.celular.HeaderText = "celular";
+            this.celular.HeaderText = "Celular";
             this.celular.Name = "celular";
             this.celular.ReadOnly = true;
             // 
             // direccion
             // 
             this.direccion.DataPropertyName = "direccion";
-            this.direccion.HeaderText = "direccion";
+            this.direccion.HeaderText = "Direccion";
             this.direccion.Name = "direccion";
             this.direccion.ReadOnly = true;
             // 
             // alergias
             // 
             this.alergias.DataPropertyName = "alergias";
-            this.alergias.HeaderText = "alergias";
+            this.alergias.HeaderText = "Alergias";
             this.alergias.Name = "alergias";
             this.alergias.ReadOnly = true;
             // 
             // otros_problemas
             // 
             this.otros_problemas.DataPropertyName = "otros_problemas";
-            this.otros_problemas.HeaderText = "otros_problemas";
+            this.otros_problemas.HeaderText = "Otros Problemas";
             this.otros_problemas.Name = "otros_problemas";
             this.otros_problemas.ReadOnly = true;
             // 
             // email
             // 
             this.email.DataPropertyName = "email";
-            this.email.HeaderText = "email";
+            this.email.HeaderText = "Email";
             this.email.Name = "email";
             this.email.ReadOnly = true;
+            // 
+            // cmbSexo
+            // 
+            this.cmbSexo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.cmbSexo.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.cmbSexo.ForeColor = System.Drawing.Color.White;
+            this.cmbSexo.FormattingEnabled = true;
+            this.cmbSexo.Items.AddRange(new object[] {
+            "M",
+            "F"});
+            this.cmbSexo.Location = new System.Drawing.Point(139, 442);
+            this.cmbSexo.Name = "cmbSexo";
+            this.cmbSexo.Size = new System.Drawing.Size(162, 21);
+            this.cmbSexo.TabIndex = 160;
+            this.cmbSexo.Text = "Seleccione su sexo.";
+            // 
+            // txtdireccion
+            // 
+            this.txtdireccion.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txtdireccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtdireccion.ForeColor = System.Drawing.Color.Silver;
+            this.txtdireccion.Location = new System.Drawing.Point(671, 433);
+            this.txtdireccion.Multiline = true;
+            this.txtdireccion.Name = "txtdireccion";
+            this.txtdireccion.Size = new System.Drawing.Size(165, 30);
+            this.txtdireccion.TabIndex = 159;
+            // 
+            // lbldireccion
+            // 
+            this.lbldireccion.AutoSize = true;
+            this.lbldireccion.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lbldireccion.ForeColor = System.Drawing.Color.White;
+            this.lbldireccion.Location = new System.Drawing.Point(667, 411);
+            this.lbldireccion.Name = "lbldireccion";
+            this.lbldireccion.Size = new System.Drawing.Size(74, 19);
+            this.lbldireccion.TabIndex = 158;
+            this.lbldireccion.Text = "Direccion";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txtEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtEmail.ForeColor = System.Drawing.Color.Silver;
+            this.txtEmail.Location = new System.Drawing.Point(491, 433);
+            this.txtEmail.Multiline = true;
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(165, 30);
+            this.txtEmail.TabIndex = 157;
+            // 
+            // lblemail
+            // 
+            this.lblemail.AutoSize = true;
+            this.lblemail.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblemail.ForeColor = System.Drawing.Color.White;
+            this.lblemail.Location = new System.Drawing.Point(487, 411);
+            this.lblemail.Name = "lblemail";
+            this.lblemail.Size = new System.Drawing.Size(46, 19);
+            this.lblemail.TabIndex = 156;
+            this.lblemail.Text = "Email";
+            // 
+            // txttelefono
+            // 
+            this.txttelefono.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txttelefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txttelefono.ForeColor = System.Drawing.Color.Silver;
+            this.txttelefono.Location = new System.Drawing.Point(320, 433);
+            this.txttelefono.Multiline = true;
+            this.txttelefono.Name = "txttelefono";
+            this.txttelefono.Size = new System.Drawing.Size(165, 30);
+            this.txttelefono.TabIndex = 155;
+            // 
+            // lblTelefono
+            // 
+            this.lblTelefono.AutoSize = true;
+            this.lblTelefono.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblTelefono.ForeColor = System.Drawing.Color.White;
+            this.lblTelefono.Location = new System.Drawing.Point(316, 411);
+            this.lblTelefono.Name = "lblTelefono";
+            this.lblTelefono.Size = new System.Drawing.Size(66, 19);
+            this.lblTelefono.TabIndex = 154;
+            this.lblTelefono.Text = "Telefono";
+            // 
+            // lblsexo
+            // 
+            this.lblsexo.AutoSize = true;
+            this.lblsexo.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblsexo.ForeColor = System.Drawing.Color.White;
+            this.lblsexo.Location = new System.Drawing.Point(139, 411);
+            this.lblsexo.Name = "lblsexo";
+            this.lblsexo.Size = new System.Drawing.Size(41, 19);
+            this.lblsexo.TabIndex = 153;
+            this.lblsexo.Text = "Sexo";
+            // 
+            // txtcelular
+            // 
+            this.txtcelular.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txtcelular.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtcelular.ForeColor = System.Drawing.Color.Silver;
+            this.txtcelular.Location = new System.Drawing.Point(671, 374);
+            this.txtcelular.Multiline = true;
+            this.txtcelular.Name = "txtcelular";
+            this.txtcelular.Size = new System.Drawing.Size(165, 30);
+            this.txtcelular.TabIndex = 152;
+            // 
+            // lblcelular
+            // 
+            this.lblcelular.AutoSize = true;
+            this.lblcelular.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblcelular.ForeColor = System.Drawing.Color.White;
+            this.lblcelular.Location = new System.Drawing.Point(667, 352);
+            this.lblcelular.Name = "lblcelular";
+            this.lblcelular.Size = new System.Drawing.Size(58, 19);
+            this.lblcelular.TabIndex = 151;
+            this.lblcelular.Text = "Celular";
+            // 
+            // txtedad
+            // 
+            this.txtedad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txtedad.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtedad.ForeColor = System.Drawing.Color.Silver;
+            this.txtedad.Location = new System.Drawing.Point(491, 374);
+            this.txtedad.Multiline = true;
+            this.txtedad.Name = "txtedad";
+            this.txtedad.Size = new System.Drawing.Size(165, 30);
+            this.txtedad.TabIndex = 150;
+            // 
+            // LblEdad
+            // 
+            this.LblEdad.AutoSize = true;
+            this.LblEdad.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.LblEdad.ForeColor = System.Drawing.Color.White;
+            this.LblEdad.Location = new System.Drawing.Point(487, 352);
+            this.LblEdad.Name = "LblEdad";
+            this.LblEdad.Size = new System.Drawing.Size(47, 19);
+            this.LblEdad.TabIndex = 149;
+            this.LblEdad.Text = "Edad";
+            // 
+            // txtfechanac
+            // 
+            this.txtfechanac.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txtfechanac.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtfechanac.ForeColor = System.Drawing.Color.Silver;
+            this.txtfechanac.Location = new System.Drawing.Point(320, 374);
+            this.txtfechanac.Multiline = true;
+            this.txtfechanac.Name = "txtfechanac";
+            this.txtfechanac.Size = new System.Drawing.Size(165, 30);
+            this.txtfechanac.TabIndex = 148;
+            // 
+            // lblfechanac
+            // 
+            this.lblfechanac.AutoSize = true;
+            this.lblfechanac.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblfechanac.ForeColor = System.Drawing.Color.White;
+            this.lblfechanac.Location = new System.Drawing.Point(316, 352);
+            this.lblfechanac.Name = "lblfechanac";
+            this.lblfechanac.Size = new System.Drawing.Size(137, 19);
+            this.lblfechanac.TabIndex = 147;
+            this.lblfechanac.Text = "Fecha Nacimiento";
+            // 
+            // txtnombrepaciente
+            // 
+            this.txtnombrepaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txtnombrepaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtnombrepaciente.ForeColor = System.Drawing.Color.Silver;
+            this.txtnombrepaciente.Location = new System.Drawing.Point(139, 374);
+            this.txtnombrepaciente.Multiline = true;
+            this.txtnombrepaciente.Name = "txtnombrepaciente";
+            this.txtnombrepaciente.Size = new System.Drawing.Size(165, 30);
+            this.txtnombrepaciente.TabIndex = 146;
+            // 
+            // lblnombrePaciente
+            // 
+            this.lblnombrePaciente.AutoSize = true;
+            this.lblnombrePaciente.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblnombrePaciente.ForeColor = System.Drawing.Color.White;
+            this.lblnombrePaciente.Location = new System.Drawing.Point(139, 352);
+            this.lblnombrePaciente.Name = "lblnombrePaciente";
+            this.lblnombrePaciente.Size = new System.Drawing.Size(130, 19);
+            this.lblnombrePaciente.TabIndex = 145;
+            this.lblnombrePaciente.Text = "Nombre Paciente";
+            // 
+            // txtotrosproblemas
+            // 
+            this.txtotrosproblemas.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txtotrosproblemas.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtotrosproblemas.ForeColor = System.Drawing.Color.Silver;
+            this.txtotrosproblemas.Location = new System.Drawing.Point(860, 433);
+            this.txtotrosproblemas.Multiline = true;
+            this.txtotrosproblemas.Name = "txtotrosproblemas";
+            this.txtotrosproblemas.Size = new System.Drawing.Size(165, 30);
+            this.txtotrosproblemas.TabIndex = 164;
+            // 
+            // lblotrosproblemas
+            // 
+            this.lblotrosproblemas.AutoSize = true;
+            this.lblotrosproblemas.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblotrosproblemas.ForeColor = System.Drawing.Color.White;
+            this.lblotrosproblemas.Location = new System.Drawing.Point(856, 411);
+            this.lblotrosproblemas.Name = "lblotrosproblemas";
+            this.lblotrosproblemas.Size = new System.Drawing.Size(119, 19);
+            this.lblotrosproblemas.TabIndex = 163;
+            this.lblotrosproblemas.Text = "Otros Problemas";
+            // 
+            // txtalergias
+            // 
+            this.txtalergias.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
+            this.txtalergias.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.txtalergias.ForeColor = System.Drawing.Color.Silver;
+            this.txtalergias.Location = new System.Drawing.Point(860, 374);
+            this.txtalergias.Multiline = true;
+            this.txtalergias.Name = "txtalergias";
+            this.txtalergias.Size = new System.Drawing.Size(165, 30);
+            this.txtalergias.TabIndex = 162;
+            // 
+            // lblalergias
+            // 
+            this.lblalergias.AutoSize = true;
+            this.lblalergias.Font = new System.Drawing.Font("Century Gothic", 10F);
+            this.lblalergias.ForeColor = System.Drawing.Color.White;
+            this.lblalergias.Location = new System.Drawing.Point(856, 352);
+            this.lblalergias.Name = "lblalergias";
+            this.lblalergias.Size = new System.Drawing.Size(61, 19);
+            this.lblalergias.TabIndex = 161;
+            this.lblalergias.Text = "Alergias";
             // 
             // FrmPacientes
             // 
@@ -349,22 +528,37 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1220, 586);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.cmbPaciente);
+            this.Controls.Add(this.txtotrosproblemas);
+            this.Controls.Add(this.lblotrosproblemas);
+            this.Controls.Add(this.txtalergias);
+            this.Controls.Add(this.lblalergias);
+            this.Controls.Add(this.cmbSexo);
+            this.Controls.Add(this.txtdireccion);
+            this.Controls.Add(this.lbldireccion);
+            this.Controls.Add(this.txtEmail);
+            this.Controls.Add(this.lblemail);
+            this.Controls.Add(this.txttelefono);
+            this.Controls.Add(this.lblTelefono);
+            this.Controls.Add(this.lblsexo);
+            this.Controls.Add(this.txtcelular);
+            this.Controls.Add(this.lblcelular);
+            this.Controls.Add(this.txtedad);
+            this.Controls.Add(this.LblEdad);
+            this.Controls.Add(this.txtfechanac);
+            this.Controls.Add(this.lblfechanac);
+            this.Controls.Add(this.txtnombrepaciente);
+            this.Controls.Add(this.lblnombrePaciente);
             this.Controls.Add(this.LblIDD);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.BtnEliminar);
             this.Controls.Add(this.BtnActualizar);
-            this.Controls.Add(this.btnAgregarDr);
-            this.Controls.Add(this.txtcomentario);
-            this.Controls.Add(this.lblFecha_Nac);
-            this.Controls.Add(this.lbldireccion);
-            this.Controls.Add(this.lblnombrepaciente);
+            this.Controls.Add(this.btnAgregarPaciente);
             this.Controls.Add(this.LblPacientes);
             this.Controls.Add(this.dgvPacientes);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPacientes";
             this.Text = "FrmPacientes";
+            this.Load += new System.EventHandler(this.FrmPacientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -372,20 +566,33 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.ComboBox cmbPaciente;
         private System.Windows.Forms.Label LblIDD;
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.Button BtnEliminar;
         private System.Windows.Forms.Button BtnActualizar;
-        private System.Windows.Forms.Button btnAgregarDr;
-        private System.Windows.Forms.TextBox txtcomentario;
-        private System.Windows.Forms.Label lblFecha_Nac;
-        private System.Windows.Forms.Label lbldireccion;
-        private System.Windows.Forms.Label lblnombrepaciente;
+        private System.Windows.Forms.Button btnAgregarPaciente;
         private System.Windows.Forms.Label LblPacientes;
         public System.Windows.Forms.DataGridView dgvPacientes;
+        private System.Windows.Forms.ComboBox cmbSexo;
+        private System.Windows.Forms.TextBox txtdireccion;
+        private System.Windows.Forms.Label lbldireccion;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.Label lblemail;
+        private System.Windows.Forms.TextBox txttelefono;
+        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblsexo;
+        private System.Windows.Forms.TextBox txtcelular;
+        private System.Windows.Forms.Label lblcelular;
+        private System.Windows.Forms.TextBox txtedad;
+        private System.Windows.Forms.Label LblEdad;
+        private System.Windows.Forms.TextBox txtfechanac;
+        private System.Windows.Forms.Label lblfechanac;
+        private System.Windows.Forms.TextBox txtnombrepaciente;
+        private System.Windows.Forms.Label lblnombrePaciente;
+        private System.Windows.Forms.TextBox txtotrosproblemas;
+        private System.Windows.Forms.Label lblotrosproblemas;
+        private System.Windows.Forms.TextBox txtalergias;
+        private System.Windows.Forms.Label lblalergias;
         private System.Windows.Forms.DataGridViewTextBoxColumn idt_paciente;
         private System.Windows.Forms.DataGridViewTextBoxColumn nombre_Completo;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_nac;

@@ -282,7 +282,7 @@
             this.BtnPacientes.Size = new System.Drawing.Size(289, 133);
             this.BtnPacientes.TabIndex = 59;
             this.BtnPacientes.UseVisualStyleBackColor = false;
-            this.BtnPacientes.Click += new System.EventHandler(this.button4_Click);
+            this.BtnPacientes.Click += new System.EventHandler(this.BtnPacientes_Click);
             // 
             // pbDoctores
             // 
