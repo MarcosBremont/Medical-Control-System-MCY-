@@ -131,12 +131,38 @@ namespace Medical_Control_System__MCY_.Pantallas
             FrmAgregarCitas agr = new FrmAgregarCitas();
             agr.CargarDgvCitas();
             CargarCantidadCita();
-
+            SelectCitasCompletadas();
+            SelectCitasPendientes();
         }
+
+        public void SelectCitasCompletadas()
+        {
+            con = new MySqlConnection(cs);
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM t_citapaciente where estado = 'Completada' ", con);
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            da.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            da.Fill(tabla);
+            lblcitascompletadas.Text = tabla.Rows.Count.ToString();
+        }
+
+        public void SelectCitasPendientes()
+        {
+            con = new MySqlConnection(cs);
+            MySqlCommand comando = new MySqlCommand("SELECT * FROM t_citapaciente where estado = 'Pendiente' ", con);
+            MySqlDataAdapter da = new MySqlDataAdapter();
+            da.SelectCommand = comando;
+            DataTable tabla = new DataTable();
+            da.Fill(tabla);
+            lblcitaspendientes.Text = tabla.Rows.Count.ToString();
+        }
+
+
 
         public void CargarCantidadCita()
         {
             FrmAgregarCitas agr = new FrmAgregarCitas();
+            agr.CargarDgvCitas();
             lblcitasparahoy.Text = agr.dgvcitas.RowCount.ToString();
         }
 
@@ -170,9 +196,21 @@ namespace Medical_Control_System__MCY_.Pantallas
            
         }
 
-        private void btnPagos_Click(object sender, EventArgs e)
+        private void btnVerPagos_Click(object sender, EventArgs e)
         {
             OpenChildForm(new FrmVerPagos());
+        }
+
+        private void btnDeserts_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmHistorialCitasCompletas());
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            FrmDashboard frmDashboard = new FrmDashboard();
+            frmDashboard.Show();
         }
     }
 }

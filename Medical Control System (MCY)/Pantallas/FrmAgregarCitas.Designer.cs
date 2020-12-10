@@ -34,8 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblnombrepaciente = new System.Windows.Forms.Label();
             this.txtnombrepaciente = new System.Windows.Forms.TextBox();
-            this.txtapellidopaciente = new System.Windows.Forms.TextBox();
-            this.lblapellidopaciente = new System.Windows.Forms.Label();
             this.txtfechanacimiento = new System.Windows.Forms.TextBox();
             this.lblfechanacimiento = new System.Windows.Forms.Label();
             this.txtedad = new System.Windows.Forms.TextBox();
@@ -60,8 +58,7 @@
             this.lblagregarcita = new System.Windows.Forms.Label();
             this.dgvcitas = new System.Windows.Forms.DataGridView();
             this.idt_citapaciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nombre_paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.apellido_paciente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nombre_Completo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.telefono = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.celular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fecha_cita = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,28 +115,6 @@
             this.txtnombrepaciente.Name = "txtnombrepaciente";
             this.txtnombrepaciente.Size = new System.Drawing.Size(165, 30);
             this.txtnombrepaciente.TabIndex = 13;
-            // 
-            // txtapellidopaciente
-            // 
-            this.txtapellidopaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
-            this.txtapellidopaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.txtapellidopaciente.ForeColor = System.Drawing.Color.Silver;
-            this.txtapellidopaciente.Location = new System.Drawing.Point(214, 241);
-            this.txtapellidopaciente.Multiline = true;
-            this.txtapellidopaciente.Name = "txtapellidopaciente";
-            this.txtapellidopaciente.Size = new System.Drawing.Size(165, 30);
-            this.txtapellidopaciente.TabIndex = 15;
-            // 
-            // lblapellidopaciente
-            // 
-            this.lblapellidopaciente.AutoSize = true;
-            this.lblapellidopaciente.Font = new System.Drawing.Font("Century Gothic", 10F);
-            this.lblapellidopaciente.ForeColor = System.Drawing.Color.White;
-            this.lblapellidopaciente.Location = new System.Drawing.Point(214, 213);
-            this.lblapellidopaciente.Name = "lblapellidopaciente";
-            this.lblapellidopaciente.Size = new System.Drawing.Size(131, 19);
-            this.lblapellidopaciente.TabIndex = 14;
-            this.lblapellidopaciente.Text = "Apellido Paciente";
             // 
             // txtfechanacimiento
             // 
@@ -408,8 +383,7 @@
             this.dgvcitas.ColumnHeadersHeight = 40;
             this.dgvcitas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idt_citapaciente,
-            this.nombre_paciente,
-            this.apellido_paciente,
+            this.nombre_Completo,
             this.telefono,
             this.celular,
             this.fecha_cita,
@@ -469,19 +443,12 @@
             this.idt_citapaciente.Name = "idt_citapaciente";
             this.idt_citapaciente.ReadOnly = true;
             // 
-            // nombre_paciente
+            // nombre_Completo
             // 
-            this.nombre_paciente.DataPropertyName = "nombre_paciente";
-            this.nombre_paciente.HeaderText = "Nombre P.";
-            this.nombre_paciente.Name = "nombre_paciente";
-            this.nombre_paciente.ReadOnly = true;
-            // 
-            // apellido_paciente
-            // 
-            this.apellido_paciente.DataPropertyName = "apellido_paciente";
-            this.apellido_paciente.HeaderText = "Apellido P.";
-            this.apellido_paciente.Name = "apellido_paciente";
-            this.apellido_paciente.ReadOnly = true;
+            this.nombre_Completo.DataPropertyName = "nombre_Completo";
+            this.nombre_Completo.HeaderText = "Nombre P.";
+            this.nombre_Completo.Name = "nombre_Completo";
+            this.nombre_Completo.ReadOnly = true;
             // 
             // telefono
             // 
@@ -634,11 +601,11 @@
             this.btnPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPagos.Font = new System.Drawing.Font("Century Gothic", 14.25F);
             this.btnPagos.ForeColor = System.Drawing.Color.White;
-            this.btnPagos.Location = new System.Drawing.Point(735, 443);
+            this.btnPagos.Location = new System.Drawing.Point(779, 443);
             this.btnPagos.Name = "btnPagos";
-            this.btnPagos.Size = new System.Drawing.Size(156, 45);
+            this.btnPagos.Size = new System.Drawing.Size(232, 45);
             this.btnPagos.TabIndex = 86;
-            this.btnPagos.Text = "Completada";
+            this.btnPagos.Text = "Ordenes Completadas";
             this.btnPagos.UseVisualStyleBackColor = false;
             this.btnPagos.Click += new System.EventHandler(this.btnPagos_Click);
             // 
@@ -784,7 +751,7 @@
             this.lblnumero.TabIndex = 98;
             this.lblnumero.Text = "..";
             // 
-            // AgregarCitas
+            // FrmAgregarCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -831,12 +798,10 @@
             this.Controls.Add(this.lbledad);
             this.Controls.Add(this.txtfechanacimiento);
             this.Controls.Add(this.lblfechanacimiento);
-            this.Controls.Add(this.txtapellidopaciente);
-            this.Controls.Add(this.lblapellidopaciente);
             this.Controls.Add(this.txtnombrepaciente);
             this.Controls.Add(this.lblnombrepaciente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AgregarCitas";
+            this.Name = "FrmAgregarCitas";
             this.Text = "AgregarCitas";
             this.Load += new System.EventHandler(this.AgregarCitas_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AgregarCitas_KeyDown);
@@ -850,8 +815,6 @@
         #endregion
         private System.Windows.Forms.Label lblnombrepaciente;
         private System.Windows.Forms.TextBox txtnombrepaciente;
-        private System.Windows.Forms.TextBox txtapellidopaciente;
-        private System.Windows.Forms.Label lblapellidopaciente;
         private System.Windows.Forms.TextBox txtfechanacimiento;
         private System.Windows.Forms.Label lblfechanacimiento;
         private System.Windows.Forms.TextBox txtedad;
@@ -886,9 +849,14 @@
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.DateTimePicker dtpfechacita;
+        public System.Windows.Forms.DateTimePicker dateTimePicker1;
+        public System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.DataGridViewTextBoxColumn idt_citapaciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_paciente;
-        private System.Windows.Forms.DataGridViewTextBoxColumn apellido_paciente;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nombre_Completo;
         private System.Windows.Forms.DataGridViewTextBoxColumn telefono;
         private System.Windows.Forms.DataGridViewTextBoxColumn celular;
         private System.Windows.Forms.DataGridViewTextBoxColumn fecha_cita;
@@ -902,12 +870,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn totaldinero;
         private System.Windows.Forms.DataGridViewTextBoxColumn abono;
         private System.Windows.Forms.DataGridViewTextBoxColumn estado;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox cmbEstado;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblnumero;
-        public System.Windows.Forms.DateTimePicker dtpfechacita;
-        public System.Windows.Forms.DateTimePicker dateTimePicker1;
-        public System.Windows.Forms.DateTimePicker dateTimePicker2;
+        public System.Windows.Forms.Label lblnumero;
     }
 }
