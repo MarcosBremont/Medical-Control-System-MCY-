@@ -35,44 +35,48 @@
             this.btnDeserts = new System.Windows.Forms.Button();
             this.btnCitas = new System.Windows.Forms.Button();
             this.pnlDesktop = new System.Windows.Forms.Panel();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.lblhistorial = new System.Windows.Forms.Label();
+            this.BtnHistorial = new System.Windows.Forms.Button();
+            this.pbPacientes = new System.Windows.Forms.PictureBox();
+            this.lblPacientes = new System.Windows.Forms.Label();
+            this.BtnPacientes = new System.Windows.Forms.Button();
+            this.pbDoctores = new System.Windows.Forms.PictureBox();
+            this.lblDoctores = new System.Windows.Forms.Label();
+            this.btnDoctores = new System.Windows.Forms.Button();
+            this.pbAjustes = new System.Windows.Forms.PictureBox();
+            this.pbLogout = new System.Windows.Forms.PictureBox();
+            this.pbGmail = new System.Windows.Forms.PictureBox();
+            this.pbFacebook = new System.Windows.Forms.PictureBox();
             this.lblfecha = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblcitaspendientes = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblcitascompletadas = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblcitasparahoy = new System.Windows.Forms.Label();
             this.lblreloj = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnCitasParaHoy = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.button3 = new System.Windows.Forms.Button();
             this.lbluser = new System.Windows.Forms.Label();
             this.lblBienvenido = new System.Windows.Forms.Label();
-            this.lblversion = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnDoctores = new System.Windows.Forms.Button();
-            this.lblDoctores = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMaximize = new System.Windows.Forms.PictureBox();
-            this.pbDoctores = new System.Windows.Forms.PictureBox();
-            this.pbAjustes = new System.Windows.Forms.PictureBox();
-            this.pbLogout = new System.Windows.Forms.PictureBox();
-            this.pbGmail = new System.Windows.Forms.PictureBox();
-            this.pbFacebook = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.lblversion = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnlDesktop.SuspendLayout();
-            this.panel6.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPacientes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDoctores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).BeginInit();
@@ -81,6 +85,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -167,6 +175,12 @@
             // pnlDesktop
             // 
             this.pnlDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(68)))), ((int)(((byte)(83)))));
+            this.pnlDesktop.Controls.Add(this.pictureBox5);
+            this.pnlDesktop.Controls.Add(this.lblhistorial);
+            this.pnlDesktop.Controls.Add(this.BtnHistorial);
+            this.pnlDesktop.Controls.Add(this.pbPacientes);
+            this.pnlDesktop.Controls.Add(this.lblPacientes);
+            this.pnlDesktop.Controls.Add(this.BtnPacientes);
             this.pnlDesktop.Controls.Add(this.pbDoctores);
             this.pnlDesktop.Controls.Add(this.lblDoctores);
             this.pnlDesktop.Controls.Add(this.btnDoctores);
@@ -196,6 +210,157 @@
             this.pnlDesktop.TabIndex = 26;
             this.pnlDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlDesktop_Paint);
             // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
+            this.pictureBox5.Image = global::Medical_Control_System__MCY_.Properties.Resources.historial_medico__1_;
+            this.pictureBox5.Location = new System.Drawing.Point(931, 384);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(73, 78);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 64;
+            this.pictureBox5.TabStop = false;
+            // 
+            // lblhistorial
+            // 
+            this.lblhistorial.AutoSize = true;
+            this.lblhistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
+            this.lblhistorial.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblhistorial.ForeColor = System.Drawing.Color.White;
+            this.lblhistorial.Location = new System.Drawing.Point(919, 349);
+            this.lblhistorial.Name = "lblhistorial";
+            this.lblhistorial.Size = new System.Drawing.Size(91, 25);
+            this.lblhistorial.TabIndex = 63;
+            this.lblhistorial.Text = "Historial";
+            // 
+            // BtnHistorial
+            // 
+            this.BtnHistorial.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
+            this.BtnHistorial.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnHistorial.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnHistorial.ForeColor = System.Drawing.Color.White;
+            this.BtnHistorial.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnHistorial.Location = new System.Drawing.Point(811, 347);
+            this.BtnHistorial.Name = "BtnHistorial";
+            this.BtnHistorial.Size = new System.Drawing.Size(289, 133);
+            this.BtnHistorial.TabIndex = 62;
+            this.BtnHistorial.UseVisualStyleBackColor = false;
+            this.BtnHistorial.Click += new System.EventHandler(this.BtnHistorial_Click);
+            // 
+            // pbPacientes
+            // 
+            this.pbPacientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(28)))));
+            this.pbPacientes.Image = global::Medical_Control_System__MCY_.Properties.Resources.paciente;
+            this.pbPacientes.Location = new System.Drawing.Point(535, 384);
+            this.pbPacientes.Name = "pbPacientes";
+            this.pbPacientes.Size = new System.Drawing.Size(73, 78);
+            this.pbPacientes.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPacientes.TabIndex = 61;
+            this.pbPacientes.TabStop = false;
+            // 
+            // lblPacientes
+            // 
+            this.lblPacientes.AutoSize = true;
+            this.lblPacientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(28)))));
+            this.lblPacientes.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPacientes.ForeColor = System.Drawing.Color.White;
+            this.lblPacientes.Location = new System.Drawing.Point(517, 349);
+            this.lblPacientes.Name = "lblPacientes";
+            this.lblPacientes.Size = new System.Drawing.Size(102, 25);
+            this.lblPacientes.TabIndex = 60;
+            this.lblPacientes.Text = "Pacientes";
+            // 
+            // BtnPacientes
+            // 
+            this.BtnPacientes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(28)))));
+            this.BtnPacientes.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.BtnPacientes.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPacientes.ForeColor = System.Drawing.Color.White;
+            this.BtnPacientes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.BtnPacientes.Location = new System.Drawing.Point(419, 347);
+            this.BtnPacientes.Name = "BtnPacientes";
+            this.BtnPacientes.Size = new System.Drawing.Size(289, 133);
+            this.BtnPacientes.TabIndex = 59;
+            this.BtnPacientes.UseVisualStyleBackColor = false;
+            this.BtnPacientes.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // pbDoctores
+            // 
+            this.pbDoctores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
+            this.pbDoctores.Image = global::Medical_Control_System__MCY_.Properties.Resources.doctor;
+            this.pbDoctores.Location = new System.Drawing.Point(144, 384);
+            this.pbDoctores.Name = "pbDoctores";
+            this.pbDoctores.Size = new System.Drawing.Size(73, 78);
+            this.pbDoctores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDoctores.TabIndex = 58;
+            this.pbDoctores.TabStop = false;
+            // 
+            // lblDoctores
+            // 
+            this.lblDoctores.AutoSize = true;
+            this.lblDoctores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
+            this.lblDoctores.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoctores.ForeColor = System.Drawing.Color.White;
+            this.lblDoctores.Location = new System.Drawing.Point(132, 349);
+            this.lblDoctores.Name = "lblDoctores";
+            this.lblDoctores.Size = new System.Drawing.Size(96, 25);
+            this.lblDoctores.TabIndex = 57;
+            this.lblDoctores.Text = "Doctores";
+            // 
+            // btnDoctores
+            // 
+            this.btnDoctores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
+            this.btnDoctores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDoctores.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoctores.ForeColor = System.Drawing.Color.White;
+            this.btnDoctores.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDoctores.Location = new System.Drawing.Point(51, 347);
+            this.btnDoctores.Name = "btnDoctores";
+            this.btnDoctores.Size = new System.Drawing.Size(268, 133);
+            this.btnDoctores.TabIndex = 56;
+            this.btnDoctores.UseVisualStyleBackColor = false;
+            this.btnDoctores.Click += new System.EventHandler(this.btnDoctores_Click);
+            // 
+            // pbAjustes
+            // 
+            this.pbAjustes.Image = global::Medical_Control_System__MCY_.Properties.Resources.configurar;
+            this.pbAjustes.Location = new System.Drawing.Point(973, 540);
+            this.pbAjustes.Name = "pbAjustes";
+            this.pbAjustes.Size = new System.Drawing.Size(70, 67);
+            this.pbAjustes.TabIndex = 55;
+            this.pbAjustes.TabStop = false;
+            this.pbAjustes.Click += new System.EventHandler(this.pbAjustes_Click);
+            // 
+            // pbLogout
+            // 
+            this.pbLogout.Image = global::Medical_Control_System__MCY_.Properties.Resources.logout;
+            this.pbLogout.Location = new System.Drawing.Point(1049, 540);
+            this.pbLogout.Name = "pbLogout";
+            this.pbLogout.Size = new System.Drawing.Size(70, 67);
+            this.pbLogout.TabIndex = 54;
+            this.pbLogout.TabStop = false;
+            this.pbLogout.Click += new System.EventHandler(this.pbLogout_Click);
+            // 
+            // pbGmail
+            // 
+            this.pbGmail.Image = global::Medical_Control_System__MCY_.Properties.Resources.gmail__1_;
+            this.pbGmail.Location = new System.Drawing.Point(897, 540);
+            this.pbGmail.Name = "pbGmail";
+            this.pbGmail.Size = new System.Drawing.Size(70, 67);
+            this.pbGmail.TabIndex = 53;
+            this.pbGmail.TabStop = false;
+            this.pbGmail.Click += new System.EventHandler(this.pbGmail_Click);
+            // 
+            // pbFacebook
+            // 
+            this.pbFacebook.Image = global::Medical_Control_System__MCY_.Properties.Resources.facebook;
+            this.pbFacebook.Location = new System.Drawing.Point(826, 540);
+            this.pbFacebook.Name = "pbFacebook";
+            this.pbFacebook.Size = new System.Drawing.Size(70, 67);
+            this.pbFacebook.TabIndex = 51;
+            this.pbFacebook.TabStop = false;
+            this.pbFacebook.Click += new System.EventHandler(this.pbFacebook_Click);
+            // 
             // lblfecha
             // 
             this.lblfecha.AutoSize = true;
@@ -214,6 +379,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(280, 10);
             this.panel1.TabIndex = 39;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
+            this.pictureBox4.Image = global::Medical_Control_System__MCY_.Properties.Resources.calendario__3_;
+            this.pictureBox4.Location = new System.Drawing.Point(942, 48);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(73, 66);
+            this.pictureBox4.TabIndex = 38;
+            this.pictureBox4.TabStop = false;
             // 
             // lblcitaspendientes
             // 
@@ -252,6 +427,16 @@
             this.button2.TabIndex = 36;
             this.button2.UseVisualStyleBackColor = false;
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(28)))));
+            this.pictureBox3.Image = global::Medical_Control_System__MCY_.Properties.Resources.calendario__3_;
+            this.pictureBox3.Location = new System.Drawing.Point(579, 48);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(73, 66);
+            this.pictureBox3.TabIndex = 34;
+            this.pictureBox3.TabStop = false;
+            // 
             // lblcitascompletadas
             // 
             this.lblcitascompletadas.AutoSize = true;
@@ -288,6 +473,16 @@
             this.button1.Size = new System.Drawing.Size(290, 111);
             this.button1.TabIndex = 32;
             this.button1.UseVisualStyleBackColor = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(146)))), ((int)(((byte)(223)))));
+            this.pictureBox2.Image = global::Medical_Control_System__MCY_.Properties.Resources.calendario__3_;
+            this.pictureBox2.Location = new System.Drawing.Point(211, 48);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(73, 66);
+            this.pictureBox2.TabIndex = 30;
+            this.pictureBox2.TabStop = false;
             // 
             // lblcitasparahoy
             // 
@@ -360,6 +555,19 @@
             this.panel6.TabIndex = 27;
             this.panel6.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel6_MouseDown);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Image = global::Medical_Control_System__MCY_.Properties.Resources.home;
+            this.button3.Location = new System.Drawing.Point(6, 0);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(35, 41);
+            this.button3.TabIndex = 26;
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // lbluser
             // 
             this.lbluser.AutoSize = true;
@@ -379,61 +587,6 @@
             this.lblBienvenido.Size = new System.Drawing.Size(102, 19);
             this.lblBienvenido.TabIndex = 0;
             this.lblBienvenido.Text = "Bienvenido:";
-            // 
-            // lblversion
-            // 
-            this.lblversion.AutoSize = true;
-            this.lblversion.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblversion.ForeColor = System.Drawing.Color.White;
-            this.lblversion.Location = new System.Drawing.Point(12, 620);
-            this.lblversion.Name = "lblversion";
-            this.lblversion.Size = new System.Drawing.Size(53, 25);
-            this.lblversion.TabIndex = 29;
-            this.lblversion.Text = "V 1.0";
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnDoctores
-            // 
-            this.btnDoctores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
-            this.btnDoctores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnDoctores.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoctores.ForeColor = System.Drawing.Color.White;
-            this.btnDoctores.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDoctores.Location = new System.Drawing.Point(806, 155);
-            this.btnDoctores.Name = "btnDoctores";
-            this.btnDoctores.Size = new System.Drawing.Size(294, 133);
-            this.btnDoctores.TabIndex = 56;
-            this.btnDoctores.UseVisualStyleBackColor = false;
-            // 
-            // lblDoctores
-            // 
-            this.lblDoctores.AutoSize = true;
-            this.lblDoctores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
-            this.lblDoctores.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDoctores.ForeColor = System.Drawing.Color.White;
-            this.lblDoctores.Location = new System.Drawing.Point(918, 165);
-            this.lblDoctores.Name = "lblDoctores";
-            this.lblDoctores.Size = new System.Drawing.Size(74, 25);
-            this.lblDoctores.TabIndex = 57;
-            this.lblDoctores.Text = "Doctores";
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Image = global::Medical_Control_System__MCY_.Properties.Resources.home;
-            this.button3.Location = new System.Drawing.Point(6, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(35, 41);
-            this.button3.TabIndex = 26;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // picMinimize
             // 
@@ -471,86 +624,22 @@
             this.picMaximize.TabStop = false;
             this.picMaximize.Click += new System.EventHandler(this.picMaximize_Click);
             // 
-            // pbDoctores
+            // lblversion
             // 
-            this.pbDoctores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
-            this.pbDoctores.Image = global::Medical_Control_System__MCY_.Properties.Resources.doctor;
-            this.pbDoctores.Location = new System.Drawing.Point(918, 196);
-            this.pbDoctores.Name = "pbDoctores";
-            this.pbDoctores.Size = new System.Drawing.Size(73, 78);
-            this.pbDoctores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pbDoctores.TabIndex = 58;
-            this.pbDoctores.TabStop = false;
+            this.lblversion.AutoSize = true;
+            this.lblversion.Font = new System.Drawing.Font("Bahnschrift SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblversion.ForeColor = System.Drawing.Color.White;
+            this.lblversion.Location = new System.Drawing.Point(12, 620);
+            this.lblversion.Name = "lblversion";
+            this.lblversion.Size = new System.Drawing.Size(53, 25);
+            this.lblversion.TabIndex = 29;
+            this.lblversion.Text = "V 1.0";
             // 
-            // pbAjustes
+            // timer1
             // 
-            this.pbAjustes.Image = global::Medical_Control_System__MCY_.Properties.Resources.configurar;
-            this.pbAjustes.Location = new System.Drawing.Point(973, 540);
-            this.pbAjustes.Name = "pbAjustes";
-            this.pbAjustes.Size = new System.Drawing.Size(70, 67);
-            this.pbAjustes.TabIndex = 55;
-            this.pbAjustes.TabStop = false;
-            this.pbAjustes.Click += new System.EventHandler(this.pbAjustes_Click);
-            // 
-            // pbLogout
-            // 
-            this.pbLogout.Image = global::Medical_Control_System__MCY_.Properties.Resources.logout;
-            this.pbLogout.Location = new System.Drawing.Point(1049, 540);
-            this.pbLogout.Name = "pbLogout";
-            this.pbLogout.Size = new System.Drawing.Size(70, 67);
-            this.pbLogout.TabIndex = 54;
-            this.pbLogout.TabStop = false;
-            this.pbLogout.Click += new System.EventHandler(this.pbLogout_Click);
-            // 
-            // pbGmail
-            // 
-            this.pbGmail.Image = global::Medical_Control_System__MCY_.Properties.Resources.gmail__1_;
-            this.pbGmail.Location = new System.Drawing.Point(897, 540);
-            this.pbGmail.Name = "pbGmail";
-            this.pbGmail.Size = new System.Drawing.Size(70, 67);
-            this.pbGmail.TabIndex = 53;
-            this.pbGmail.TabStop = false;
-            this.pbGmail.Click += new System.EventHandler(this.pbGmail_Click);
-            // 
-            // pbFacebook
-            // 
-            this.pbFacebook.Image = global::Medical_Control_System__MCY_.Properties.Resources.facebook;
-            this.pbFacebook.Location = new System.Drawing.Point(826, 540);
-            this.pbFacebook.Name = "pbFacebook";
-            this.pbFacebook.Size = new System.Drawing.Size(70, 67);
-            this.pbFacebook.TabIndex = 51;
-            this.pbFacebook.TabStop = false;
-            this.pbFacebook.Click += new System.EventHandler(this.pbFacebook_Click);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
-            this.pictureBox4.Image = global::Medical_Control_System__MCY_.Properties.Resources.calendario__3_;
-            this.pictureBox4.Location = new System.Drawing.Point(942, 48);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(73, 66);
-            this.pictureBox4.TabIndex = 38;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(126)))), ((int)(((byte)(28)))));
-            this.pictureBox3.Image = global::Medical_Control_System__MCY_.Properties.Resources.calendario__3_;
-            this.pictureBox3.Location = new System.Drawing.Point(579, 48);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(73, 66);
-            this.pictureBox3.TabIndex = 34;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(146)))), ((int)(((byte)(223)))));
-            this.pictureBox2.Image = global::Medical_Control_System__MCY_.Properties.Resources.calendario__3_;
-            this.pictureBox2.Location = new System.Drawing.Point(211, 48);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(73, 66);
-            this.pictureBox2.TabIndex = 30;
-            this.pictureBox2.TabStop = false;
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // pictureBox1
             // 
@@ -587,11 +676,8 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Dashboard_MouseDown);
             this.pnlDesktop.ResumeLayout(false);
             this.pnlDesktop.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPacientes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbDoctores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).EndInit();
@@ -600,6 +686,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -646,5 +737,11 @@
         private System.Windows.Forms.PictureBox pbDoctores;
         private System.Windows.Forms.Label lblDoctores;
         private System.Windows.Forms.Button btnDoctores;
+        private System.Windows.Forms.PictureBox pbPacientes;
+        private System.Windows.Forms.Label lblPacientes;
+        private System.Windows.Forms.Button BtnPacientes;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label lblhistorial;
+        private System.Windows.Forms.Button BtnHistorial;
     }
 }

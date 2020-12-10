@@ -242,7 +242,7 @@
             this.lblhistorialcitas.AutoSize = true;
             this.lblhistorialcitas.Font = new System.Drawing.Font("Bahnschrift", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblhistorialcitas.ForeColor = System.Drawing.Color.White;
-            this.lblhistorialcitas.Location = new System.Drawing.Point(371, 9);
+            this.lblhistorialcitas.Location = new System.Drawing.Point(473, 9);
             this.lblhistorialcitas.Name = "lblhistorialcitas";
             this.lblhistorialcitas.Size = new System.Drawing.Size(145, 19);
             this.lblhistorialcitas.TabIndex = 83;

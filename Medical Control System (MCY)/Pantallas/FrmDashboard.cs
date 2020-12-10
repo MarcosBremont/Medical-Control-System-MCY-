@@ -221,6 +221,19 @@ namespace Medical_Control_System__MCY_.Pantallas
             frmConfiguracion.Show();
         }
 
-        
+        private void btnDoctores_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmDoctores());
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmDoctores());
+        }
+
+        private void BtnHistorial_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmHistorialPacientes());
+        }
     }
 }

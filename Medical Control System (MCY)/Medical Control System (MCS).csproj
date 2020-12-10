@@ -99,17 +99,35 @@
     <Compile Include="Pantallas\FrmConfiguracion.Designer.cs">
       <DependentUpon>FrmConfiguracion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\FrmDoctores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\FrmDoctores.Designer.cs">
+      <DependentUpon>FrmDoctores.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\FrmHistorialCitasCompletas.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pantallas\FrmHistorialCitasCompletas.Designer.cs">
       <DependentUpon>FrmHistorialCitasCompletas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas\FrmHistorialPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\FrmHistorialPacientes.Designer.cs">
+      <DependentUpon>FrmHistorialPacientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas\FrmOdontodiagrama.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Pantallas\FrmOdontodiagrama.Designer.cs">
       <DependentUpon>FrmOdontodiagrama.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas\FrmPacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas\FrmPacientes.Designer.cs">
+      <DependentUpon>FrmPacientes.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantallas\FrmVerPagos.cs">
       <SubType>Form</SubType>
@@ -146,11 +164,20 @@
     <EmbeddedResource Include="Pantallas\FrmConfiguracion.resx">
       <DependentUpon>FrmConfiguracion.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\FrmDoctores.resx">
+      <DependentUpon>FrmDoctores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\FrmHistorialCitasCompletas.resx">
       <DependentUpon>FrmHistorialCitasCompletas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\FrmHistorialPacientes.resx">
+      <DependentUpon>FrmHistorialPacientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\FrmOdontodiagrama.resx">
       <DependentUpon>FrmOdontodiagrama.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas\FrmPacientes.resx">
+      <DependentUpon>FrmPacientes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas\FrmVerPagos.resx">
       <DependentUpon>FrmVerPagos.cs</DependentUpon>
@@ -198,6 +225,9 @@
     <None Include="Resources\hermosa-chica-sentada-oficina-dentista_1157-21014.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\historial-medico %281%29.png" />
+    <None Include="Resources\historial-medico.png" />
+    <None Include="Resources\paciente.png" />
     <None Include="Resources\doctor.png" />
     <None Include="Resources\home.png" />
     <None Include="Resources\configurar.png" />
