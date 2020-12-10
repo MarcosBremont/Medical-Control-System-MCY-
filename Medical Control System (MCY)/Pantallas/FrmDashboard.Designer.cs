@@ -53,10 +53,13 @@
             this.lblBienvenido = new System.Windows.Forms.Label();
             this.lblversion = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.btnDoctores = new System.Windows.Forms.Button();
+            this.lblDoctores = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.picMinimize = new System.Windows.Forms.PictureBox();
             this.picClose = new System.Windows.Forms.PictureBox();
             this.picMaximize = new System.Windows.Forms.PictureBox();
+            this.pbDoctores = new System.Windows.Forms.PictureBox();
             this.pbAjustes = new System.Windows.Forms.PictureBox();
             this.pbLogout = new System.Windows.Forms.PictureBox();
             this.pbGmail = new System.Windows.Forms.PictureBox();
@@ -70,6 +73,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDoctores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGmail)).BeginInit();
@@ -163,6 +167,9 @@
             // pnlDesktop
             // 
             this.pnlDesktop.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(68)))), ((int)(((byte)(83)))));
+            this.pnlDesktop.Controls.Add(this.pbDoctores);
+            this.pnlDesktop.Controls.Add(this.lblDoctores);
+            this.pnlDesktop.Controls.Add(this.btnDoctores);
             this.pnlDesktop.Controls.Add(this.pbAjustes);
             this.pnlDesktop.Controls.Add(this.pbLogout);
             this.pnlDesktop.Controls.Add(this.pbGmail);
@@ -390,6 +397,31 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // btnDoctores
+            // 
+            this.btnDoctores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
+            this.btnDoctores.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDoctores.Font = new System.Drawing.Font("Bahnschrift", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoctores.ForeColor = System.Drawing.Color.White;
+            this.btnDoctores.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDoctores.Location = new System.Drawing.Point(806, 155);
+            this.btnDoctores.Name = "btnDoctores";
+            this.btnDoctores.Size = new System.Drawing.Size(294, 133);
+            this.btnDoctores.TabIndex = 56;
+            this.btnDoctores.UseVisualStyleBackColor = false;
+            // 
+            // lblDoctores
+            // 
+            this.lblDoctores.AutoSize = true;
+            this.lblDoctores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
+            this.lblDoctores.Font = new System.Drawing.Font("Bahnschrift Condensed", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDoctores.ForeColor = System.Drawing.Color.White;
+            this.lblDoctores.Location = new System.Drawing.Point(918, 165);
+            this.lblDoctores.Name = "lblDoctores";
+            this.lblDoctores.Size = new System.Drawing.Size(74, 25);
+            this.lblDoctores.TabIndex = 57;
+            this.lblDoctores.Text = "Doctores";
+            // 
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
@@ -439,6 +471,17 @@
             this.picMaximize.TabStop = false;
             this.picMaximize.Click += new System.EventHandler(this.picMaximize_Click);
             // 
+            // pbDoctores
+            // 
+            this.pbDoctores.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(184)))), ((int)(((byte)(112)))));
+            this.pbDoctores.Image = global::Medical_Control_System__MCY_.Properties.Resources.doctor;
+            this.pbDoctores.Location = new System.Drawing.Point(918, 196);
+            this.pbDoctores.Name = "pbDoctores";
+            this.pbDoctores.Size = new System.Drawing.Size(73, 78);
+            this.pbDoctores.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbDoctores.TabIndex = 58;
+            this.pbDoctores.TabStop = false;
+            // 
             // pbAjustes
             // 
             this.pbAjustes.Image = global::Medical_Control_System__MCY_.Properties.Resources.configurar;
@@ -447,6 +490,7 @@
             this.pbAjustes.Size = new System.Drawing.Size(70, 67);
             this.pbAjustes.TabIndex = 55;
             this.pbAjustes.TabStop = false;
+            this.pbAjustes.Click += new System.EventHandler(this.pbAjustes_Click);
             // 
             // pbLogout
             // 
@@ -548,6 +592,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.picMinimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMaximize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbDoctores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAjustes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbLogout)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbGmail)).EndInit();
@@ -598,5 +643,8 @@
         private System.Windows.Forms.PictureBox pbGmail;
         private System.Windows.Forms.PictureBox pbFacebook;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pbDoctores;
+        private System.Windows.Forms.Label lblDoctores;
+        private System.Windows.Forms.Button btnDoctores;
     }
 }

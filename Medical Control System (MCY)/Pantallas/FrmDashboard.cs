@@ -14,6 +14,7 @@ namespace Medical_Control_System__MCY_.Pantallas
 {
     public partial class FrmDashboard : Form
     {
+        
         //Dll para mover el formulario si no tiene bordes
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -135,6 +136,7 @@ namespace Medical_Control_System__MCY_.Pantallas
             SelectCitasPendientes();
         }
 
+       
         public void SelectCitasCompletadas()
         {
             con = new MySqlConnection(cs);
@@ -212,5 +214,13 @@ namespace Medical_Control_System__MCY_.Pantallas
             FrmDashboard frmDashboard = new FrmDashboard();
             frmDashboard.Show();
         }
+
+        private void pbAjustes_Click(object sender, EventArgs e)
+        {
+            FrmConfiguracion frmConfiguracion = new FrmConfiguracion();
+            frmConfiguracion.Show();
+        }
+
+        
     }
 }
