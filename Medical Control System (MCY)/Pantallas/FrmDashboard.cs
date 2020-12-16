@@ -134,8 +134,6 @@ namespace Medical_Control_System__MCY_.Pantallas
             CargarCantidadCita();
             SelectCitasCompletadas();
             SelectCitasPendientes();
-            FrmLoginPage frmLoginPage = new FrmLoginPage();
-            frmLoginPage
         }
 
        
