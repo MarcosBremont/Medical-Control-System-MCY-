@@ -238,5 +238,15 @@ namespace Medical_Control_System__MCY_.Pantallas
         {
             OpenChildForm(new FrmPacientes());
         }
+
+        private void btnPaciente_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmPacientes());
+        }
+
+        private void btnDoctor_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new FrmDoctores());
+        }
     }
 }

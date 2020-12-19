@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.btnAboutUs = new System.Windows.Forms.Button();
-            this.btnMyCart = new System.Windows.Forms.Button();
+            this.btnPaciente = new System.Windows.Forms.Button();
+            this.btnDoctor = new System.Windows.Forms.Button();
             this.btnVerPagos = new System.Windows.Forms.Button();
             this.btnDeserts = new System.Windows.Forms.Button();
             this.btnCitas = new System.Windows.Forms.Button();
@@ -74,6 +74,8 @@
             this.lblversion = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnHistorialMedico = new System.Windows.Forms.Button();
+            this.btnAcercade = new System.Windows.Forms.Button();
             this.pnlDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPacientes)).BeginInit();
@@ -92,35 +94,37 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAboutUs
+            // btnPaciente
             // 
-            this.btnAboutUs.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.btnAboutUs.FlatAppearance.BorderSize = 0;
-            this.btnAboutUs.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAboutUs.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAboutUs.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAboutUs.Location = new System.Drawing.Point(3, 396);
-            this.btnAboutUs.Name = "btnAboutUs";
-            this.btnAboutUs.Size = new System.Drawing.Size(216, 37);
-            this.btnAboutUs.TabIndex = 20;
-            this.btnAboutUs.Text = "   Acerca de";
-            this.btnAboutUs.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAboutUs.UseVisualStyleBackColor = false;
+            this.btnPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnPaciente.FlatAppearance.BorderSize = 0;
+            this.btnPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPaciente.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnPaciente.Location = new System.Drawing.Point(3, 396);
+            this.btnPaciente.Name = "btnPaciente";
+            this.btnPaciente.Size = new System.Drawing.Size(216, 37);
+            this.btnPaciente.TabIndex = 20;
+            this.btnPaciente.Text = "   Pacientes";
+            this.btnPaciente.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnPaciente.UseVisualStyleBackColor = false;
+            this.btnPaciente.Click += new System.EventHandler(this.btnPaciente_Click);
             // 
-            // btnMyCart
+            // btnDoctor
             // 
-            this.btnMyCart.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.btnMyCart.FlatAppearance.BorderSize = 0;
-            this.btnMyCart.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMyCart.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMyCart.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnMyCart.Location = new System.Drawing.Point(3, 340);
-            this.btnMyCart.Name = "btnMyCart";
-            this.btnMyCart.Size = new System.Drawing.Size(216, 37);
-            this.btnMyCart.TabIndex = 19;
-            this.btnMyCart.Text = "   Pagos";
-            this.btnMyCart.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnMyCart.UseVisualStyleBackColor = false;
+            this.btnDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnDoctor.FlatAppearance.BorderSize = 0;
+            this.btnDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDoctor.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnDoctor.Location = new System.Drawing.Point(3, 340);
+            this.btnDoctor.Name = "btnDoctor";
+            this.btnDoctor.Size = new System.Drawing.Size(216, 37);
+            this.btnDoctor.TabIndex = 19;
+            this.btnDoctor.Text = "   Doctores";
+            this.btnDoctor.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDoctor.UseVisualStyleBackColor = false;
+            this.btnDoctor.Click += new System.EventHandler(this.btnDoctor_Click);
             // 
             // btnVerPagos
             // 
@@ -229,7 +233,7 @@
             this.lblhistorial.ForeColor = System.Drawing.Color.White;
             this.lblhistorial.Location = new System.Drawing.Point(919, 349);
             this.lblhistorial.Name = "lblhistorial";
-            this.lblhistorial.Size = new System.Drawing.Size(91, 25);
+            this.lblhistorial.Size = new System.Drawing.Size(72, 25);
             this.lblhistorial.TabIndex = 63;
             this.lblhistorial.Text = "Historial";
             // 
@@ -266,7 +270,7 @@
             this.lblPacientes.ForeColor = System.Drawing.Color.White;
             this.lblPacientes.Location = new System.Drawing.Point(517, 349);
             this.lblPacientes.Name = "lblPacientes";
-            this.lblPacientes.Size = new System.Drawing.Size(102, 25);
+            this.lblPacientes.Size = new System.Drawing.Size(80, 25);
             this.lblPacientes.TabIndex = 60;
             this.lblPacientes.Text = "Pacientes";
             // 
@@ -303,7 +307,7 @@
             this.lblDoctores.ForeColor = System.Drawing.Color.White;
             this.lblDoctores.Location = new System.Drawing.Point(132, 349);
             this.lblDoctores.Name = "lblDoctores";
-            this.lblDoctores.Size = new System.Drawing.Size(96, 25);
+            this.lblDoctores.Size = new System.Drawing.Size(74, 25);
             this.lblDoctores.TabIndex = 57;
             this.lblDoctores.Text = "Doctores";
             // 
@@ -653,17 +657,49 @@
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
+            // btnHistorialMedico
+            // 
+            this.btnHistorialMedico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnHistorialMedico.FlatAppearance.BorderSize = 0;
+            this.btnHistorialMedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnHistorialMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHistorialMedico.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnHistorialMedico.Location = new System.Drawing.Point(3, 450);
+            this.btnHistorialMedico.Name = "btnHistorialMedico";
+            this.btnHistorialMedico.Size = new System.Drawing.Size(216, 37);
+            this.btnHistorialMedico.TabIndex = 30;
+            this.btnHistorialMedico.Text = "   Historial Medico";
+            this.btnHistorialMedico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnHistorialMedico.UseVisualStyleBackColor = false;
+            // 
+            // btnAcercade
+            // 
+            this.btnAcercade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
+            this.btnAcercade.FlatAppearance.BorderSize = 0;
+            this.btnAcercade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAcercade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAcercade.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnAcercade.Location = new System.Drawing.Point(3, 503);
+            this.btnAcercade.Name = "btnAcercade";
+            this.btnAcercade.Size = new System.Drawing.Size(216, 37);
+            this.btnAcercade.TabIndex = 31;
+            this.btnAcercade.Text = "   Acerca de";
+            this.btnAcercade.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAcercade.UseVisualStyleBackColor = false;
+            // 
             // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1357, 653);
+            this.Controls.Add(this.btnAcercade);
+            this.Controls.Add(this.btnHistorialMedico);
             this.Controls.Add(this.lblversion);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pnlDesktop);
-            this.Controls.Add(this.btnAboutUs);
-            this.Controls.Add(this.btnMyCart);
+            this.Controls.Add(this.btnPaciente);
+            this.Controls.Add(this.btnDoctor);
             this.Controls.Add(this.btnVerPagos);
             this.Controls.Add(this.btnDeserts);
             this.Controls.Add(this.btnCitas);
@@ -701,8 +737,8 @@
         internal System.Windows.Forms.PictureBox picMaximize;
         internal System.Windows.Forms.PictureBox picMinimize;
         internal System.Windows.Forms.PictureBox picClose;
-        internal System.Windows.Forms.Button btnAboutUs;
-        internal System.Windows.Forms.Button btnMyCart;
+        internal System.Windows.Forms.Button btnPaciente;
+        internal System.Windows.Forms.Button btnDoctor;
         internal System.Windows.Forms.Button btnVerPagos;
         internal System.Windows.Forms.Button btnDeserts;
         internal System.Windows.Forms.Button btnCitas;
@@ -743,5 +779,7 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblhistorial;
         private System.Windows.Forms.Button BtnHistorial;
+        internal System.Windows.Forms.Button btnHistorialMedico;
+        internal System.Windows.Forms.Button btnAcercade;
     }
 }
