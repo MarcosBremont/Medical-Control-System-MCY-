@@ -74,8 +74,6 @@
             this.lblversion = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnHistorialMedico = new System.Windows.Forms.Button();
-            this.btnAcercade = new System.Windows.Forms.Button();
             this.pnlDesktop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPacientes)).BeginInit();
@@ -657,44 +655,12 @@
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
-            // btnHistorialMedico
-            // 
-            this.btnHistorialMedico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.btnHistorialMedico.FlatAppearance.BorderSize = 0;
-            this.btnHistorialMedico.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnHistorialMedico.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHistorialMedico.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnHistorialMedico.Location = new System.Drawing.Point(3, 450);
-            this.btnHistorialMedico.Name = "btnHistorialMedico";
-            this.btnHistorialMedico.Size = new System.Drawing.Size(216, 37);
-            this.btnHistorialMedico.TabIndex = 30;
-            this.btnHistorialMedico.Text = "   Historial Medico";
-            this.btnHistorialMedico.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnHistorialMedico.UseVisualStyleBackColor = false;
-            // 
-            // btnAcercade
-            // 
-            this.btnAcercade.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(176)))), ((int)(((byte)(137)))));
-            this.btnAcercade.FlatAppearance.BorderSize = 0;
-            this.btnAcercade.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAcercade.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAcercade.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnAcercade.Location = new System.Drawing.Point(3, 503);
-            this.btnAcercade.Name = "btnAcercade";
-            this.btnAcercade.Size = new System.Drawing.Size(216, 37);
-            this.btnAcercade.TabIndex = 31;
-            this.btnAcercade.Text = "   Acerca de";
-            this.btnAcercade.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAcercade.UseVisualStyleBackColor = false;
-            // 
             // FrmDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(49)))), ((int)(((byte)(61)))));
             this.ClientSize = new System.Drawing.Size(1357, 653);
-            this.Controls.Add(this.btnAcercade);
-            this.Controls.Add(this.btnHistorialMedico);
             this.Controls.Add(this.lblversion);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.pnlDesktop);
@@ -779,7 +745,5 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblhistorial;
         private System.Windows.Forms.Button BtnHistorial;
-        internal System.Windows.Forms.Button btnHistorialMedico;
-        internal System.Windows.Forms.Button btnAcercade;
     }
 }
