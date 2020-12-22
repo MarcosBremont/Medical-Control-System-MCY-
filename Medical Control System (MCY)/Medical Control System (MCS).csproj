@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
       <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
@@ -244,6 +247,7 @@
     <None Include="Resources\338 [Convertido]1.png" />
     <None Include="Resources\aaaaa.png" />
     <None Include="Resources\aaaaa.jpg" />
+    <Content Include="Logo.ico" />
     <Content Include="Resources\btnClose.png" />
     <None Include="Resources\Makeup___ore-removebg-preview %281%29.png" />
     <None Include="Resources\MedicalControlSystem.png" />
